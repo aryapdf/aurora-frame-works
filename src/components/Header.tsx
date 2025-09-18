@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Search, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -8,6 +8,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
   const { t } = useLanguage();
+  const [isScrolled, setIsScrolled] = useState(false);
   const navItems = [
     { key: "nav.work", label: t("nav.work") },
     { key: "nav.experience", label: t("nav.experience") },
@@ -18,15 +19,24 @@ const Header = () => {
   ];
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-      <header className="fixed top-0 left-0 right-0 z-50 glass-card">
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled ? 'glass-card' : 'bg-transparent'
+      }`}>
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">AA</span>
-              </div>
+              <img alt="personal_logo" src="src/assets/personal-logo.png" className="w-14 h-14 object-contain rounded-full" />
             </div>
 
             {/* Desktop Nav */}
@@ -35,7 +45,7 @@ const Header = () => {
                   <a
                       key={item.key}
                       href={`#${item.key.split('.')[1]}`}
-                      className="text-foreground/80 hover:text-foreground transition-colors text-sm font-medium"
+                      className="text-foreground/80 hover:text-foreground transition-colors text-base font-medium"
                   >
                     {item.label}
                   </a>
