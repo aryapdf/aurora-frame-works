@@ -28,17 +28,17 @@ const ClientShowcase = () => {
 
         {/* Experience Statement */}
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <div className="text-6xl font-bold text-primary mb-4">15+</div>
+          <div className="text-6xl font-bold text-primary mb-4">1+</div>
           <p className="text-xl text-foreground/80 leading-relaxed">
-            With over 15 years of expertise in innovative ventures, I've collaborated with brands like Google, Slack, Youtube, Sony, Blizzard Entertainment, Volkswagen, Chevrolet, Spotify, Procter & Gamble, HBO, and LG, to name a few.
+            With 1+ years of experience in modern web development, I've worked with technologies like Vue.js, React, Nuxt.js, and Next.js to create engaging user experiences.
           </p>
           <p className="text-foreground/60 leading-relaxed">
-            I consider myself a versatile and practical visual designer, specializing in design systems, impactful visuals, and brand identity.
+            I consider myself a dedicated and passionate front end engineer, specializing in modern frameworks, responsive design, and seamless API integrations.
           </p>
           <div className="pt-8">
             <p className="text-sm text-foreground/40">
-              *Currently working at Zigma.<br />
-              Based in Edinburgh, Scotland.
+              *Currently exploring new opportunities.<br />
+              Based in Indonesia.
             </p>
           </div>
         </div>

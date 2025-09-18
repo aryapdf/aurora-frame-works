@@ -9,16 +9,16 @@ const HeroSection = () => {
           {/* Profile Bubble */}
           <div className="inline-flex items-center space-x-3 glass-card px-4 py-2 rounded-full">
             <div className="w-8 h-8 rounded-full overflow-hidden bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <span className="text-xs font-medium text-primary-foreground">AA</span>
+              <span className="text-xs font-medium text-primary-foreground">AP</span>
             </div>
-            <span className="text-foreground/80 text-sm">Hi, thereeee!</span>
+            <span className="text-foreground/80 text-sm">Hi, there!</span>
           </div>
           
           {/* Main Heading */}
           <h1 className="text-5xl lg:text-7xl font-bold leading-tight text-foreground">
-            Anders Antonsen,<br />
-            visual designer who build a useful<br />
-            and eye pleasing design
+            Arya Pradana,<br />
+            front end engineer who builds<br />
+            modern and intuitive web experiences
           </h1>
           
           {/* CTA */}
