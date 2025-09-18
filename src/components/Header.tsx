@@ -1,10 +1,21 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Search, Globe, Menu } from "lucide-react";
+import { Search, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import ThemeToggle from "@/components/ThemeToggle";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
-  const navItems = ["Work", "Experience", "Blog", "FAQ", "Proposal", "Contact"];
+  const { t } = useLanguage();
+  const navItems = [
+    { key: "nav.work", label: t("nav.work") },
+    { key: "nav.experience", label: t("nav.experience") },
+    { key: "nav.blog", label: t("nav.blog") },
+    { key: "nav.faq", label: t("nav.faq") },
+    { key: "nav.proposal", label: t("nav.proposal") },
+    { key: "nav.contact", label: t("nav.contact") }
+  ];
   const [open, setOpen] = useState(false);
 
   return (
@@ -22,20 +33,19 @@ const Header = () => {
             <nav className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
                   <a
-                      key={item}
-                      href={`#${item.toLowerCase()}`}
+                      key={item.key}
+                      href={`#${item.key.split('.')[1]}`}
                       className="text-foreground/80 hover:text-foreground transition-colors text-sm font-medium"
                   >
-                    {item}
+                    {item.label}
                   </a>
               ))}
             </nav>
 
             {/* Right side */}
             <div className="flex items-center space-x-2 md:space-x-4">
-              <Button variant="ghost" size="icon" className="text-foreground/80">
-                <Globe className="h-4 w-4" />
-              </Button>
+              <LanguageSwitcher />
+              <ThemeToggle />
               <Button variant="ghost" size="icon" className="text-foreground/80">
                 <Search className="h-4 w-4" />
               </Button>
@@ -52,12 +62,12 @@ const Header = () => {
                     <nav className="flex flex-col space-y-4 mt-6">
                       {navItems.map((item) => (
                           <a
-                              key={item}
-                              href={`#${item.toLowerCase()}`}
+                              key={item.key}
+                              href={`#${item.key.split('.')[1]}`}
                               onClick={() => setOpen(false)}
                               className="text-foreground/80 hover:text-foreground transition-colors text-base font-medium"
                           >
-                            {item}
+                            {item.label}
                           </a>
                       ))}
                     </nav>

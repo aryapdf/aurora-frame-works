@@ -13,6 +13,11 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'aktiv': ['AktivGrotesk', 'system-ui', 'sans-serif'],
+        'aktiv-ex': ['AktivGroteskEx', 'system-ui', 'sans-serif'],
+        'sans': ['AktivGrotesk', 'system-ui', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

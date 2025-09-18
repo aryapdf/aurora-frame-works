@@ -1,0 +1,57 @@
+/* Theme CSS Variables */
+:root[data-theme="dark"] {
+  /* Background Colors */
+  --bg-primary: 222.2 84% 4.9%;
+  --bg-secondary: 217.2 32.6% 17.5%;
+  --bg-tertiary: 222.2 84% 4.9%;
+  
+  /* Text Colors */
+  --text-primary: 210 40% 98%;
+  --text-secondary: 215 20.2% 65.1%;
+  --text-muted: 215.4 16.3% 46.9%;
+  
+  /* Accent Colors */
+  --accent-color: 217.2 91.2% 59.8%;
+  --accent-hover: 217.2 91.2% 69.8%;
+  
+  /* UI Colors */
+  --border-color: 217.2 32.6% 17.5%;
+  --card-bg: 222.2 84% 4.9%;
+  --muted-bg: 217.2 32.6% 17.5%;
+  
+  /* Status Colors */
+  --destructive: 0 62.8% 30.6%;
+  --warning: 47.9 95.8% 53.1%;
+  --success: 142.1 76.2% 36.3%;
+}
+
+:root[data-theme="light"] {
+  /* Background Colors */
+  --bg-primary: 0 0% 100%;
+  --bg-secondary: 210 40% 98%;
+  --bg-tertiary: 220 14.3% 95.9%;
+  
+  /* Text Colors */
+  --text-primary: 222.2 84% 4.9%;
+  --text-secondary: 215.4 16.3% 46.9%;
+  --text-muted: 215 20.2% 65.1%;
+  
+  /* Accent Colors */
+  --accent-color: 221.2 83.2% 53.3%;
+  --accent-hover: 221.2 83.2% 43.3%;
+  
+  /* UI Colors */
+  --border-color: 214.3 31.8% 91.4%;
+  --card-bg: 0 0% 100%;
+  --muted-bg: 210 40% 98%;
+  
+  /* Status Colors */
+  --destructive: 0 84.2% 60.2%;
+  --warning: 47.9 95.8% 53.1%;
+  --success: 142.1 70.6% 45.3%;
+}
+
+/* Theme transition */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
