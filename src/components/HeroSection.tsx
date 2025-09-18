@@ -40,9 +40,8 @@ const HeroSection = () => {
           <div className="max-w-full space-y-8 animate-fade-in">
             {/* Profile Bubble */}
             <div className="inline-flex items-center space-x-3 glass-card px-4 py-2 rounded-full">
-              <div className="w-8 h-8 rounded-full overflow-hidden bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <span className="text-xs font-medium text-primary-foreground">AP</span>
-              </div>
+              <img alt="personal_logo" src="src/assets/personal-logo-full.png"
+                   className="w-8 h-8 object-contain rounded-full"/>
               <span className="text-foreground/80 text-sm">Hi, there!</span>
             </div>
 

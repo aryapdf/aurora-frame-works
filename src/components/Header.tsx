@@ -56,9 +56,9 @@ const Header = () => {
             <div className="flex items-center space-x-2 md:space-x-4">
               <LanguageSwitcher />
               <ThemeToggle />
-              <Button variant="ghost" size="icon" className="text-foreground/80">
-                <Search className="h-4 w-4" />
-              </Button>
+              {/*<Button variant="ghost" size="icon" className="text-foreground/80">*/}
+              {/*  <Search className="h-4 w-4" />*/}
+              {/*</Button>*/}
 
               {/* Mobile Menu */}
               <div className="md:hidden">
