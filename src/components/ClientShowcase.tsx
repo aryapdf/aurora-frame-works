@@ -1,26 +1,26 @@
 const ClientShowcase = () => {
-  const clients = [
-    { name: "Google", logo: "Google" },
-    { name: "YouTube", logo: "YouTube" },
-    { name: "Chevrolet", logo: "CHEVROLET" },
-    { name: "Slack", logo: "slack" },
-    { name: "Spotify", logo: "Spotify" },
-    { name: "HBO", logo: "HBO" }
+  const techStack = [
+    { name: "Vue.js", logo: "Vue.js" },
+    { name: "React", logo: "React" },
+    { name: "Nuxt.js", logo: "Nuxt.js" },
+    { name: "Next.js", logo: "Next.js" },
+    { name: "Magento", logo: "Magento" },
+    { name: "Figma", logo: "Figma" }
   ];
 
   return (
     <section className="py-20 relative">
       <div className="container mx-auto px-6">
-        {/* Client Logos */}
+        {/* Tech Stack Logos */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
-          {clients.map((client, index) => (
+          {techStack.map((tech, index) => (
             <div 
-              key={client.name}
+              key={tech.name}
               className="flex items-center justify-center p-4 glass-card hover:glow-effect transition-all duration-300"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <span className="text-foreground/60 font-medium text-sm tracking-wide">
-                {client.logo}
+                {tech.logo}
               </span>
             </div>
           ))}
