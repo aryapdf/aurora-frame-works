@@ -2,7 +2,7 @@ const AboutSection = () => {
   return (
     <section className="py-20 relative">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl">
           {/* Section Header */}
           <div className="text-left mb-16">
             <p className="text-sm text-foreground/40 uppercase tracking-wider mb-8">
