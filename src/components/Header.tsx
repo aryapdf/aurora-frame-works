@@ -1,45 +1,73 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Search, Globe } from "lucide-react";
+import { Search, Globe, Menu } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const Header = () => {
   const navItems = ["Work", "Experience", "Blog", "FAQ", "Proposal", "Contact"];
+  const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass-card">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">AA</span>
+      <header className="fixed top-0 left-0 right-0 z-50 glass-card">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-sm">AA</span>
+              </div>
+            </div>
+
+            {/* Desktop Nav */}
+            <nav className="hidden md:flex items-center space-x-8">
+              {navItems.map((item) => (
+                  <a
+                      key={item}
+                      href={`#${item.toLowerCase()}`}
+                      className="text-foreground/80 hover:text-foreground transition-colors text-sm font-medium"
+                  >
+                    {item}
+                  </a>
+              ))}
+            </nav>
+
+            {/* Right side */}
+            <div className="flex items-center space-x-2 md:space-x-4">
+              <Button variant="ghost" size="icon" className="text-foreground/80">
+                <Globe className="h-4 w-4" />
+              </Button>
+              <Button variant="ghost" size="icon" className="text-foreground/80">
+                <Search className="h-4 w-4" />
+              </Button>
+
+              {/* Mobile Menu */}
+              <div className="md:hidden">
+                <Sheet open={open} onOpenChange={setOpen}>
+                  <SheetTrigger asChild>
+                    <Button variant="ghost" size="icon">
+                      <Menu className="h-5 w-5" />
+                    </Button>
+                  </SheetTrigger>
+                  <SheetContent side="right" className="w-64 p-6">
+                    <nav className="flex flex-col space-y-4 mt-6">
+                      {navItems.map((item) => (
+                          <a
+                              key={item}
+                              href={`#${item.toLowerCase()}`}
+                              onClick={() => setOpen(false)}
+                              className="text-foreground/80 hover:text-foreground transition-colors text-base font-medium"
+                          >
+                            {item}
+                          </a>
+                      ))}
+                    </nav>
+                  </SheetContent>
+                </Sheet>
+              </div>
             </div>
           </div>
-
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-foreground/80 hover:text-foreground transition-colors text-sm font-medium"
-              >
-                {item}
-              </a>
-            ))}
-          </nav>
-
-          {/* Right side */}
-          <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="icon" className="text-foreground/80">
-              <Globe className="h-4 w-4" />
-            </Button>
-            <Button variant="ghost" size="icon" className="text-foreground/80">
-              <Search className="h-4 w-4" />
-            </Button>
-          </div>
         </div>
-      </div>
-    </header>
+      </header>
   );
 };
 
