@@ -14,9 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        'aktiv': ['AktivGrotesk', 'system-ui', 'sans-serif'],
-        'aktiv-ex': ['AktivGroteskEx', 'system-ui', 'sans-serif'],
-        'sans': ['AktivGrotesk', 'system-ui', 'sans-serif'],
+        'aktiv': ['AktivGrotesk-Regular', 'system-ui', 'sans-serif'],
+        'aktiv-ex': ['AktivGroteskEx-Regular', 'system-ui', 'sans-serif'],
+        'sans': ['AktivGrotesk-Regular', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -35,22 +35,22 @@ const Header = () => {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-8">
               <img alt="personal_logo" src="src/assets/personal-logo.png" className="w-14 h-14 object-contain rounded-full" />
-            </div>
 
-            {/* Desktop Nav */}
-            <nav className="hidden md:flex items-center space-x-8">
-              {navItems.map((item) => (
-                  <a
-                      key={item.key}
-                      href={`#${item.key.split('.')[1]}`}
-                      className="text-foreground/80 hover:text-foreground transition-colors text-base font-medium"
-                  >
-                    {item.label}
-                  </a>
-              ))}
-            </nav>
+              {/* Desktop Nav */}
+              <nav className="hidden md:flex items-center space-x-8">
+                {navItems.map((item) => (
+                    <a
+                        key={item.key}
+                        href={`#${item.key.split('.')[1]}`}
+                        className="text-foreground/80 hover:text-foreground transition-colors text-base font-medium"
+                    >
+                      {item.label}
+                    </a>
+                ))}
+              </nav>
+            </div>
 
             {/* Right side */}
             <div className="flex items-center space-x-2 md:space-x-4">
