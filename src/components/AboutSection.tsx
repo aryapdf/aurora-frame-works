@@ -1,21 +1,15 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import googleLogo from "@/assets/logos/google-logo.png";
-import youtubeLogo from "@/assets/logos/youtube-logo.png";
-import chevroletLogo from "@/assets/logos/chevrolet-logo.png";
-import slackLogo from "@/assets/logos/slack-logo.png";
-import spotifyLogo from "@/assets/logos/spotify-logo.png";
-import hboLogo from "@/assets/logos/hbo-logo.png";
 
 const AboutSection = () => {
   const { t } = useLanguage();
   
   const companies = [
-    { name: "Google", logo: googleLogo },
-    { name: "YouTube", logo: youtubeLogo },
-    { name: "Chevrolet", logo: chevroletLogo },
-    { name: "Slack", logo: slackLogo },
-    { name: "Spotify", logo: spotifyLogo },
-    { name: "HBO", logo: hboLogo }
+    "Google",
+    "YouTube", 
+    "Chevrolet",
+    "Slack",
+    "Spotify",
+    "HBO"
   ];
 
   return (
@@ -27,15 +21,13 @@ const AboutSection = () => {
             <div className="grid grid-cols-3 sm:grid-cols-6 gap-6 sm:gap-8 opacity-40">
               {companies.map((company, index) => (
                 <div 
-                  key={company.name}
+                  key={company}
                   className="flex items-center justify-center"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <img 
-                    src={company.logo} 
-                    alt={company.name}
-                    className="h-6 sm:h-8 object-contain filter brightness-0 invert opacity-60"
-                  />
+                  <span className="text-sm sm:text-base text-foreground/60 font-medium">
+                    {company}
+                  </span>
                 </div>
               ))}
             </div>
