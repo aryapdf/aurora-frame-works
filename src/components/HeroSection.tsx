@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-import { useLanguage as t } from "@/contexts/LanguageContext.tsx";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const HeroSection = () => {
+  const { t } = useLanguage();
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const texts = ["Front End Engineer", "Back End Engineer", "Linux Enthusiast", "Musician"];
+  const texts = t("hero.roles") as string[];
 
   useEffect(() => {
     const currentFullText = texts[currentTextIndex];
@@ -46,7 +47,7 @@ const HeroSection = () => {
                   src="src/assets/personal-logo-full.png"
                   className="w-6 h-6 sm:w-8 sm:h-8 object-contain rounded-full"
               />
-              <span className="text-foreground/80 text-xs sm:text-sm">Hi, there!</span>
+              <span className="text-foreground/80 text-xs sm:text-sm">{t("hero.greeting")}</span>
             </div>
 
             {/* Main Heading */}
@@ -54,7 +55,7 @@ const HeroSection = () => {
               <span
                   className="block bg-gradient-to-r from-[#00C8FF] to-[#0072FF] bg-clip-text text-transparent font-bold leading-tight"
               >
-                Arya Pradana,
+                {t("hero.name")}
               </span>
 
               <span className="inline-block min-h-[1.2em] mt-2 sm:mt-0">
@@ -67,7 +68,7 @@ const HeroSection = () => {
             <div className="pt-4 sm:pt-8">
               <button
                   className="group flex items-center space-x-2 text-foreground/60 hover:text-primary transition-colors text-sm sm:text-base">
-                <span className="leading-relaxed">Scroll down to see the portfolio</span>
+                <span className="leading-relaxed">{t("hero.scroll")}</span>
                 <ArrowDown className="h-3 w-3 sm:h-4 sm:w-4 group-hover:translate-y-1 transition-transform flex-shrink-0" />
               </button>
             </div>

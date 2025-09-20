@@ -1,10 +1,43 @@
 {
   "nav.work": "Karya",
-  "nav.experience": "Pengalaman",
+  "nav.experience": "Pengalaman", 
   "nav.blog": "Blog",
   "nav.faq": "FAQ",
   "nav.proposal": "Proposal",
   "nav.contact": "Kontak",
   "lang.english": "English",
-  "lang.indonesian": "Indonesia"
+  "lang.indonesian": "Indonesia",
+  "frontend": "Front End Engineer",
+  "hero.greeting": "Hai!",
+  "hero.name": "Arya Pradana,",
+  "hero.roles": ["Front End Engineer", "Back End Engineer", "Linux Enthusiast", "Musician"],
+  "hero.scroll": "Gulir ke bawah untuk melihat portofolio",
+  "about.section": "01 — MENGENAL SAYA",
+  "about.title": "Dengan pengalaman lebih dari 1+ tahun dalam pengembangan web modern, saya telah bekerja dengan teknologi seperti Vue.js, React, Nuxt.js, Next.js, Magento, integrasi REST API, Figma, Adobe XD, dan Photoshop untuk menciptakan pengalaman pengguna yang seamless.",
+  "about.description": "Saya menganggap diri saya sebagai front end engineer yang berdedikasi dan bersemangat, mengkhususkan diri pada framework modern, desain responsif, dan integrasi API yang seamless dengan fondasi teknis yang kuat dalam pengembangan web.",
+  "about.current_job": "Saat ini bekerja di Summit Global Technology (Indonesia).",
+  "about.job_details": "Partner resmi dengan Transsion Group (Infinix) termasuk Xpark E-Commerce, Xclub Social media, Karmaserve dan FitHub. Berbasis di Indonesia.",
+  "experience.section": "03 — PENGALAMAN",
+  "experience.title": "Pengalaman yang membentuk solusi web modern",
+  "experience.description": "Dengan dedikasi untuk pembelajaran berkelanjutan dan pengalaman langsung dalam pengembangan web modern, saya mengkhususkan diri dalam menciptakan aplikasi responsif yang berpusat pada pengguna menggunakan teknologi dan framework terdepan di ekosistem Vue.js dan React.",
+  "experience.positions": [
+    {
+      "title": "Magang Frontend Developer",
+      "company": "Agen Web Lokal",
+      "location": "Jakarta, Indonesia",
+      "period": "2022 — 2023"
+    },
+    {
+      "title": "Junior Frontend Developer",
+      "company": "Tech Startup",
+      "location": "Jakarta, Indonesia",
+      "period": "2023 — 2024"
+    },
+    {
+      "title": "Frontend Engineer",
+      "company": "Summit Global Technology",
+      "location": "Jakarta, Indonesia",
+      "period": "2024 — Sekarang"
+    }
+  ]
 }

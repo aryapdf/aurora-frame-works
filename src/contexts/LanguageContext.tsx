@@ -7,7 +7,7 @@ type Language = "en" | "id";
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: string) => string;
+  t: (key: string) => any;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
@@ -22,7 +22,7 @@ export const useLanguage = () => {
   return context;
 };
 
-const translations: Record<Language, Record<string, string>> = {
+const translations: Record<Language, Record<string, any>> = {
   en,
   id,
 };
@@ -46,7 +46,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 
   const setLanguage = (lang: Language) => setLanguageState(lang);
 
-  const t = (key: string): string => {
+  const t = (key: string): any => {
     return translations[language][key] || key;
   };
 
