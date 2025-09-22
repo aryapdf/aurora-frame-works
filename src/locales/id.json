@@ -1,7 +1,8 @@
 {
   "nav.work": "Karya",
-  "nav.experience": "Pengalaman", 
-  "nav.blog": "Blog",
+  "nav.experience": "Pengalaman",
+  "nav.about": "Tentang",
+  "nav.projects": "Proyek",
   "nav.contact": "Kontak",
   "lang.english": "English",
   "lang.indonesian": "Indonesia",

@@ -10,11 +10,9 @@ const Header = () => {
   const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const navItems = [
-    { key: "nav.work", label: t("nav.work") },
+    { key: "nav.about", label: t("nav.about") },
+    { key: "nav.projects", label: t("nav.projects") },
     { key: "nav.experience", label: t("nav.experience") },
-    { key: "nav.blog", label: t("nav.blog") },
-    { key: "nav.faq", label: t("nav.faq") },
-    { key: "nav.proposal", label: t("nav.proposal") },
     { key: "nav.contact", label: t("nav.contact") }
   ];
   const [open, setOpen] = useState(false);
