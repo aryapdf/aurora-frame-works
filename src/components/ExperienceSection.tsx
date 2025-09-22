@@ -26,7 +26,7 @@ const ExperienceSection = () => {
   }>;
 
   return (
-    <section id="experience" className="py-12 sm:py-16 lg:py-20 relative">
+    <section id="experience" className="pt-24 relative">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Tool Icons */}
         <div className="flex justify-center mb-12 sm:mb-16">

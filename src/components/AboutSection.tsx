@@ -13,7 +13,7 @@ const AboutSection = () => {
   ];
 
   return (
-      <section id="about" className="py-8 sm:py-12 lg:py-16 xl:py-20 relative">
+      <section id="about" className="pt-24 relative">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="w-full">
             {/* Company Logos - Mobile Optimized */}
