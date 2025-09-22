@@ -13,31 +13,37 @@
   "hero.roles": ["Front End Engineer", "Back End Engineer", "Linux Enthusiast", "Musician"],
   "hero.scroll": "Scroll down to see the portfolio",
   "about.section": "01 — GET TO KNOW ME",
-  "about.title": "With over 1+ years of experience in modern web development, I've worked with technologies like Vue.js, React, Nuxt.js, Next.js, Magento, REST API integration, Figma, Adobe XD, and Photoshop to create seamless user experiences.",
-  "about.description": "I consider myself a dedicated and passionate front end engineer, specializing in modern frameworks, responsive design, and seamless API integrations with strong technical foundation in web development.",
-  "about.current_job": "Currently working at Summit Global Technology (Indonesia).",
-  "about.job_details": "Official partner with Transsion Group (Infinix) includes Xpark E-Commerce, Xclub Social media, Karmaserve and FitHub. Based in Indonesia.",
+  "about.title": "Front End Engineer with 1+ years of experience in Vue/React ecosystems, specializing in Nuxt.js and Next.js frameworks.",
+  "about.description": "Proficient in Magento development, REST API integration, and object-oriented programming. Daily experience with design tools including Figma, Adobe XD, and Photoshop for UI/UX implementation. Linux enthusiast with strong technical foundation in modern web development.",
+  "about.current_job": "Currently working as Front-End Developer at PT. Summit Global Teknologi.",
+  "about.job_details": "Developing seasonal gaming event platforms (PMGC, PMSL, HOK Invitational), XClub community websites, and business intelligence dashboards using Next.js and ANTDesign.",
   "experience.section": "03 — EXPERIENCE",
   "experience.title": "Experience that shapes modern web solutions",
   "experience.description": "With dedication to continuous learning and hands-on experience in modern web development, I specialize in creating responsive, user-centric applications using cutting-edge technologies and frameworks in the Vue.js and React ecosystems.",
   "experience.positions": [
     {
-      "title": "Frontend Developer Intern",
-      "company": "Local Web Agency",
-      "location": "Jakarta, Indonesia",
-      "period": "2022 — 2023"
+      "title": "WordPress Developer",
+      "company": "Faculty of Agriculture, Universitas Jambi",
+      "location": "Mendalo Darat, Jambi",
+      "period": "April 2022 — August 2022"
     },
     {
-      "title": "Junior Frontend Developer", 
-      "company": "Tech Startup",
-      "location": "Jakarta, Indonesia",
-      "period": "2023 — 2024"
+      "title": "Front-End Developer Intern", 
+      "company": "PT. Dicoding Akademi Indonesia",
+      "location": "Bandung, Jawa Barat",
+      "period": "August 2022 — January 2023"
     },
     {
-      "title": "Frontend Engineer",
-      "company": "Summit Global Technology",
-      "location": "Jakarta, Indonesia", 
-      "period": "2024 — Present"
+      "title": "Junior Front-End Developer",
+      "company": "PT. Summit Global Teknologi",
+      "location": "Tangerang, Banten", 
+      "period": "June 2024 — December 2024"
+    },
+    {
+      "title": "Front-End Developer",
+      "company": "PT. Summit Global Teknologi",
+      "location": "Tangerang, Banten",
+      "period": "December 2024 — Present"
     }
   ]
 }

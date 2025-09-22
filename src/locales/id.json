@@ -13,31 +13,37 @@
   "hero.roles": ["Front End Engineer", "Back End Engineer", "Linux Enthusiast", "Musician"],
   "hero.scroll": "Gulir ke bawah untuk melihat portofolio",
   "about.section": "01 — MENGENAL SAYA",
-  "about.title": "Dengan pengalaman lebih dari 1+ tahun dalam pengembangan web modern, saya telah bekerja dengan teknologi seperti Vue.js, React, Nuxt.js, Next.js, Magento, integrasi REST API, Figma, Adobe XD, dan Photoshop untuk menciptakan pengalaman pengguna yang seamless.",
-  "about.description": "Saya menganggap diri saya sebagai front end engineer yang berdedikasi dan bersemangat, mengkhususkan diri pada framework modern, desain responsif, dan integrasi API yang seamless dengan fondasi teknis yang kuat dalam pengembangan web.",
-  "about.current_job": "Saat ini bekerja di Summit Global Technology (Indonesia).",
-  "about.job_details": "Partner resmi dengan Transsion Group (Infinix) termasuk Xpark E-Commerce, Xclub Social media, Karmaserve dan FitHub. Berbasis di Indonesia.",
+  "about.title": "Front End Engineer dengan pengalaman 1+ tahun di ekosistem Vue/React, mengkhususkan diri pada framework Nuxt.js dan Next.js.",
+  "about.description": "Mahir dalam pengembangan Magento, integrasi REST API, dan pemrograman berorientasi objek. Pengalaman harian dengan alat desain termasuk Figma, Adobe XD, dan Photoshop untuk implementasi UI/UX. Penggemar Linux dengan fondasi teknis yang kuat dalam pengembangan web modern.",
+  "about.current_job": "Saat ini bekerja sebagai Front-End Developer di PT. Summit Global Teknologi.",
+  "about.job_details": "Mengembangkan platform acara gaming musiman (PMGC, PMSL, HOK Invitational), situs web komunitas XClub, dan dashboard business intelligence menggunakan Next.js dan ANTDesign.",
   "experience.section": "03 — PENGALAMAN",
   "experience.title": "Pengalaman yang membentuk solusi web modern",
   "experience.description": "Dengan dedikasi untuk pembelajaran berkelanjutan dan pengalaman langsung dalam pengembangan web modern, saya mengkhususkan diri dalam menciptakan aplikasi responsif yang berpusat pada pengguna menggunakan teknologi dan framework terdepan di ekosistem Vue.js dan React.",
   "experience.positions": [
     {
-      "title": "Magang Frontend Developer",
-      "company": "Agen Web Lokal",
-      "location": "Jakarta, Indonesia",
-      "period": "2022 — 2023"
+      "title": "WordPress Developer",
+      "company": "Fakultas Pertanian, Universitas Jambi",
+      "location": "Mendalo Darat, Jambi",
+      "period": "April 2022 — Agustus 2022"
     },
     {
-      "title": "Junior Frontend Developer",
-      "company": "Tech Startup",
-      "location": "Jakarta, Indonesia",
-      "period": "2023 — 2024"
+      "title": "Magang Front-End Developer",
+      "company": "PT. Dicoding Akademi Indonesia",
+      "location": "Bandung, Jawa Barat",
+      "period": "Agustus 2022 — Januari 2023"
     },
     {
-      "title": "Frontend Engineer",
-      "company": "Summit Global Technology",
-      "location": "Jakarta, Indonesia",
-      "period": "2024 — Sekarang"
+      "title": "Junior Front-End Developer",
+      "company": "PT. Summit Global Teknologi",
+      "location": "Tangerang, Banten",
+      "period": "Juni 2024 — Desember 2024"
+    },
+    {
+      "title": "Front-End Developer",
+      "company": "PT. Summit Global Teknologi",
+      "location": "Tangerang, Banten",
+      "period": "Desember 2024 — Sekarang"
     }
   ]
 }
