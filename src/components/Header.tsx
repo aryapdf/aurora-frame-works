@@ -10,12 +10,27 @@ const Header = () => {
   const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const navItems = [
-    { key: "nav.about", label: t("nav.about") },
-    { key: "nav.projects", label: t("nav.projects") },
-    { key: "nav.experience", label: t("nav.experience") },
-    { key: "nav.contact", label: t("nav.contact") }
+    { key: "nav.about", label: t("nav.about"), section: "about" },
+    { key: "nav.projects", label: t("nav.projects"), section: "projects" },
+    { key: "nav.experience", label: t("nav.experience"), section: "experience" },
+    { key: "nav.contact", label: t("nav.contact"), section: "contact" }
   ];
   const [open, setOpen] = useState(false);
+
+  const smoothScrollTo = (elementId: string) => {
+    if (elementId === "top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+    
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,18 +49,23 @@ const Header = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center space-x-8">
-              <img alt="personal_logo" src="src/assets/personal-logo.png" className="w-14 h-14 object-contain rounded-full" />
+              <img 
+                alt="personal_logo" 
+                src="src/assets/personal-logo.png" 
+                className="w-14 h-14 object-contain rounded-full cursor-pointer hover:scale-105 transition-transform"
+                onClick={() => smoothScrollTo("top")}
+              />
 
               {/* Desktop Nav */}
               <nav className="hidden md:flex items-center space-x-8">
                 {navItems.map((item) => (
-                    <a
+                    <button
                         key={item.key}
-                        href={`#${item.key.split('.')[1]}`}
+                        onClick={() => smoothScrollTo(item.section)}
                         className="text-foreground/80 hover:text-foreground transition-colors text-base font-medium"
                     >
                       {item.label}
-                    </a>
+                    </button>
                 ))}
               </nav>
             </div>
@@ -69,14 +89,16 @@ const Header = () => {
                   <SheetContent side="right" className="w-64 p-6">
                     <nav className="flex flex-col space-y-4 mt-6">
                       {navItems.map((item) => (
-                          <a
+                          <button
                               key={item.key}
-                              href={`#${item.key.split('.')[1]}`}
-                              onClick={() => setOpen(false)}
-                              className="text-foreground/80 hover:text-foreground transition-colors text-base font-medium"
+                              onClick={() => {
+                                smoothScrollTo(item.section);
+                                setOpen(false);
+                              }}
+                              className="text-foreground/80 hover:text-foreground transition-colors text-base font-medium text-left"
                           >
                             {item.label}
-                          </a>
+                          </button>
                       ))}
                     </nav>
                   </SheetContent>

@@ -21,7 +21,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 relative">
+    <section id="contact" className="py-12 sm:py-16 lg:py-20 relative">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="max-w-4xl mx-auto mb-12 sm:mb-16 text-center">
