@@ -2,8 +2,6 @@
   "nav.work": "Karya",
   "nav.experience": "Pengalaman", 
   "nav.blog": "Blog",
-  "nav.faq": "FAQ",
-  "nav.proposal": "Proposal",
   "nav.contact": "Kontak",
   "lang.english": "English",
   "lang.indonesian": "Indonesia",
@@ -22,16 +20,10 @@
   "experience.description": "Dengan dedikasi untuk pembelajaran berkelanjutan dan pengalaman langsung dalam pengembangan web modern, saya mengkhususkan diri dalam menciptakan aplikasi responsif yang berpusat pada pengguna menggunakan teknologi dan framework terdepan di ekosistem Vue.js dan React.",
   "experience.positions": [
     {
-      "title": "WordPress Developer",
-      "company": "Fakultas Pertanian, Universitas Jambi",
-      "location": "Mendalo Darat, Jambi",
-      "period": "April 2022 — Agustus 2022"
-    },
-    {
-      "title": "Magang Front-End Developer",
-      "company": "PT. Dicoding Akademi Indonesia",
-      "location": "Bandung, Jawa Barat",
-      "period": "Agustus 2022 — Januari 2023"
+      "title": "Front-End Developer",
+      "company": "PT. Summit Global Teknologi",
+      "location": "Tangerang, Banten",
+      "period": "Desember 2024 — Sekarang"
     },
     {
       "title": "Junior Front-End Developer",
@@ -40,10 +32,34 @@
       "period": "Juni 2024 — Desember 2024"
     },
     {
-      "title": "Front-End Developer",
-      "company": "PT. Summit Global Teknologi",
-      "location": "Tangerang, Banten",
-      "period": "Desember 2024 — Sekarang"
+      "title": "Magang Front-End Developer",
+      "company": "PT. Dicoding Akademi Indonesia",
+      "location": "Bandung, Jawa Barat",
+      "period": "Agustus 2022 — Januari 2023"
+    },
+    {
+      "title": "WordPress Developer",
+      "company": "Fakultas Pertanian, Universitas Jambi",
+      "location": "Mendalo Darat, Jambi",
+      "period": "April 2022 — Agustus 2022"
     }
-  ]
+  ],
+  "contact.section": "04 — KONTAK",
+  "contact.title": "Mari berkenalan",
+  "contact.subtitle": "Hubungi Saya",
+  "contact.talk_to_me": "Bicara dengan saya",
+  "contact.write_project": "Ceritakan proyek Anda",
+  "contact.email": "Email",
+  "contact.whatsapp": "Whatsapp",
+  "contact.mail_me": "Kirim Email",
+  "contact.text_me": "Kirim Pesan",
+  "contact.form.name": "Nama",
+  "contact.form.name_placeholder": "Masukkan nama Anda",
+  "contact.form.email": "Email",
+  "contact.form.email_placeholder": "Masukkan email Anda",
+  "contact.form.subject": "Subjek",
+  "contact.form.subject_placeholder": "Masukkan subjek",
+  "contact.form.project": "Proyek",
+  "contact.form.project_placeholder": "Tulis proyek Anda",
+  "contact.form.send": "Kirim Pesan"
 }

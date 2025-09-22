@@ -2,8 +2,6 @@
   "nav.work": "Work",
   "nav.experience": "Experience",
   "nav.blog": "Blog",
-  "nav.faq": "FAQ",
-  "nav.proposal": "Proposal",
   "nav.contact": "Contact",
   "lang.english": "English",
   "lang.indonesian": "Indonesia",
@@ -22,16 +20,10 @@
   "experience.description": "With dedication to continuous learning and hands-on experience in modern web development, I specialize in creating responsive, user-centric applications using cutting-edge technologies and frameworks in the Vue.js and React ecosystems.",
   "experience.positions": [
     {
-      "title": "WordPress Developer",
-      "company": "Faculty of Agriculture, Universitas Jambi",
-      "location": "Mendalo Darat, Jambi",
-      "period": "April 2022 — August 2022"
-    },
-    {
-      "title": "Front-End Developer Intern", 
-      "company": "PT. Dicoding Akademi Indonesia",
-      "location": "Bandung, Jawa Barat",
-      "period": "August 2022 — January 2023"
+      "title": "Front-End Developer",
+      "company": "PT. Summit Global Teknologi",
+      "location": "Tangerang, Banten",
+      "period": "December 2024 — Present"
     },
     {
       "title": "Junior Front-End Developer",
@@ -40,10 +32,34 @@
       "period": "June 2024 — December 2024"
     },
     {
-      "title": "Front-End Developer",
-      "company": "PT. Summit Global Teknologi",
-      "location": "Tangerang, Banten",
-      "period": "December 2024 — Present"
+      "title": "Front-End Developer Intern", 
+      "company": "PT. Dicoding Akademi Indonesia",
+      "location": "Bandung, Jawa Barat",
+      "period": "August 2022 — January 2023"
+    },
+    {
+      "title": "WordPress Developer",
+      "company": "Faculty of Agriculture, Universitas Jambi",
+      "location": "Mendalo Darat, Jambi",
+      "period": "April 2022 — August 2022"
     }
-  ]
+  ],
+  "contact.section": "04 — CONTACT",
+  "contact.title": "Get in touch",
+  "contact.subtitle": "Contact Me",
+  "contact.talk_to_me": "Talk to me",
+  "contact.write_project": "Write me your project",
+  "contact.email": "Email",
+  "contact.whatsapp": "Whatsapp",
+  "contact.mail_me": "Mail Me",
+  "contact.text_me": "Text Me",
+  "contact.form.name": "Name",
+  "contact.form.name_placeholder": "Insert your name",
+  "contact.form.email": "Mail",
+  "contact.form.email_placeholder": "Insert your email",
+  "contact.form.subject": "Subject",
+  "contact.form.subject_placeholder": "Insert subject",
+  "contact.form.project": "Project",
+  "contact.form.project_placeholder": "Write your project",
+  "contact.form.send": "Send Message"
 }
