@@ -50,7 +50,7 @@ const ExperienceSection = () => {
         {/* Section Header */}
         <div className="max-w-4xl mx-auto mb-12 sm:mb-16">
           <div className="flex items-center gap-4 mb-4 sm:mb-6">
-            <span className="text-xs sm:text-sm text-primary font-medium tracking-wider">{t("experience.section")}</span>
+            <span className="text-sm text-foreground/40 uppercase tracking-wider mb-4">{t("experience.section")}</span>
             <div className="h-px bg-border flex-1"></div>
           </div>
           

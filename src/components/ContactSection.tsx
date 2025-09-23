@@ -27,7 +27,7 @@ const ContactSection = () => {
         <div className="max-w-4xl mx-auto mb-12 sm:mb-16 text-center">
           <div className="flex items-center justify-center gap-4 mb-4 sm:mb-6">
             <div className="h-px bg-border flex-1 max-w-24"></div>
-            <span className="text-xs sm:text-sm text-primary font-medium tracking-wider">{t("contact.section")}</span>
+            <span className="text-sm text-foreground/40 uppercase tracking-wider ">{t("contact.section")}</span>
             <div className="h-px bg-border flex-1 max-w-24"></div>
           </div>
           
