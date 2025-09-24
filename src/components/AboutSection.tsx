@@ -1,51 +1,78 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useEffect, useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
 
 const AboutSection = () => {
   const { t } = useLanguage();
+  const swiperRef = useRef(null);
 
   const companies = [
-    "Google",
-    "YouTube",
-    "Chevrolet",
-    "Slack",
-    "Spotify",
-    "HBO"
+    { name: "Google", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" },
+    { name: "YouTube", logo: "https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" },
+    { name: "Chevrolet", logo: "https://logoeps.com/wp-content/uploads/2013/03/chevrolet-vector-logo.png" },
+    { name: "Slack", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg" },
+    { name: "Spotify", logo: "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" },
+    { name: "HBO", logo: "https://logoeps.com/wp-content/uploads/2014/05/hbo-vector-logo.png" }
   ];
+
+  // Duplicate companies for seamless loop effect
+  const duplicatedCompanies = [...companies, ...companies];
 
   return (
       <section id="about" className="pt-24 relative">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="w-full">
-            {/* Company Logos - Mobile Optimized */}
+            {/* Company Logos Carousel */}
             <div className="mb-8 sm:mb-12 lg:mb-16 w-full overflow-hidden">
-              {/* Mobile: Scrollable horizontal layout */}
-              <div className="flex sm:hidden overflow-x-auto pb-2 -mx-4 px-4 gap-6 opacity-40">
-                {companies.map((company, index) => (
-                    <div
-                        key={company}
-                        className="flex items-center justify-center flex-shrink-0"
-                        style={{ animationDelay: `${index * 0.1}s` }}
-                    >
-                  <span className="text-sm text-foreground/60 font-medium whitespace-nowrap">
-                    {company}
-                  </span>
-                    </div>
-                ))}
-              </div>
-
-              {/* Tablet and Desktop: Original layout */}
-              <div className="hidden sm:flex justify-between items-center opacity-40">
-                {companies.map((company, index) => (
-                    <div
-                        key={company}
-                        className="flex items-center justify-center"
-                        style={{ animationDelay: `${index * 0.1}s` }}
-                    >
-                  <span className="text-sm lg:text-base text-foreground/60 font-medium">
-                    {company}
-                  </span>
-                    </div>
-                ))}
+              <div className="">
+                <Swiper
+                    ref={swiperRef}
+                    modules={[Autoplay]}
+                    spaceBetween={50}
+                    slidesPerView="auto"
+                    loop={true}
+                    autoplay={{
+                      delay: 0,
+                      disableOnInteraction: false,
+                      pauseOnMouseEnter: false,
+                      reverseDirection: false,
+                    }}
+                    speed={5000}
+                    allowTouchMove={false}
+                    breakpoints={{
+                      320: {
+                        slidesPerView: 4,
+                        spaceBetween: 100,
+                      },
+                      640: {
+                        slidesPerView: 4,
+                        spaceBetween: 150,
+                      },
+                      768: {
+                        slidesPerView: 5,
+                        spaceBetween: 180,
+                      },
+                      1024: {
+                        slidesPerView: 6,
+                        spaceBetween: 200,
+                      },
+                    }}
+                    className="company-logos-swiper"
+                >
+                  {duplicatedCompanies.map((company, index) => (
+                      <SwiperSlide key={`${company.name}-${index}`} className="!w-auto">
+                        <div className="flex items-center justify-center py-4 group cursor-pointer">
+                          <img
+                              src={company.logo}
+                              alt={`${company.name} logo`}
+                              className="h-8 md:h-12 lg:h-16 w-auto filter grayscale opacity-60 transition-all duration-300 group-hover:filter-none group-hover:opacity-100"
+                          />
+                        </div>
+                      </SwiperSlide>
+                  ))}
+                </Swiper>
               </div>
             </div>
 
@@ -80,6 +107,16 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
+
+        <style jsx>{`
+          .company-logos-swiper {
+            overflow: visible !important;
+          }
+
+          .company-logos-swiper .swiper-wrapper {
+            transition-timing-function: linear !important;
+          }
+        `}</style>
       </section>
   );
 };
