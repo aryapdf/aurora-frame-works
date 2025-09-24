@@ -14,7 +14,7 @@
   "about.section": "01 — GET TO KNOW ME",
   "about.title": "Front End Engineer with 1+ years of experience in Vue/React ecosystems, specializing in Nuxt.js and Next.js frameworks.",
   "about.description": "Proficient in Magento development, REST API integration, and object-oriented programming. Daily experience with design tools including Figma, Adobe XD, and Photoshop for UI/UX implementation. Linux enthusiast with strong technical foundation in modern web development.",
-  "about.current_job": "Currently working as Front-End Developer at PT. Summit Global Teknologi.",
+  "about.current_job": "Currently working as Front-End Developer at PT. Summit Global Technology.",
   "about.job_details": "Developing seasonal gaming event platforms (PMGC, PMSL, HOK Invitational), XClub community websites, and business intelligence dashboards using Next.js and ANTDesign.",
   "experience.section": "03 — EXPERIENCE",
   "experience.title": "Experience that shapes modern web solutions",
@@ -22,13 +22,13 @@
   "experience.positions": [
     {
       "title": "Front-End Developer",
-      "company": "PT. Summit Global Teknologi",
+      "company": "PT. Summit Global Technology",
       "location": "Tangerang, Banten",
       "period": "December 2024 — Present"
     },
     {
       "title": "Junior Front-End Developer",
-      "company": "PT. Summit Global Teknologi",
+      "company": "PT. Summit Global Technology",
       "location": "Tangerang, Banten", 
       "period": "June 2024 — December 2024"
     },
