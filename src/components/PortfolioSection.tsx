@@ -122,8 +122,11 @@ const PortfolioSection = () => {
               02 — PORTFOLIO
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Digital Product Showcases
+              Project Showcases
             </h2>
+            <p className="text-base sm:text-lg text-foreground/70">
+              A showcase of projects from my professional journey and personal exploration.
+            </p>
           </div>
 
           {/* Filter Tabs */}
