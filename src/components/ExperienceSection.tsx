@@ -27,10 +27,10 @@ const ExperienceSection = () => {
 
   return (
     <section id="experience" className="pt-24 relative">
-      <div className="container mx-auto px-4 sm:px-6">
+      <div className="container mx-auto px-6">
         {/* Tool Icons */}
-        <div className="flex justify-center mb-12 sm:mb-16">
-          <div className="grid grid-cols-3 sm:grid-cols-6 gap-4 sm:gap-6">
+        <div className="flex justify-center mb-12 sm:mb-16 w-full">
+          <div className="grid grid-cols-3 sm:grid-cols-6 gap-4 sm:gap-6 w-full">
             {tools.map((tool, index) => (
               <div 
                 key={tool.name}
@@ -64,7 +64,7 @@ const ExperienceSection = () => {
         </div>
 
         {/* Experience Timeline */}
-        <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
+        <div className="max-w-full mx-auto space-y-6 sm:space-y-8">
           {experiences.map((exp, index) => (
             <div 
               key={index}

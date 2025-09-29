@@ -149,7 +149,7 @@ const PortfolioSection = () => {
           </div>
 
           {/* Project Grid Container */}
-          <div className="relative max-w-7xl mx-auto mb-12 overflow-hidden">
+          <div className="relative max-w-full mb-12 overflow-hidden">
             <div
                 className="project-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-400 ease-out"
                 style={{ transform: 'translateX(0%)', opacity: 1 }}
