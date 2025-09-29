@@ -12,13 +12,13 @@
   "hero.roles": ["Front End Engineer", "Back End Engineer", "Linux Enthusiast", "Musician"],
   "hero.scroll": "Gulir ke bawah untuk melihat portofolio",
   "about.section": "01 — MENGENAL SAYA",
-  "about.title": "Front End Engineer dengan pengalaman 1+ tahun di ekosistem Vue/React, mengkhususkan diri pada framework Nuxt.js dan Next.js.",
-  "about.description": "Mahir dalam pengembangan Magento, integrasi REST API, dan pemrograman berorientasi objek. Pengalaman harian dengan alat desain termasuk Figma, Adobe XD, dan Photoshop untuk implementasi UI/UX. Penggemar Linux dengan fondasi teknis yang kuat dalam pengembangan web modern.",
+  "about.title": "Front End Engineer dengan pengalaman profesional 1+ tahun dan kontributor utama untuk produk Infinix, termasuk halaman USP, xclub, dan platform xpark. Saat ini bekerja sebagai full-stack dengan pengembangan aktif di 2sweet.ai—platform berbasis AI untuk melestarikan kenangan, membuat pohon keluarga, dan mengadakan acara memorial.",
+  "about.description": "Front-End Engineer yang sedang aktif mengembangkan skill di bidang Back-End. Antusias dengan Linux dan teknologi open-source. Di luar coding, bermain gitar dan bass.",
   "about.current_job": "Saat ini bekerja sebagai Front-End Developer di PT. Summit Global Technology.",
-  "about.job_details": "Mengembangkan platform acara gaming musiman (PMGC, PMSL, HOK Invitational), situs web komunitas XClub, dan dashboard business intelligence menggunakan Next.js dan ANTDesign.",
+  "about.job_details": "",
   "experience.section": "03 — PENGALAMAN",
-  "experience.title": "Pengalaman yang membentuk solusi web modern",
-  "experience.description": "Dengan dedikasi untuk pembelajaran berkelanjutan dan pengalaman langsung dalam pengembangan web modern, saya mengkhususkan diri dalam menciptakan aplikasi responsif yang berpusat pada pengguna menggunakan teknologi dan framework terdepan di ekosistem Vue.js dan React.",
+  "experience.title": "Pengalaman Profesional",
+  "experience.description": "Front End Engineer dengan pengalaman 1+ tahun di ekosistem Vue/React, spesialisasi di framework Nuxt.js dan Next.js. Mahir dalam pengembangan Magento, integrasi REST API, dan pemrograman berorientasi objek. Sambil fokus di front-end, juga aktif mempelajari dan mengembangkan backend menggunakan PHP dan JavaScript. Pengalaman sehari-hari dengan tools desain seperti Figma, Adobe XD, dan Photoshop untuk implementasi UI/UX",
   "experience.positions": [
     {
       "title": "Front-End Developer",
