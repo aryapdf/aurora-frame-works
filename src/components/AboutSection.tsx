@@ -9,12 +9,11 @@ const AboutSection = () => {
   const swiperRef = useRef(null);
 
   const companies = [
-    { name: "Google", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" },
-    { name: "YouTube", logo: "https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" },
-    { name: "Chevrolet", logo: "https://logoeps.com/wp-content/uploads/2013/03/chevrolet-vector-logo.png" },
-    { name: "Slack", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg" },
-    { name: "Spotify", logo: "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" },
-    { name: "HBO", logo: "https://logoeps.com/wp-content/uploads/2014/05/hbo-vector-logo.png" }
+    { name: "SGT", logo: "src/assets/logos/summitglobal-logo.png" },
+    { name: "Infinix", logo: "src/assets/logos/infinix-logo.png" },
+    { name: "Xclub", logo: "src/assets/logos/xclub-logo.png" },
+    { name: "Xpark", logo: "src/assets/logos/xpark-logo.png" },
+    { name: "2Sweet", logo: "src/assets/logos/2sweet-logo.svg" },
   ];
 
   // Duplicate companies for seamless loop effect
@@ -67,7 +66,7 @@ const AboutSection = () => {
                           <img
                               src={company.logo}
                               alt={`${company.name} logo`}
-                              className="h-8 md:h-12 lg:h-16 w-auto filter grayscale opacity-60 transition-all duration-300 group-hover:filter-none group-hover:opacity-100"
+                              className="h-8 md:h-16 lg:h-24 w-auto filter grayscale opacity-60 transition-all duration-300 group-hover:filter-none group-hover:opacity-100 rounded-lg overflow-hidden"
                           />
                         </div>
                       </SwiperSlide>
@@ -77,18 +76,18 @@ const AboutSection = () => {
             </div>
 
             {/* Section Header */}
-            <div className="text-left mb-6 sm:mb-8 lg:mb-12 max-w-4xl">
+            <div className="text-left mb-6 sm:mb-8 lg:mb-12 max-w-6xl">
               <p className="text-xs sm:text-sm text-foreground/40 uppercase tracking-wider mb-4 sm:mb-6 lg:mb-8">
                 {t("about.section")}
               </p>
 
               {/* Main Content */}
               <div className="space-y-4 sm:space-y-6 lg:space-y-8">
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-normal text-foreground leading-tight sm:leading-relaxed">
+                <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-normal text-foreground leading-tight sm:leading-relaxed">
                   {t("about.title")}
                 </h2>
 
-                <p className="text-base sm:text-lg lg:text-xl text-foreground/60 leading-relaxed max-w-3xl">
+                <p className="text-xl md:text-2xl lg:text-3xl xl:text-4xl text-foreground/60 leading-relaxed max-w-4xl">
                   {t("about.description")}
                 </p>
 
@@ -99,9 +98,6 @@ const AboutSection = () => {
                       {t("about.current_job")}
                     </p>
                   </div>
-                  <p className="text-xs sm:text-sm lg:text-base text-foreground/40 mt-1 sm:mt-2 leading-relaxed">
-                    {t("about.job_details")}
-                  </p>
                 </div>
               </div>
             </div>
