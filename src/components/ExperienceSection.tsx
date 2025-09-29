@@ -34,13 +34,13 @@ const ExperienceSection = () => {
             {tools.map((tool, index) => (
               <div 
                 key={tool.name}
-                className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 glass-card rounded-xl sm:rounded-2xl flex items-center justify-center hover:glow-effect transition-all duration-300"
+                className="w-16 h-16 sm:w-24 sm:h-24 md:w-48 md:h-48 p-8 glass-card rounded-xl sm:rounded-2xl flex items-center justify-center hover:glow-effect transition-all duration-300"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <img 
                   src={tool.icon} 
                   alt={tool.name}
-                  className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 object-contain"
+                  className="w-full h-full object-contain rounded-xl"
                 />
               </div>
             ))}
@@ -48,17 +48,17 @@ const ExperienceSection = () => {
         </div>
 
         {/* Section Header */}
-        <div className="max-w-4xl mx-auto mb-12 sm:mb-16">
+        <div className="max-w-6xl mx-auto mb-12 sm:mb-16">
           <div className="flex items-center gap-4 mb-4 sm:mb-6">
-            <span className="text-sm text-foreground/40 uppercase tracking-wider mb-4">{t("experience.section")}</span>
+            <span className="text-center w-full text-sm text-foreground/40 uppercase tracking-wider mb-4">{t("experience.section")}</span>
             <div className="h-px bg-border flex-1"></div>
           </div>
           
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
+          <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
             {t("experience.title")}
           </h2>
           
-          <p className="text-base sm:text-lg text-foreground/70 leading-relaxed max-w-3xl">
+          <p className="text-center text-base sm:text-lg text-foreground/70 leading-relaxed max-w-full">
             {t("experience.description")}
           </p>
         </div>
