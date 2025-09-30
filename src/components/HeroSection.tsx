@@ -39,38 +39,41 @@ const HeroSection = () => {
   return (
       <section className="min-h-screen pt-20 relative overflow-hidden flex items-center">
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-full space-y-6 sm:space-y-8 animate-fade-in">
-            {/* Profile Bubble */}
-            <div className="inline-flex items-center space-x-2 sm:space-x-3 glass-card px-3 sm:px-4 py-2 rounded-full">
-              <img
-                  alt="personal_logo"
-                  src="src/assets/personal-logo-full.png"
-                  className="w-6 h-6 sm:w-8 sm:h-8 object-contain rounded-full"
-              />
-              <span className="text-foreground/80 text-xs sm:text-sm">{t("hero.greeting")}</span>
-            </div>
+          {/* Blurred background container */}
+          <div className="backdrop-blur-xl bg-background/30 border border-foreground/10 rounded-3xl p-8 sm:p-12 lg:p-16">
+            <div className="max-w-full space-y-6 sm:space-y-8 animate-fade-in">
+              {/* Profile Bubble */}
+              <div className="inline-flex items-center space-x-2 sm:space-x-3 glass-card px-3 sm:px-4 py-2 rounded-full">
+                <img
+                    alt="personal_logo"
+                    src="src/assets/personal-logo-full.png"
+                    className="w-6 h-6 sm:w-8 sm:h-8 object-contain rounded-full"
+                />
+                <span className="text-foreground/80 text-xs sm:text-sm">{t("hero.greeting")}</span>
+              </div>
 
-            {/* Main Heading */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight text-foreground max-w-full">
+              {/* Main Heading */}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight text-foreground max-w-full">
               <span
                   className="block bg-gradient-to-r from-[#00C8FF] to-[#0072FF] bg-clip-text text-transparent font-bold leading-tight"
               >
                 {t("hero.name")}
               </span>
 
-              <span className="inline-block min-h-[1.2em] mt-2 sm:mt-0">
-              {displayedText}
-                <span className="opacity-0 pointer-events-none">A</span>
-            </span>
-            </h1>
+                <span className="inline-block min-h-[1.2em] mt-2 sm:mt-0">
+                {displayedText}
+                  <span className="opacity-0 pointer-events-none">A</span>
+              </span>
+              </h1>
 
-            {/* CTA */}
-            <div className="pt-4 sm:pt-8">
-              <button
-                  className="group flex items-center space-x-2 text-foreground/60 hover:text-primary transition-colors text-sm sm:text-base">
-                <span className="leading-relaxed">{t("hero.scroll")}</span>
-                <ArrowDown className="h-3 w-3 sm:h-4 sm:w-4 group-hover:translate-y-1 transition-transform flex-shrink-0" />
-              </button>
+              {/* CTA */}
+              <div className="pt-4 sm:pt-8">
+                <button
+                    className="group flex items-center space-x-2 text-foreground/60 hover:text-primary transition-colors text-sm sm:text-base">
+                  <span className="leading-relaxed">{t("hero.scroll")}</span>
+                  <ArrowDown className="h-3 w-3 sm:h-4 sm:w-4 group-hover:translate-y-1 transition-transform flex-shrink-0" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
