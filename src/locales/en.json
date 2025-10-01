@@ -344,7 +344,7 @@
 
   "experience.section": "03 — EXPERIENCE",
   "experience.title": "Professional Experience",
-  "experience.description": "Front End Engineer with 1+ years of experience in Vue/React ecosystems, specializing in Nuxt.js and Next.js frameworks. Proficient in Magento development, REST API integration, and object-oriented programming. While focusing on front-end, actively learning and developing backend using PHP and JavaScript. Daily experience with design tools including Figma, Adobe XD, and Photoshop for UI/UX implementation",
+  "experience.description": "Front End Engineer with 1+ years of experience in Vue/React ecosystems, specializing in Nuxt.js and Next.js frameworks. Proficient in Magento development, REST API integration, and object-oriented programming. While focusing on front-end, actively learning and developing backend using PHP and JavaScript. Daily experience with design tools including Figma, Adobe XD, and Photoshop for UI/UX implementation.",
   "experience.positions": [
     {
       "title": "Front-End Developer", 
