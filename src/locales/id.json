@@ -350,25 +350,37 @@
       "title": "Front-End Developer",
       "company": "PT. Summit Global Technology",
       "location": "Tangerang, Banten",
-      "period": "Desember 2024 — Sekarang"
+      "period": "Desember 2024 — Sekarang",
+      "duration": "1 th: 5 bln",
+      "description": "Mengembangkan platform acara gaming musiman (PMGC, PMSL, HOK Invitational), situs komunitas XClub, dan dashboard business intelligence menggunakan Vue.js dan ANTDesign. Memelihara platform e-commerce XPARK dan InfiniixMobility pada framework Magento, menggunakan PHP dan MySQL untuk backend. Integrasi dengan Next.js yang memungkinkan pengguna membuat pengalaman percakapan dengan orang yang telah meninggal menggunakan data pribadi. Mengimplementasikan konkurensi transaksi melalui Midtrans dan mengelola persona digital menggunakan proyek 2Sweet.",
+      "skills": ["HTML/CSS/JavaScript", "Vue.js", "Nuxt.js", "ReactJS", "Next.js", "PHP", "Magento", "E-Commerce", "Business Intelligence (BI)", "Pembuatan Dashboard", "Pengembangan API", "REST API", "Figma", "Linux Desktop", "TypeScript", "MySQL"]
     },
     {
       "title": "Junior Front-End Developer",
       "company": "PT. Summit Global Technology",
       "location": "Tangerang, Banten",
-      "period": "Juni 2024 — Desember 2024"
+      "period": "Juni 2024 — Desember 2024",
+      "duration": "7 bln",
+      "description": "Mengembangkan dan memelihara halaman landing (USP) untuk lini produk Infinix termasuk smartphone, tablet, dan perangkat TWS menggunakan framework Vue.js. Memimpin inisiatif optimisasi kode komprehensif, mengubah arsitektur pemrograman fungsional menjadi struktur berorientasi objek OOP yang sangat tinggi, meningkatkan maintainability dan skalabilitas kode. Dipromosikan menjadi Project Leader untuk supervisi teknis dan memimpin koordinasi tim untuk proyek landing page.",
+      "skills": ["HTML/CSS/JavaScript", "Vue.js", "Nuxt.js", "Application Programming Interface (API)", "Front-end Engineering", "Desain Front-End", "Adobe Photoshop", "Adobe XD", "Linux Desktop", "Node.js"]
     },
     {
       "title": "Magang Front-End Developer",
       "company": "PT. Dicoding Akademi Indonesia",
       "location": "Bandung, Jawa Barat",
-      "period": "Agustus 2022 — Januari 2023"
+      "period": "Agustus 2022 — Januari 2023",
+      "duration": "6 bln",
+      "description": "Memimpin dan mengelola tim yang terdiri dari 4 developer dalam Proyek Capstone, membuat katalog resep, blog, dan forum diskusi 'Buku Resepku'. Mengembangkan arsitektur front-end dengan - Perhatian terhadap fitur-fitur unggulan.",
+      "skills": ["Pengembangan Perangkat Lunak", "Coding Front-end", "Pemecahan Masalah", "Produk Web", "Optimisasi Front-end", "Rekayasa Perangkat Lunak", "Coding", "Google Sheets", "Pengembangan Front-End", "UI/UX", "Kepemimpinan Tim", "Cascading Style Sheets (CSS)", "Performa Web", "Pemrograman", "Postman API", "Desain Front-End", "Desain Ikon", "GitHub"]
     },
     {
       "title": "WordPress Developer",
       "company": "Fakultas Pertanian, Universitas Jambi",
       "location": "Mendalo Darat, Jambi",
-      "period": "April 2022 — Agustus 2022"
+      "period": "April 2022 — Agustus 2022",
+      "duration": "5 bln",
+      "description": "Mengembangkan situs WordPress untuk digunakan sebagai platform promosi, penyebaran informasi, dan pendaftaran untuk keperluan Seminar dan Template.",
+      "skills": ["Microsoft Office", "Desain WordPress", "Manajemen Waktu", "Pemecahan Masalah", "Kerja Sama Tim", "Microsoft Excel", "Google Sheets", "Administrasi Kantor Dasar", "WordPress", "Adobe Photoshop", "Microsoft Word", "Pembuatan Situs"]
     }
   ],
 

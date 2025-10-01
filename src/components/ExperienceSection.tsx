@@ -1,10 +1,16 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { ChevronDown } from "lucide-react";
 import vscodeIcon from "@/assets/tools/vscode-icon.png";
 import reactIcon from "@/assets/tools/react-icon.png";
 import vueIcon from "@/assets/tools/vue-icon.png";
 import figmaIcon from "@/assets/tools/figma-icon.png";
 import nuxtIcon from "@/assets/tools/nuxt-icon.png";
 import gitIcon from "@/assets/tools/git-icon.png";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 
 const ExperienceSection = () => {
   const { t } = useLanguage();
@@ -23,6 +29,9 @@ const ExperienceSection = () => {
     company: string;
     location: string;
     period: string;
+    duration?: string;
+    description?: string;
+    skills?: string[];
   }>;
 
   return (
@@ -64,28 +73,62 @@ const ExperienceSection = () => {
         </div>
 
         {/* Experience Timeline */}
-        <div className="max-w-full mx-auto space-y-6 sm:space-y-8">
+        <div className="max-w-full mx-auto space-y-4">
           {experiences.map((exp, index) => (
-            <div 
-              key={index}
-              className="flex flex-col md:flex-row md:items-center justify-between py-4 sm:py-6 border-b border-border/30 last:border-b-0 hover:bg-card/20 transition-all duration-300 rounded-lg px-2 sm:px-4"
-              style={{ animationDelay: `${(index + tools.length) * 0.1}s` }}
-            >
-              <div className="flex-1">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-foreground mb-2">
-                  {exp.title}
-                </h3>
-                <p className="text-foreground/60 text-sm sm:text-base">
-                  {exp.company} — {exp.location}
-                </p>
+            <Collapsible key={index}>
+              <div 
+                className="glass-card rounded-xl overflow-hidden hover:glow-effect transition-all duration-300"
+                style={{ animationDelay: `${(index + tools.length) * 0.1}s` }}
+              >
+                <CollapsibleTrigger className="w-full">
+                  <div className="flex flex-col md:flex-row md:items-start justify-between p-4 sm:p-6 hover:bg-card/20 transition-all duration-300 cursor-pointer group">
+                    <div className="flex-1 text-left">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                        {exp.title}
+                      </h3>
+                      <p className="text-foreground/60 text-sm sm:text-base">
+                        {exp.company} — {exp.location}
+                      </p>
+                    </div>
+                    
+                    <div className="flex items-center gap-3 mt-3 md:mt-0 md:ml-8">
+                      <span className="text-primary font-medium text-base sm:text-lg tracking-wide">
+                        {exp.period}
+                      </span>
+                      <ChevronDown className="h-5 w-5 text-foreground/60 transition-transform duration-300 group-data-[state=open]:rotate-180" />
+                    </div>
+                  </div>
+                </CollapsibleTrigger>
+
+                {exp.description && (
+                  <CollapsibleContent>
+                    <div className="px-4 sm:px-6 pb-4 sm:pb-6 space-y-4 border-t border-border/30">
+                      <div className="pt-4">
+                        <p className="text-foreground/70 text-sm sm:text-base leading-relaxed">
+                          {exp.description}
+                        </p>
+                      </div>
+
+                      {exp.skills && exp.skills.length > 0 && (
+                        <div>
+                          <h4 className="text-sm font-semibold text-foreground/80 mb-3">Skills:</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {exp.skills.map((skill, skillIndex) => (
+                              <span
+                                key={skillIndex}
+                                className="px-3 py-1 text-xs sm:text-sm bg-primary/10 text-primary rounded-full border border-primary/20 hover:bg-primary/20 transition-colors"
+                              >
+                                {skill}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </CollapsibleContent>
+                )}
               </div>
-              
-              <div className="mt-3 md:mt-0 md:ml-8">
-                <span className="text-primary font-medium text-base sm:text-lg tracking-wide">
-                  {exp.period}
-                </span>
-              </div>
-            </div>
+            </Collapsible>
           ))}
         </div>
       </div>
