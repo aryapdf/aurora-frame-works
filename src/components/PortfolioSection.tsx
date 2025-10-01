@@ -69,7 +69,7 @@ const PortfolioSection = () => {
     if (isPageChanging || page === currentPage) return;
     setIsPageChanging(true);
     const direction = page > currentPage ? "left" : "right";
-    const projectGrid = document.querySelector('.sheet-project-grid');
+    const projectGrid = document.querySelector('.sheet-project-grid') as HTMLElement;
     if (projectGrid) {
       projectGrid.style.transform = `translateX(${direction === "left" ? "-100%" : "100%"})`;
       projectGrid.style.opacity = '0';

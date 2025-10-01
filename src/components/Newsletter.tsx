@@ -16,12 +16,12 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="py-20 relative">
-      <div className="container mx-auto px-6">
+    <section className="py-12 sm:py-20 relative">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-2xl mx-auto">
-          <div className="glass-card p-8 rounded-2xl text-center space-y-6">
-            <h2 className="text-3xl font-bold">Subscribe to our newsletter</h2>
-            <p className="text-foreground/60">
+          <div className="glass-card p-6 sm:p-8 rounded-2xl text-center space-y-4 sm:space-y-6">
+            <h2 className="text-2xl sm:text-3xl font-bold">Subscribe to our newsletter</h2>
+            <p className="text-foreground/60 text-sm sm:text-base">
               Get updates and insights from Anders
             </p>
             
@@ -35,14 +35,15 @@ const Newsletter = () => {
                 required
               />
               
-              <div className="flex items-center space-x-2 text-sm text-left">
+              <div className="flex items-start space-x-2 text-xs sm:text-sm text-left">
                 <Checkbox
                   id="privacy"
                   checked={accepted}
                   onCheckedChange={(checked) => setAccepted(checked as boolean)}
                   required
+                  className="mt-0.5"
                 />
-                <label htmlFor="privacy" className="text-foreground/60 leading-relaxed">
+                <label htmlFor="privacy" className="text-foreground/60 leading-relaxed flex-1">
                   I accept the Privacy Policy and Terms and Conditions, and I'd like to receive news from Anders.
                 </label>
               </div>

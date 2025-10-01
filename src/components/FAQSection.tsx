@@ -30,24 +30,24 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-20 relative" id="faq">
-      <div className="container mx-auto px-6">
+    <section className="py-12 sm:py-20 relative" id="faq">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">We got you an answer</h2>
-            <p className="text-foreground/60">
+          <div className="text-center mb-8 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">We got you an answer</h2>
+            <p className="text-foreground/60 text-sm sm:text-base px-4">
               Everything you need to know to make your brand better — answered using best practices.
             </p>
           </div>
 
-          <div className="glass-card p-8 rounded-2xl">
+          <div className="glass-card p-4 sm:p-8 rounded-2xl">
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="border-border/20">
-                  <AccordionTrigger className="text-left hover:text-primary transition-colors">
+                  <AccordionTrigger className="text-left hover:text-primary transition-colors text-sm sm:text-base">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-foreground/70 leading-relaxed">
+                  <AccordionContent className="text-foreground/70 leading-relaxed text-sm sm:text-base">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

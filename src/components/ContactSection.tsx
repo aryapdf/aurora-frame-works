@@ -50,7 +50,7 @@ const ContactSection = () => {
 
           {/* Contact Content */}
           <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col sm:flex-row w-full gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full gap-4 sm:gap-6">
               {/* Email Card */}
               <div className="flex-1 glass-card rounded-xl sm:rounded-2xl p-6 sm:p-8 text-center hover:glow-effect transition-all duration-300">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 rounded-xl bg-primary/10 flex items-center justify-center">
