@@ -118,6 +118,14 @@ export default {
           "50%": {
             boxShadow: "0 0 40px hsl(217 91% 60% / 0.2)"
           }
+        },
+        "scroll": {
+          "0%": {
+            transform: "translateX(0)"
+          },
+          "100%": {
+            transform: "translateX(-33.333%)"
+          }
         }
       },
       animation: {
@@ -128,6 +136,7 @@ export default {
         "fade-in": "fade-in 0.6s ease-out",
         "float": "float 6s ease-in-out infinite",
         "glow": "glow 4s ease-in-out infinite",
+        "scroll": "scroll 30s linear infinite",
       },
     },
   },

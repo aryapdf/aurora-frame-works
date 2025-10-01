@@ -15,23 +15,29 @@ const AboutSection = () => {
       <section id="about" className="relative">
         <div className="container mx-auto px-4 sm:px-6 flex items-center justify-center h-screen pt-24">
           <div className="w-full h-fit flex flex-col justify-center items-center backdrop-blur-xl bg-background/30 border border-foreground/10 rounded-3xl p-8 sm:p-12 lg:p-16">
-            {/* Company Logos Grid */}
-            {/*<div className="mb-8 sm:mb-12 lg:mb-16 w-full">*/}
-            {/*  <div className="flex flex-wrap items-center justify-between gap-8 sm:gap-12 lg:gap-16">*/}
-            {/*    {companies.map((company) => (*/}
-            {/*        <div*/}
-            {/*            key={company.name}*/}
-            {/*            className="flex items-center justify-center group cursor-pointer transition-transform duration-300 hover:scale-110"*/}
-            {/*        >*/}
-            {/*          <img*/}
-            {/*              src={company.logo}*/}
-            {/*              alt={`${company.name} logo`}*/}
-            {/*              className="h-16 md:h-24 lg:h-32 w-auto filter grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 overflow-hidden rounded-xl"*/}
-            {/*          />*/}
-            {/*        </div>*/}
-            {/*    ))}*/}
-            {/*  </div>*/}
-            {/*</div>*/}
+            {/* Company Logos Carousel */}
+            <div className="mb-8 sm:mb-12 lg:mb-16 w-full relative overflow-hidden">
+              {/* Fade overlays */}
+              <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-32 bg-gradient-to-r from-background/80 via-background/40 to-transparent z-10 pointer-events-none" />
+              <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-32 bg-gradient-to-l from-background/80 via-background/40 to-transparent z-10 pointer-events-none" />
+              
+              {/* Scrolling container */}
+              <div className="flex gap-4 sm:gap-6 animate-scroll">
+                {/* Duplicate the companies array for seamless loop */}
+                {[...companies, ...companies, ...companies].map((company, index) => (
+                  <div
+                    key={`${company.name}-${index}`}
+                    className="flex-shrink-0 flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-muted/50 border border-foreground/5 backdrop-blur-sm"
+                  >
+                    <img
+                      src={company.logo}
+                      alt={`${company.name} logo`}
+                      className="h-8 sm:h-10 w-auto filter grayscale opacity-60"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
 
             {/* Section Header */}
             <div className="text-left mb-6 sm:mb-8 lg:mb-12 max-w-full">
