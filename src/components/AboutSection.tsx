@@ -16,22 +16,22 @@ const AboutSection = () => {
         <div className="container mx-auto px-4 sm:px-6 flex items-center justify-center h-screen pt-24">
           <div className="w-full h-fit flex flex-col justify-center items-center backdrop-blur-xl bg-background/30 border border-foreground/10 rounded-3xl p-8 sm:p-12 lg:p-16">
             {/* Company Logos Grid */}
-            <div className="mb-8 sm:mb-12 lg:mb-16 w-full">
-              <div className="flex flex-wrap items-center justify-between gap-8 sm:gap-12 lg:gap-16">
-                {companies.map((company) => (
-                    <div
-                        key={company.name}
-                        className="flex items-center justify-center group cursor-pointer transition-transform duration-300 hover:scale-110"
-                    >
-                      <img
-                          src={company.logo}
-                          alt={`${company.name} logo`}
-                          className="h-16 md:h-24 lg:h-32 w-auto filter grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 overflow-hidden rounded-xl"
-                      />
-                    </div>
-                ))}
-              </div>
-            </div>
+            {/*<div className="mb-8 sm:mb-12 lg:mb-16 w-full">*/}
+            {/*  <div className="flex flex-wrap items-center justify-between gap-8 sm:gap-12 lg:gap-16">*/}
+            {/*    {companies.map((company) => (*/}
+            {/*        <div*/}
+            {/*            key={company.name}*/}
+            {/*            className="flex items-center justify-center group cursor-pointer transition-transform duration-300 hover:scale-110"*/}
+            {/*        >*/}
+            {/*          <img*/}
+            {/*              src={company.logo}*/}
+            {/*              alt={`${company.name} logo`}*/}
+            {/*              className="h-16 md:h-24 lg:h-32 w-auto filter grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 overflow-hidden rounded-xl"*/}
+            {/*          />*/}
+            {/*        </div>*/}
+            {/*    ))}*/}
+            {/*  </div>*/}
+            {/*</div>*/}
 
             {/* Section Header */}
             <div className="text-left mb-6 sm:mb-8 lg:mb-12 max-w-full">
@@ -41,11 +41,17 @@ const AboutSection = () => {
 
               {/* Main Content */}
               <div className="space-y-4 sm:space-y-6 lg:space-y-8">
-                <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-normal text-foreground leading-relaxed sm:leading-relaxed lg:leading-relaxed">
+                <h2
+                    className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-normal text-foreground leading-relaxed sm:leading-relaxed lg:leading-relaxed"
+                    style={{lineHeight: 1.25}}
+                >
                   {t("about.title")}
                 </h2>
 
-                <p className="text-xl md:text-2xl lg:text-3xl xl:text-4xl text-foreground/60 leading-relaxed sm:leading-relaxed lg:leading-loose max-w-4xl">
+                <p
+                    className="text-xl md:text-2xl lg:text-3xl xl:text-4xl text-foreground/60 leading-relaxed sm:leading-relaxed lg:leading-loose max-w-4xl"
+                    style={{lineHeight: 1.25}}
+                >
                   {t("about.description")}
                 </p>
 
