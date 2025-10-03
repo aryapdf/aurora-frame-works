@@ -342,7 +342,144 @@
     }
   ],
 
-  "experience.section": "03 — PENGALAMAN",
+  "expertise": {
+    "section": "03 — KEAHLIAN & KETERAMPILAN",
+    "title": "Keahlian Teknis",
+    "experienceLabel": "Detail Pengalaman",
+    "projectsLabel": "Proyek yang Dibangun",
+    "skills": [
+      {
+        "id": "html",
+        "title": "HTML, CSS & JavaScript Native",
+        "experience": "3+ tahun pengalaman",
+        "detail": "Pengalaman luas dalam membangun antarmuka web semantik dan accessible menggunakan HTML5, CSS3, dan JavaScript modern (ES6+). Mahir dalam desain responsif, CSS Grid, Flexbox, animasi, dan optimasi performa. Pemahaman mendalam tentang browser API, manipulasi DOM, dan kompatibilitas lintas browser.",
+        "projects": [
+          {
+            "name": "Platform Arsitektur Urbanex+",
+            "description": "Dibangun dengan HTML semantik dan animasi CSS lanjutan untuk visualisasi 3D"
+          },
+          {
+            "name": "E-commerce Kedai Kopi",
+            "description": "Implementasi Vanilla JS untuk keranjang belanja dan filter produk"
+          },
+          {
+            "name": "Sistem Booking Studio Fitness",
+            "description": "Animasi CSS kustom dan implementasi date picker native"
+          },
+          {
+            "name": "Landing Page Startup Teknologi",
+            "description": "Demo interaktif hand-coded dengan transforms dan transitions CSS"
+          }
+        ]
+      },
+      {
+        "id": "react",
+        "title": "ReactJS, NextJS & TypeScript",
+        "experience": "2+ tahun pengalaman",
+        "detail": "Kemahiran tingkat lanjut dalam ekosistem React termasuk hooks, context API, dan component lifecycle. Berpengalaman dengan Next.js untuk SSR/SSG, TypeScript untuk type safety, dan state management modern (Redux, Zustand). Terampil dalam optimasi performa, code splitting, dan membangun aplikasi enterprise yang scalable.",
+        "projects": [
+          {
+            "name": "Platform Trading Kripto MoonWave",
+            "description": "Antarmuka trading real-time dengan React, TypeScript, dan integrasi WebSocket"
+          },
+          {
+            "name": "SaaS Manajemen Proyek",
+            "description": "Platform React/Node.js lengkap dengan fitur kolaborasi real-time"
+          },
+          {
+            "name": "Platform Dashboard Analitik",
+            "description": "Visualisasi data kompleks dengan React, D3.js, dan custom hooks"
+          },
+          {
+            "name": "Platform Perbankan",
+            "description": "Aplikasi finansial aman dengan React, TypeScript, dan pola keamanan lanjutan"
+          },
+          {
+            "name": "Sistem Manajemen Kesehatan",
+            "description": "Aplikasi React yang sesuai HIPAA dengan state management kompleks"
+          },
+          {
+            "name": "Sistem Manajemen Brand KraftQ",
+            "description": "Platform Next.js dengan SSR untuk manajemen aset brand dan workflows"
+          }
+        ]
+      },
+      {
+        "id": "vue",
+        "title": "VueJS & NuxtJS",
+        "experience": "2+ tahun pengalaman",
+        "detail": "Pengalaman komprehensif dengan Vue.js 2/3, Composition API, dan framework Nuxt.js. Mahir membangun aplikasi reaktif dengan state management Vuex/Pinia, Vue Router, dan server-side rendering dengan Nuxt. Terampil dalam membuat komponen yang dapat digunakan kembali dan mengimplementasikan antarmuka pengguna yang kompleks.",
+        "projects": [
+          {
+            "name": "E-commerce Kedai Kopi",
+            "description": "Platform e-commerce lengkap dibangun dengan Vue.js dan backend Express"
+          },
+          {
+            "name": "Frontend API Dukungan Pelanggan",
+            "description": "Dashboard Vue.js dengan Socket.io untuk manajemen tiket real-time"
+          },
+          {
+            "name": "Panel Admin E-commerce",
+            "description": "Antarmuka admin Vue.js komprehensif dengan Vuex dan Chart.js"
+          },
+          {
+            "name": "Platform Multi-lokasi Restoran",
+            "description": "Sistem manajemen menu dan reservasi berbasis Vue"
+          }
+        ]
+      },
+      {
+        "id": "antd",
+        "title": "Ant Design (ANTD)",
+        "experience": "1,5+ tahun pengalaman",
+        "detail": "Ahli dalam mengimplementasikan UI tingkat enterprise menggunakan library komponen Ant Design. Berpengalaman dalam kustomisasi tema, membuat form kompleks, tabel data, dan admin dashboard. Mahir mengintegrasikan ANTD dengan aplikasi React dan mengoptimalkan ukuran bundle.",
+        "projects": [
+          {
+            "name": "Sistem Manajemen Inventori",
+            "description": "Dibangun dengan komponen ANTD untuk tabel data dan form kompleks"
+          },
+          {
+            "name": "Antarmuka Backend Manajemen HR",
+            "description": "Panel admin bertenaga ANTD untuk manajemen karyawan dan penggajian"
+          },
+          {
+            "name": "Platform Email Marketing",
+            "description": "Campaign builder menggunakan komponen form dan tabel lanjutan ANTD"
+          },
+          {
+            "name": "Dashboard Backend Trading Finansial",
+            "description": "Dashboard trading real-time dengan komponen ANTD yang dikustomisasi"
+          }
+        ]
+      },
+      {
+        "id": "magento",
+        "title": "Magento",
+        "experience": "1+ tahun pengalaman",
+        "detail": "Pemahaman solid tentang arsitektur Magento 2, pengembangan tema, dan kustomisasi modul. Pengalaman dalam membuat tema kustom, memperluas fungsionalitas melalui plugin, dan mengintegrasikan layanan pihak ketiga. Berpengetahuan dalam sistem layout XML Magento, template PHTML, dan konfigurasi admin.",
+        "projects": [
+          {
+            "name": "Platform E-commerce Multi-store",
+            "description": "Tema Magento 2 kustom dengan konfigurasi produk lanjutan"
+          },
+          {
+            "name": "Portal Grosir B2B",
+            "description": "Kustomisasi Magento untuk pemesanan massal dan tingkat harga"
+          },
+          {
+            "name": "Situs E-commerce Fashion",
+            "description": "Modul Magento kustom untuk size chart dan virtual try-on"
+          },
+          {
+            "name": "Marketplace Elektronik",
+            "description": "Platform Magento multi-vendor dengan integrasi pengiriman kustom"
+          }
+        ]
+      }
+    ]
+  },
+
+  "experience.section": "04 — PENGALAMAN",
   "experience.title": "Pengalaman Profesional",
   "experience.description": "Front End Engineer dengan pengalaman 1+ tahun di ekosistem Vue/React, spesialisasi di framework Nuxt.js dan Next.js. Mahir dalam pengembangan Magento, integrasi REST API, dan pemrograman berorientasi objek. Sambil fokus di front-end, juga aktif mempelajari dan mengembangkan backend menggunakan PHP dan JavaScript. Pengalaman sehari-hari dengan tools desain seperti Figma, Adobe XD, dan Photoshop untuk implementasi UI/UX.",
   "experience.positions": [

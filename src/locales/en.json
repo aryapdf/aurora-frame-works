@@ -342,7 +342,144 @@
   ],
 
 
-  "experience.section": "03 — EXPERIENCE",
+  "expertise": {
+    "section": "03 — EXPERTISE & SKILLS",
+    "title": "Technical Expertise",
+    "experienceLabel": "Experience Details",
+    "projectsLabel": "Projects Built",
+    "skills": [
+      {
+        "id": "html",
+        "title": "HTML, CSS & Native JavaScript",
+        "experience": "3+ years of experience",
+        "detail": "Extensive experience in building semantic, accessible web interfaces using vanilla HTML5, CSS3, and modern JavaScript (ES6+). Proficient in responsive design, CSS Grid, Flexbox, animations, and performance optimization. Deep understanding of browser APIs, DOM manipulation, and cross-browser compatibility.",
+        "projects": [
+          {
+            "name": "Urbanex+ Architecture Platform",
+            "description": "Built with semantic HTML and advanced CSS animations for 3D visualizations"
+          },
+          {
+            "name": "Coffee Shop E-commerce",
+            "description": "Vanilla JS implementation for shopping cart and product filtering"
+          },
+          {
+            "name": "Fitness Studio Booking System",
+            "description": "Custom CSS animations and native date picker implementations"
+          },
+          {
+            "name": "Tech Startup Landing Page",
+            "description": "Hand-coded interactive demos with CSS transforms and transitions"
+          }
+        ]
+      },
+      {
+        "id": "react",
+        "title": "ReactJS, NextJS & TypeScript",
+        "experience": "2+ years of experience",
+        "detail": "Advanced proficiency in React ecosystem including hooks, context API, and component lifecycle. Experienced with Next.js for SSR/SSG, TypeScript for type safety, and modern state management (Redux, Zustand). Skilled in performance optimization, code splitting, and building scalable enterprise applications.",
+        "projects": [
+          {
+            "name": "MoonWave Crypto Trading Platform",
+            "description": "Real-time trading interface with React, TypeScript, and WebSocket integration"
+          },
+          {
+            "name": "Project Management SaaS",
+            "description": "Full React/Node.js platform with real-time collaboration features"
+          },
+          {
+            "name": "Analytics Dashboard Platform",
+            "description": "Complex data visualization with React, D3.js, and custom hooks"
+          },
+          {
+            "name": "Banking Platform",
+            "description": "Secure financial app with React, TypeScript, and advanced security patterns"
+          },
+          {
+            "name": "Healthcare Management System",
+            "description": "HIPAA-compliant React application with complex state management"
+          },
+          {
+            "name": "KraftQ Brand Management System",
+            "description": "Next.js platform with SSR for brand asset management and workflows"
+          }
+        ]
+      },
+      {
+        "id": "vue",
+        "title": "VueJS & NuxtJS",
+        "experience": "2+ years of experience",
+        "detail": "Comprehensive experience with Vue.js 2/3, Composition API, and Nuxt.js framework. Proficient in building reactive applications with Vuex/Pinia state management, Vue Router, and server-side rendering with Nuxt. Skilled in creating reusable components and implementing complex user interfaces.",
+        "projects": [
+          {
+            "name": "Coffee Shop E-commerce",
+            "description": "Full e-commerce platform built with Vue.js and Express backend"
+          },
+          {
+            "name": "Customer Support API Frontend",
+            "description": "Vue.js dashboard with Socket.io for real-time ticket management"
+          },
+          {
+            "name": "E-commerce Admin Panel",
+            "description": "Comprehensive Vue.js admin interface with Vuex and Chart.js"
+          },
+          {
+            "name": "Restaurant Multi-location Platform",
+            "description": "Vue-based menu management and reservation system"
+          }
+        ]
+      },
+      {
+        "id": "antd",
+        "title": "Ant Design (ANTD)",
+        "experience": "1.5+ years of experience",
+        "detail": "Expert in implementing enterprise-grade UIs using Ant Design component library. Experienced in customizing themes, creating complex forms, data tables, and admin dashboards. Proficient in integrating ANTD with React applications and optimizing bundle sizes.",
+        "projects": [
+          {
+            "name": "Inventory Management System",
+            "description": "Built with ANTD components for complex data tables and forms"
+          },
+          {
+            "name": "HR Management Backend Interface",
+            "description": "ANTD-powered admin panel for employee management and payroll"
+          },
+          {
+            "name": "Email Marketing Platform",
+            "description": "Campaign builder using ANTD's advanced form and table components"
+          },
+          {
+            "name": "Financial Trading Backend Dashboard",
+            "description": "Real-time trading dashboard with customized ANTD components"
+          }
+        ]
+      },
+      {
+        "id": "magento",
+        "title": "Magento",
+        "experience": "1+ year of experience",
+        "detail": "Solid understanding of Magento 2 architecture, theme development, and module customization. Experience with creating custom themes, extending functionality through plugins, and integrating third-party services. Knowledgeable in Magento's XML layout system, PHTML templates, and admin configuration.",
+        "projects": [
+          {
+            "name": "Multi-store E-commerce Platform",
+            "description": "Custom Magento 2 theme with advanced product configurations"
+          },
+          {
+            "name": "B2B Wholesale Portal",
+            "description": "Magento customization for bulk ordering and pricing tiers"
+          },
+          {
+            "name": "Fashion E-commerce Site",
+            "description": "Custom Magento modules for size charts and virtual try-on"
+          },
+          {
+            "name": "Electronics Marketplace",
+            "description": "Multi-vendor Magento platform with custom shipping integrations"
+          }
+        ]
+      }
+    ]
+  },
+
+  "experience.section": "04 — EXPERIENCE",
   "experience.title": "Professional Experience",
   "experience.description": "Front End Engineer with 1+ years of experience in Vue/React ecosystems, specializing in Nuxt.js and Next.js frameworks. Proficient in Magento development, REST API integration, and object-oriented programming. While focusing on front-end, actively learning and developing backend using PHP and JavaScript. Daily experience with design tools including Figma, Adobe XD, and Photoshop for UI/UX implementation.",
   "experience.positions": [
