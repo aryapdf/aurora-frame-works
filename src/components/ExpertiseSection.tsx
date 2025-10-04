@@ -15,7 +15,7 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  { id: "html", name: "HTML/CSS/JS", icon: htmlIcon },
+  // { id: "html", name: "HTML/CSS/JS", icon: htmlIcon },
   { id: "react", name: "React/Next/TS", icon: reactIcon },
   { id: "vue", name: "Vue/Nuxt", icon: vueIcon },
   { id: "antd", name: "ANTD", icon: antdIcon },
@@ -24,7 +24,7 @@ const skills: Skill[] = [
 
 const ExpertiseSection = () => {
   const { t } = useLanguage();
-  const [activeSkill, setActiveSkill] = useState<string>("html");
+  const [activeSkill, setActiveSkill] = useState<string>("react");
 
   const expertiseData = t("expertise");
   const activeData = expertiseData.skills.find((s: any) => s.id === activeSkill);
