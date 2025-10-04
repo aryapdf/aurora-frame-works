@@ -1,6 +1,11 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 import {
   Collapsible,
   CollapsibleContent,
@@ -10,6 +15,33 @@ import {
 const ExperienceSection = () => {
   const { t } = useLanguage();
   const [openItems, setOpenItems] = useState<number[]>([]);
+  const sectionRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const timelineRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 80%",
+        end: "top 20%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    tl.from(headerRef.current, {
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+    })
+    .from(timelineRef.current?.children || [], {
+      y: 50,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.15,
+    }, "-=0.4");
+  }, { scope: sectionRef });
 
   const experiences = t("experience.positions") as Array<{
     title: string;
@@ -22,10 +54,10 @@ const ExperienceSection = () => {
   }>;
 
   return (
-      <section id="experience" className="pt-24 relative">
+      <section ref={sectionRef} id="experience" className="pt-24 relative">
         <div className="container mx-auto px-6">
           {/* Section Header */}
-          <div className="max-w-6xl mx-auto mb-12 sm:mb-16">
+          <div ref={headerRef} className="max-w-6xl mx-auto mb-12 sm:mb-16">
             <div className="flex items-center gap-4 mb-4 sm:mb-6">
               <span className="text-center w-full text-sm text-foreground/40 uppercase tracking-wider mb-4">{t("experience.section")}</span>
               <div className="h-px bg-border flex-1"></div>
@@ -41,7 +73,7 @@ const ExperienceSection = () => {
           </div>
 
           {/* Experience Timeline */}
-          <div className="max-w-full mx-auto space-y-4">
+          <div ref={timelineRef} className="max-w-full mx-auto space-y-4">
             {experiences.map((exp, index) => (
                 <Collapsible
                     key={index}

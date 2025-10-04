@@ -3,9 +3,43 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MessageCircle, Send, Github, Linkedin } from "lucide-react";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ContactSection = () => {
   const { t } = useLanguage();
+  const sectionRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 80%",
+        end: "top 20%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    tl.from(headerRef.current, {
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+    })
+    .from(cardsRef.current?.children || [], {
+      y: 50,
+      scale: 0.9,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.1,
+    }, "-=0.4");
+  }, { scope: sectionRef });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,10 +63,10 @@ const ContactSection = () => {
   };
 
   return (
-      <section id="contact" className="py-24 relative">
+      <section ref={sectionRef} id="contact" className="py-24 relative">
         <div className="container mx-auto px-4 sm:px-6">
           {/* Section Header */}
-          <div className="max-w-4xl mx-auto mb-12 sm:mb-16 text-center">
+          <div ref={headerRef} className="max-w-4xl mx-auto mb-12 sm:mb-16 text-center">
             <div className="flex items-center justify-center gap-4 mb-4 sm:mb-6">
               <div className="h-px bg-border flex-1 max-w-24"></div>
               <span className="text-sm text-foreground/40 uppercase tracking-wider ">{t("contact.section")}</span>
@@ -50,7 +84,7 @@ const ContactSection = () => {
 
           {/* Contact Content */}
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full gap-4 sm:gap-6">
+            <div ref={cardsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full gap-4 sm:gap-6">
               {/* Email Card */}
               <div className="flex-1 glass-card rounded-xl sm:rounded-2xl p-6 sm:p-8 text-center hover:glow-effect transition-all duration-300">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 rounded-xl bg-primary/10 flex items-center justify-center">

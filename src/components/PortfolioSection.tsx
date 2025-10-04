@@ -1,4 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -31,6 +36,39 @@ const PortfolioSection = () => {
   const [displayedProjects, setDisplayedProjects] = useState([]);
   const [isSheetOpen, setIsSheetOpen] = useState(false);
   const itemsPerPage = 6;
+  const sectionRef = useRef<HTMLElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 80%",
+        end: "top 20%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    tl.from(containerRef.current, {
+      scale: 0.95,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+    })
+    .from(headerRef.current, {
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+    }, "-=0.6")
+    .from(cardsRef.current?.children || [], {
+      y: 60,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2,
+    }, "-=0.4");
+  }, { scope: sectionRef });
 
   const filters = ["All", "Fullstack", "Front-End", "Back-End"];
   const { t } = useLanguage();
@@ -100,12 +138,12 @@ const PortfolioSection = () => {
   };
 
   return (
-      <section id="projects" className="pt-24 relative">
+      <section ref={sectionRef} id="projects" className="pt-24 relative">
         <div className="container mx-auto px-4 sm:px-6">
           {/* Blurred background container */}
-          <div className="backdrop-blur-xl bg-background/30 border border-foreground/10 rounded-3xl p-8 sm:p-12 lg:p-16">
+          <div ref={containerRef} className="backdrop-blur-xl bg-background/30 border border-foreground/10 rounded-3xl p-8 sm:p-12 lg:p-16">
             {/* Section Header */}
-            <div className="text-left mb-12">
+            <div ref={headerRef} className="text-left mb-12">
               <div className="flex items-start justify-between mb-6">
                 <div>
                   <p className="text-xs sm:text-sm text-foreground/40 uppercase tracking-wider mb-4">
@@ -249,7 +287,7 @@ const PortfolioSection = () => {
             </div>
 
             {/* Featured Projects - Large Cards */}
-            <div className="grid grid-cols-1 gap-6 lg:gap-8">
+            <div ref={cardsRef} className="grid grid-cols-1 gap-6 lg:gap-8">
               {featuredProjects.map((project) => (
                   <Card
                       key={project.id}

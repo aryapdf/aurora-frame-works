@@ -1,5 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 // Import skill icons
 import htmlIcon from "@/assets/tools/html-icon.svg";
@@ -25,15 +30,56 @@ const skills: Skill[] = [
 const ExpertiseSection = () => {
   const { t } = useLanguage();
   const [activeSkill, setActiveSkill] = useState<string>("react");
+  const sectionRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const skillsNavRef = useRef<HTMLDivElement>(null);
+  const detailRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 80%",
+        end: "top 20%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+    tl.from(headerRef.current, {
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+    })
+    .from(skillsNavRef.current, {
+      x: -60,
+      opacity: 0,
+      duration: 0.8,
+    }, "-=0.4")
+    .from(detailRef.current, {
+      x: 60,
+      opacity: 0,
+      duration: 0.8,
+    }, "-=0.6");
+
+    // Pin section during scroll
+    ScrollTrigger.create({
+      trigger: sectionRef.current,
+      start: "top top",
+      end: "+=1000",
+      pin: true,
+      pinSpacing: true,
+    });
+  }, { scope: sectionRef, dependencies: [activeSkill] });
 
   const expertiseData = t("expertise");
   const activeData = expertiseData.skills.find((s: any) => s.id === activeSkill);
 
   return (
-    <section id="expertise" className="relative min-h-screen py-20 sm:py-32">
+    <section ref={sectionRef} id="expertise" className="relative min-h-screen py-20 sm:py-32">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="mb-12 sm:mb-16">
+        <div ref={headerRef} className="mb-12 sm:mb-16">
           <p className="text-xs sm:text-sm font-mono text-muted-foreground mb-3 sm:mb-4 tracking-wider">
             {expertiseData.section}
           </p>
@@ -45,7 +91,7 @@ const ExpertiseSection = () => {
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
           {/* Left Section - Skill Icons */}
-          <div className="lg:col-span-4 xl:col-span-3">
+          <div ref={skillsNavRef} className="lg:col-span-4 xl:col-span-3">
             <div className="flex lg:flex-col gap-3 sm:gap-4 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 lg:sticky lg:top-24">
               {skills.map((skill) => (
                 <button
@@ -84,7 +130,7 @@ const ExpertiseSection = () => {
           </div>
 
           {/* Right Section - Skill Details */}
-          <div className="lg:col-span-8 xl:col-span-9">
+          <div ref={detailRef} className="lg:col-span-8 xl:col-span-9">
             <div className="backdrop-blur-xl bg-background/50 border border-foreground/10 rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8 xl:p-10">
               {activeData && (
                 <div className="space-y-5 sm:space-y-6 lg:space-y-8">

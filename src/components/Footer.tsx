@@ -1,8 +1,31 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import personalLogo from "@/assets/personal-logo.png";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
   const { t } = useLanguage();
+  const footerRef = useRef<HTMLElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    gsap.from(contentRef.current?.children || [], {
+      scrollTrigger: {
+        trigger: footerRef.current,
+        start: "top 90%",
+        toggleActions: "play none none reverse",
+      },
+      y: 30,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.15,
+      ease: "power3.out",
+    });
+  }, { scope: footerRef });
 
   const smoothScrollTo = (targetId: string) => {
     if (targetId === "top") {
@@ -17,9 +40,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-background/95 backdrop-blur-sm border-t border-border/10 py-12 lg:py-16">
+    <footer ref={footerRef} className="bg-background/95 backdrop-blur-sm border-t border-border/10 py-12 lg:py-16">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div ref={contentRef} className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Logo and Description */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
