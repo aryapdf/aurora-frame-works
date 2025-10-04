@@ -349,30 +349,6 @@
     "projectsLabel": "Proyek yang Dibangun",
     "skills": [
       {
-        "id": "html",
-        "title": "HTML, CSS & JavaScript Native",
-        "experience": "3+ tahun pengalaman",
-        "detail": "Pengalaman luas dalam membangun antarmuka web semantik dan accessible menggunakan HTML5, CSS3, dan JavaScript modern (ES6+). Mahir dalam desain responsif, CSS Grid, Flexbox, animasi, dan optimasi performa. Pemahaman mendalam tentang browser API, manipulasi DOM, dan kompatibilitas lintas browser.",
-        "projects": [
-          {
-            "name": "Platform Arsitektur Urbanex+",
-            "description": "Dibangun dengan HTML semantik dan animasi CSS lanjutan untuk visualisasi 3D"
-          },
-          {
-            "name": "E-commerce Kedai Kopi",
-            "description": "Implementasi Vanilla JS untuk keranjang belanja dan filter produk"
-          },
-          {
-            "name": "Sistem Booking Studio Fitness",
-            "description": "Animasi CSS kustom dan implementasi date picker native"
-          },
-          {
-            "name": "Landing Page Startup Teknologi",
-            "description": "Demo interaktif hand-coded dengan transforms dan transitions CSS"
-          }
-        ]
-      },
-      {
         "id": "react",
         "title": "ReactJS, NextJS & TypeScript",
         "experience": "2+ tahun pengalaman",
