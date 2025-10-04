@@ -50,17 +50,6 @@ const HeroSection = () => {
       duration: 0.5,
     }, "-=0.3");
 
-    // Parallax effect on scroll
-    gsap.to(containerRef.current, {
-      y: 100,
-      opacity: 0.5,
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: 1,
-      },
-    });
   }, { scope: sectionRef });
 
   useEffect(() => {

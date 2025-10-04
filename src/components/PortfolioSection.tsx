@@ -45,8 +45,8 @@ const PortfolioSection = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: "top 80%",
-        end: "top 20%",
+        start: "top 50%",
+        end: "bottom bottom",
         toggleActions: "play none none reverse",
       },
     });
@@ -62,11 +62,11 @@ const PortfolioSection = () => {
       opacity: 0,
       duration: 0.8,
     }, "-=0.6")
-    .from(cardsRef.current?.children || [], {
+    .from(cardsRef.current || [], {
       y: 60,
       opacity: 0,
       duration: 0.8,
-      stagger: 0.2,
+      stagger: 0.2,  // Add stagger back
     }, "-=0.4");
   }, { scope: sectionRef });
 
@@ -87,7 +87,7 @@ const PortfolioSection = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const currentProjects = filteredProjects.slice(startIndex, startIndex + itemsPerPage);
     setDisplayedProjects(currentProjects);
-  }, [isSheetOpen]);
+  }, [currentPage, activeFilter, isSheetOpen]); // Add proper dependencies
 
   const handleFilterChange = async (filter) => {
     if (isFilterChanging) return;
@@ -110,7 +110,7 @@ const PortfolioSection = () => {
     const projectGrid = document.querySelector('.sheet-project-grid') as HTMLElement;
     if (projectGrid) {
       projectGrid.style.transform = `translateX(${direction === "left" ? "-100%" : "100%"})`;
-      projectGrid.style.opacity = '0';
+      projectGrid.style.opacity = '1';
     }
     await new Promise(resolve => setTimeout(resolve, 300));
     const startIndex = (page - 1) * itemsPerPage;
@@ -194,16 +194,18 @@ const PortfolioSection = () => {
                     <div className="relative mb-8 overflow-hidden flex-1">
                       <div
                           className="sheet-project-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-300"
-                          style={{ transform: 'translateX(0%)', opacity: 1 }}
                       >
                         {isFilterChanging ? (
-                            Array.from({ length: itemsPerPage }, (_, index) => (
+                            Array.from({length: itemsPerPage}, (_, index) => (
                                 <Card key={`loading-${index}`} className="glass-card overflow-hidden">
                                   <CardContent className="p-0">
-                                    <div className="bg-gradient-to-r from-foreground/10 via-foreground/20 to-foreground/10 animate-pulse" />
+                                    <div
+                                        className="bg-gradient-to-r from-foreground/10 via-foreground/20 to-foreground/10 animate-pulse"/>
                                     <div className="p-4 space-y-2">
-                                      <div className="h-4 bg-gradient-to-r from-foreground/10 via-foreground/20 to-foreground/10 animate-pulse rounded w-3/4" />
-                                      <div className="h-3 bg-gradient-to-r from-foreground/10 via-foreground/20 to-foreground/10 animate-pulse rounded w-1/2" />
+                                      <div
+                                          className="h-4 bg-gradient-to-r from-foreground/10 via-foreground/20 to-foreground/10 animate-pulse rounded w-3/4"/>
+                                      <div
+                                          className="h-3 bg-gradient-to-r from-foreground/10 via-foreground/20 to-foreground/10 animate-pulse rounded w-1/2"/>
                                     </div>
                                   </CardContent>
                                 </Card>
@@ -228,8 +230,9 @@ const PortfolioSection = () => {
                                         <h3 className="text-base font-bold text-foreground group-hover:text-primary transition-colors flex-1">
                                           {project.title}
                                         </h3>
-                                        <div className="w-7 h-7 rounded-full bg-primary flex items-center justify-center ml-2 group-hover:scale-110 transition-transform">
-                                          <ArrowUpRight className="w-3.5 h-3.5 text-primary-foreground" />
+                                        <div
+                                            className="w-7 h-7 rounded-full bg-primary flex items-center justify-center ml-2 group-hover:scale-110 transition-transform">
+                                          <ArrowUpRight className="w-3.5 h-3.5 text-primary-foreground"/>
                                         </div>
                                       </div>
                                       <p className="text-foreground/60 text-xs">{project.subcategory}</p>
@@ -244,7 +247,7 @@ const PortfolioSection = () => {
                     {/* Pagination */}
                     {totalPages > 1 && (
                         <Pagination>
-                          <PaginationContent>
+                        <PaginationContent>
                             <PaginationItem>
                               <PaginationPrevious
                                   onClick={() => handlePageChange(currentPage - 1)}
@@ -287,7 +290,7 @@ const PortfolioSection = () => {
             </div>
 
             {/* Featured Projects - Large Cards */}
-            <div ref={cardsRef} className="grid grid-cols-1 gap-6 lg:gap-8">
+            <div ref={cardsRef}  className="grid grid-cols-1 gap-6 lg:gap-8">
               {featuredProjects.map((project) => (
                   <Card
                       key={project.id}
