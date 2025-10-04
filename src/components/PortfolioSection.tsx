@@ -34,7 +34,7 @@ const PortfolioSection = () => {
 
   const filters = ["All", "Fullstack", "Front-End", "Back-End"];
   const { t } = useLanguage();
-  const projects = t("porto.projects");
+  const projects = [...t("porto.projects")].reverse();
 
   // Featured projects (first 3)
   const featuredProjects = projects.slice(0, 3);
@@ -49,7 +49,7 @@ const PortfolioSection = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const currentProjects = filteredProjects.slice(startIndex, startIndex + itemsPerPage);
     setDisplayedProjects(currentProjects);
-  }, []);
+  }, [isSheetOpen]);
 
   const handleFilterChange = async (filter) => {
     if (isFilterChanging) return;
@@ -177,12 +177,12 @@ const PortfolioSection = () => {
                                     className="glass-card hover:glow-effect transition-all duration-300 group cursor-pointer overflow-hidden"
                                     onClick={() => handleProjectClick(project)}
                                 >
-                                  <CardContent className="p-0">
-                                    <div className="overflow-hidden">
+                                  <CardContent className="flex flex-col p-0">
+                                    <div className="relative w-full aspect-video overflow-hidden bg-muted">
                                       <img
-                                          src={project.image}
+                                          src={project.image || "src/assets/personal-logo-full.png"}
                                           alt={project.title}
-                                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                          className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                       />
                                     </div>
                                     <div className="p-4">
@@ -249,15 +249,15 @@ const PortfolioSection = () => {
             </div>
 
             {/* Featured Projects - Large Cards */}
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 gap-6 lg:gap-8">
               {featuredProjects.map((project) => (
                   <Card
                       key={project.id}
-                      className="glass-card hover:glow-effect transition-all duration-500 group cursor-pointer overflow-hidden"
+                      className="glass-card hover:glow-effect transition-all duration-500 group cursor-pointer overflow-hidden h-full"
                       onClick={() => handleProjectClick(project)}
                   >
-                    <CardContent className="p-0">
-                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                    <CardContent className="p-0 h-full">
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 h-full">
                         {/* Left: Project Info */}
                         <div className="p-8 lg:p-12 flex flex-col justify-between order-2 lg:order-1">
                           <div className="space-y-6">
@@ -296,11 +296,11 @@ const PortfolioSection = () => {
                         </div>
 
                         {/* Right: Project Image */}
-                        <div className="aspect-[4/3] lg:aspect-auto overflow-hidden order-1 lg:order-2">
+                        <div className="relative aspect-[4/3] lg:h-full overflow-hidden order-1 lg:order-2 bg-muted">
                           <img
-                              src={project.image}
+                              src={project.image || 'src/assets/personal-logo-full.png'}
                               alt={project.title}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           />
                         </div>
                       </div>
@@ -329,13 +329,17 @@ const PortfolioSection = () => {
                     </DialogHeader>
 
                     <div className="space-y-6 mt-6">
-                      <div className="aspect-[12/6] rounded-lg overflow-hidden bg-foreground/5">
-                        <img
-                            src={selectedProject.image}
-                            alt={selectedProject.title}
-                            className="w-full h-full object-cover"
-                        />
-                      </div>
+
+                      {selectedProject.image && (
+                          <div className="aspect-[12/8] rounded-lg overflow-hidden bg-foreground/5">
+                            <img
+                                src={selectedProject.image}
+                                alt={selectedProject.title}
+                                className="w-full h-full object-cover"
+                            />
+                          </div>
+                      )}
+
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div className="space-y-6">
@@ -353,14 +357,32 @@ const PortfolioSection = () => {
                                   {selectedProject.technologies.map((tech) => (
                                       <span
                                           key={tech}
-                                          className="px-3 py-1 text-xs rounded-full bg-foreground/5 border border-foreground/10 text-foreground/70"
+                                          className="px-3 py-1 text-xs rounded-full bg-foreground/5 border border-foreground/10 text-foreground/70 hover:glow-effect hover:border-transparent hover:bg-transparent hover:text-foreground "
                                       >
-                                {tech}
-                              </span>
+                                        {tech}
+                                      </span>
                                   ))}
                                 </div>
                               </div>
                           )}
+
+                          {selectedProject.links && (
+                              <div>
+                                <h4 className="text-lg font-semibold text-foreground mb-3">Links</h4>
+                                <div className="flex flex-col gap-2">
+                                  {selectedProject.links.map((tech) => (
+                                      <span
+                                          key={tech}
+                                          className="px-3 py-1 text-xs rounded-full bg-foreground/5 border border-foreground/10 text-foreground/70 hover:glow-effect hover:border-transparent hover:bg-transparent hover:text-foreground cursor-pointer"
+                                          onClick={() => window.open(tech, '_blank')}
+                                      >
+                                        {tech}
+                                      </span>
+                                  ))}
+                                </div>
+                              </div>
+                          )}
+
                         </div>
 
                         <div className="space-y-6">
@@ -389,7 +411,7 @@ const PortfolioSection = () => {
 
                           {selectedProject.clientTestimonial && (
                               <div>
-                                <h4 className="text-lg font-semibold text-foreground mb-3">Client Testimonial</h4>
+                                <h4 className="text-lg font-semibold text-foreground mb-3"></h4>
                                 <blockquote className="italic text-foreground/70 border-l-4 border-primary pl-4 bg-foreground/5 p-4 rounded">
                                   "{selectedProject.clientTestimonial}"
                                 </blockquote>
