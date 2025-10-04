@@ -43,16 +43,16 @@ const ExpertiseSection = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
           {/* Left Section - Skill Icons */}
-          <div className="lg:col-span-3">
-            <div className="flex lg:flex-col gap-4 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0">
+          <div className="lg:col-span-4 xl:col-span-3">
+            <div className="flex lg:flex-col gap-3 sm:gap-4 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 lg:sticky lg:top-24">
               {skills.map((skill) => (
                 <button
                   key={skill.id}
                   onClick={() => setActiveSkill(skill.id)}
                   className={`
-                    group flex-shrink-0 p-6 rounded-2xl border-2 transition-all duration-300
+                    group flex-shrink-0 p-4 sm:p-5 lg:p-6 rounded-xl lg:rounded-2xl border-2 transition-all duration-300 w-full
                     ${
                       activeSkill === skill.id
                         ? "border-primary bg-primary/10 shadow-lg shadow-primary/20"
@@ -60,9 +60,9 @@ const ExpertiseSection = () => {
                     }
                   `}
                 >
-                  <div className="flex flex-col items-center gap-3">
+                  <div className="flex lg:flex-col items-center gap-3">
                     <div className={`
-                      w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl transition-transform duration-300
+                      w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 flex items-center justify-center rounded-xl transition-transform duration-300 flex-shrink-0
                       ${activeSkill === skill.id ? "scale-110" : "group-hover:scale-105"}
                     `}>
                       <img
@@ -72,7 +72,7 @@ const ExpertiseSection = () => {
                       />
                     </div>
                     <span className={`
-                      text-xs sm:text-sm font-medium transition-colors duration-300 text-center
+                      text-xs sm:text-sm font-medium transition-colors duration-300 text-center lg:text-center whitespace-nowrap lg:whitespace-normal
                       ${activeSkill === skill.id ? "text-primary" : "text-muted-foreground group-hover:text-foreground"}
                     `}>
                       {skill.name}
@@ -84,18 +84,18 @@ const ExpertiseSection = () => {
           </div>
 
           {/* Right Section - Skill Details */}
-          <div className="lg:col-span-9">
-            <div className="backdrop-blur-xl bg-background/50 border border-foreground/10 rounded-3xl p-6 sm:p-8 lg:p-10">
+          <div className="lg:col-span-8 xl:col-span-9">
+            <div className="backdrop-blur-xl bg-background/50 border border-foreground/10 rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8 xl:p-10">
               {activeData && (
-                <div className="space-y-6 sm:space-y-8">
+                <div className="space-y-5 sm:space-y-6 lg:space-y-8">
                   {/* Title and Experience Time */}
-                  <div className="border-b border-border/50 pb-6">
-                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3">
+                  <div className="border-b border-border/50 pb-4 sm:pb-5 lg:pb-6">
+                    <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold mb-2 sm:mb-3">
                       {activeData.title}
                     </h3>
-                    <div className="flex items-center gap-2 text-sm sm:text-base text-muted-foreground">
+                    <div className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-muted-foreground">
                       <svg
-                        className="w-5 h-5"
+                        className="w-4 h-4 sm:w-5 sm:h-5"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -113,7 +113,7 @@ const ExpertiseSection = () => {
 
                   {/* Detail of Experience */}
                   <div>
-                    <h4 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-foreground/90">
+                    <h4 className="text-base sm:text-lg lg:text-xl font-semibold mb-2 sm:mb-3 lg:mb-4 text-foreground/90">
                       {expertiseData.experienceLabel}
                     </h4>
                     <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
@@ -123,10 +123,10 @@ const ExpertiseSection = () => {
 
                   {/* Projects Done */}
                   <div>
-                    <h4 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-5 text-foreground/90">
+                    <h4 className="text-base sm:text-lg lg:text-xl font-semibold mb-3 sm:mb-4 lg:mb-5 text-foreground/90">
                       {expertiseData.projectsLabel}
                     </h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 gap-3 sm:gap-4">
                       {activeData.projects.map((project: any, index: number) => (
                         <div
                           key={index}
@@ -138,7 +138,7 @@ const ExpertiseSection = () => {
                               <h5 className="font-semibold text-sm sm:text-base mb-1 group-hover:text-primary transition-colors duration-300">
                                 {project.name}
                               </h5>
-                              <p className="text-xs sm:text-sm text-muted-foreground line-clamp-2">
+                              <p className="text-xs sm:text-sm text-muted-foreground">
                                 {project.description}
                               </p>
                             </div>
