@@ -22,7 +22,9 @@ const HeroSection = () => {
   const ctaRef = useRef<HTMLButtonElement>(null);
 
   useGSAP(() => {
-    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+    const tl = gsap.timeline({
+      defaults: { ease: "power3.out" },
+    });
 
     tl.from(containerRef.current, {
       scale: 0.95,
@@ -32,22 +34,22 @@ const HeroSection = () => {
     .from(profileRef.current, {
       x: -50,
       opacity: 0,
-      duration: 0.6,
+      duration: 0.3,
     }, "-=0.6")
     .from(nameRef.current, {
       y: 50,
       opacity: 0,
-      duration: 0.8,
+      duration: 0.3,
     }, "-=0.4")
     .from(textRef.current, {
       y: 30,
       opacity: 0,
-      duration: 0.6,
+      duration: 0.3,
     }, "-=0.4")
     .from(ctaRef.current, {
       y: 20,
       opacity: 0,
-      duration: 0.5,
+      duration: 0.3,
     }, "-=0.3");
 
   }, { scope: sectionRef });
