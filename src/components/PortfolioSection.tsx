@@ -45,9 +45,12 @@ const PortfolioSection = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: "top 50%",
+        duration: '+=100%',
+        start: "top 75%",
         end: "bottom bottom",
+        scrub: 1,
         toggleActions: "play none none reverse",
+        markers: true,
       },
     });
 
@@ -60,14 +63,13 @@ const PortfolioSection = () => {
     .from(headerRef.current, {
       y: 40,
       opacity: 0,
-      duration: 0.8,
-    }, "-=0.6")
+      duration: 0.3,
+    }, "-=0.8")
     .from(cardsRef.current || [], {
       y: 60,
       opacity: 0,
-      duration: 0.8,
-      stagger: 0.2,  // Add stagger back
-    }, "-=0.4");
+      duration: 0.3,
+    }, "-=0.6");
   }, { scope: sectionRef });
 
   const filters = ["All", "Fullstack", "Front-End", "Back-End"];
