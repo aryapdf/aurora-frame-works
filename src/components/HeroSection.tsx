@@ -34,22 +34,22 @@ const HeroSection = () => {
     .from(profileRef.current, {
       x: -50,
       opacity: 0,
-      duration: 0.3,
+      duration: 0.4,
     }, "-=0.6")
     .from(nameRef.current, {
       y: 50,
       opacity: 0,
-      duration: 0.3,
+      duration: 0.4,
     }, "-=0.4")
     .from(textRef.current, {
       y: 30,
       opacity: 0,
-      duration: 0.3,
+      duration: 0.4,
     }, "-=0.4")
     .from(ctaRef.current, {
       y: 20,
       opacity: 0,
-      duration: 0.3,
+      duration: 0.4,
     }, "-=0.3");
 
   }, { scope: sectionRef });
