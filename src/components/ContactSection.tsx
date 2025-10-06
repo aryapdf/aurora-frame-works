@@ -21,8 +21,10 @@ const ContactSection = () => {
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top 80%",
-        end: "top 20%",
+        end: "+=50%",
+        scrub: 1,
         toggleActions: "play none none reverse",
+        // markers: true,
       },
     });
 
@@ -32,7 +34,7 @@ const ContactSection = () => {
       duration: 0.8,
       ease: "power3.out",
     })
-    .from(cardsRef.current?.children || [], {
+    .from(cardsRef.current, {
       y: 50,
       scale: 0.9,
       opacity: 0,
