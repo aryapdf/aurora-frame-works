@@ -39,15 +39,16 @@ const ExpertiseSection = () => {
     gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: "top 75%", // mulai saat 25% bawah viewport
-        end: "+=75%",
+        start: "top 50%", // mulai saat 25% bawah viewport
+        end: "+=50%",
+        scrub: 1,
         toggleActions: "play none none reverse",
         // markers: true,
       },
     })
         .from(headerRef.current, { y: 40, opacity: 0, duration: 0.4 })
-        .from(skillsNavRef.current, { x: -60, opacity: 0, duration: 0.4 }, "+=0.4")
-        .from(detailRef.current, { x: 60, opacity: 0, duration: 0.4 }, "<");
+        .from(skillsNavRef.current, { x: -60, opacity: 0, duration: 0.8 }, "+=0.8")
+        .from(detailRef.current, { x: 60, opacity: 0, duration: 0.8 }, "<");
 
     const tl = gsap.timeline({
       scrollTrigger: {

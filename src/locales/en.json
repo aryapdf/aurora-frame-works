@@ -34,7 +34,7 @@
       "category": "Front End",
       "subcategory": "Website",
       "country": "Indonesia",
-      "duration": "1 Month",
+      "duration": "~1 Month",
       "year": "2022",
       "image": "src/assets/logos/buku-resepku-logo.png",
       "technologies": ["Native Javascript", "Bootstrap", "Webpack"],
@@ -48,12 +48,26 @@
       "category": "Front End",
       "subcategory": "Website",
       "country": "Indonesia",
-      "duration": "1 Month",
+      "duration": "~1 Month",
       "year": "2024",
       "image": "",
       "technologies": ["ReactJS", "Bootstrap", "CI/CD Test"],
       "clientTestimonial": "My first framework project. I choose ReactJS and Bootstrap to learn how framework works.",
       "links": ["https://github.com/aryapdf/shopper-ecommerce-frontend"]
+    },
+    {
+      "id": 3,
+      "title": "Arya's Portfolio Website (old)",
+      "description": "A modern, light-themed personal website showcasing Arya Pradana’s profile, skills, and front-end development projects in a sleek, interactive one-page design.",
+      "category": "Front End",
+      "subcategory": "Website",
+      "country": "Indonesia",
+      "duration": "~1 Month",
+      "year": "2024",
+      "image": "src/assets/projects/arya-portfolio-old.png",
+      "technologies": ["ReactJS", "Tailwind", "Sass/Scss"],
+      "clientTestimonial": "My old portfolio website, used as reference.",
+      "links": ["https://aryapdf.netlify.app/"]
     }
   ],
 
