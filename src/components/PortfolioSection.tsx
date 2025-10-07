@@ -219,13 +219,16 @@ const PortfolioSection = () => {
                                     onClick={() => handleProjectClick(project)}
                                 >
                                   <CardContent className="flex flex-col p-0">
-                                    <div className="relative w-full aspect-video overflow-hidden bg-muted">
+                                    <div
+                                        className="relative w-full aspect-video max-w-md mx-auto overflow-hidden bg-muted">
                                       <img
                                           src={project.image || "src/assets/personal-logo-full.png"}
                                           alt={project.title}
                                           className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                          loading="lazy"
                                       />
                                     </div>
+
                                     <div className="p-4">
                                       <div className="flex items-start justify-between mb-2">
                                         <h3 className="text-base font-bold text-foreground group-hover:text-primary transition-colors flex-1">
@@ -248,8 +251,8 @@ const PortfolioSection = () => {
                     {/* Pagination */}
                     {totalPages > 1 && (
                         <Pagination>
-                        <PaginationContent>
-                            <PaginationItem>
+                          <PaginationContent>
+                          <PaginationItem>
                               <PaginationPrevious
                                   onClick={() => handlePageChange(currentPage - 1)}
                                   className={`${
@@ -373,11 +376,12 @@ const PortfolioSection = () => {
                     <div className="space-y-6 mt-6">
 
                       {selectedProject.image && (
-                          <div className="aspect-[12/8] rounded-lg overflow-hidden bg-foreground/5">
+                          <div className="rounded-lg overflow-hidden bg-foreground/5 max-w-md mx-auto">
                             <img
                                 src={selectedProject.image}
                                 alt={selectedProject.title}
-                                className="w-full h-full object-cover"
+                                className="w-full h-auto object-contain"
+                                loading="lazy"
                             />
                           </div>
                       )}
