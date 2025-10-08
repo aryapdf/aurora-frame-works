@@ -12,6 +12,7 @@ const Header = () => {
   const navItems = [
     { key: "nav.about", label: t("nav.about"), section: "about" },
     { key: "nav.projects", label: t("nav.projects"), section: "projects" },
+    { key: "nav.expertise", label: t("nav.expertise"), section: "expertise" },
     { key: "nav.experience", label: t("nav.experience"), section: "experience" },
     { key: "nav.contact", label: t("nav.contact"), section: "contact" }
   ];
