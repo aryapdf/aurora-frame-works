@@ -3,8 +3,9 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 // Import skill icons
 import htmlIcon from "@/assets/tools/html-icon.svg";
@@ -35,6 +36,27 @@ const ExpertiseSection = () => {
   const skillsNavRef = useRef<HTMLDivElement>(null);
   const detailRef = useRef<HTMLDivElement>(null);
 
+  const handleSkillClick = (skillId: string) => {
+    setActiveSkill(skillId);
+
+    // Calculate scroll position based on skill index
+    const skillIndex = skills.findIndex(s => s.id === skillId);
+    const scrollProgress = skillIndex / (skills.length - 1); // 0 to 1
+
+    // Get ScrollTrigger instance
+    const trigger = ScrollTrigger.getById('expertise-scroll');
+    if (trigger) {
+      const scrollDistance = trigger.end - trigger.start;
+      const targetScroll = trigger.start + (scrollDistance * scrollProgress);
+
+      gsap.to(window, {
+        scrollTo: targetScroll,
+        duration: 0,
+        ease: "none"
+      });
+    }
+  };
+
   useGSAP(() => {
     gsap.timeline({
       scrollTrigger: {
@@ -52,13 +74,13 @@ const ExpertiseSection = () => {
 
     const tl = gsap.timeline({
       scrollTrigger: {
+        id: 'expertise-scroll', // Add this
         trigger: sectionRef.current,
         start: "top top",
-        end: "+=400%", // panjang scroll untuk 4 skill (1x100% per step)
+        end: "+=400%",
         scrub: true,
         pin: true,
         pinSpacing: true,
-        // markers: true,
       },
     });
 
@@ -88,8 +110,6 @@ const ExpertiseSection = () => {
       onStart: () => setActiveSkill("magento"),
       onReverseComplete: () => setActiveSkill('antd')
     });
-
-
   }, { scope: sectionRef });
 
 
@@ -120,19 +140,20 @@ const ExpertiseSection = () => {
                 ref={skillsNavRef}
                 className="lg:col-span-4 xl:col-span-3 flex flex-col h-full"
             >
-              <div className="flex lg:flex-col justify-between overflow-x-auto lg:overflow-y-auto pb-4 lg:pb-0 flex-1">
+              <div className="flex lg:flex-col justify-between gap-5 overflow-x-auto lg:overflow-y-auto pb-4 lg:pb-0 flex-1">
                 {skills.map((skill) => (
                     <button
                         key={skill.id}
-                        onClick={() => setActiveSkill(skill.id)}
+                        onClick={() => handleSkillClick(skill.id)}
+                        // onClick={() => setActiveSkill(skill.id)}
                         className={`
-                group flex-shrink-0 p-4 sm:p-5 lg:p-6 rounded-xl lg:rounded-2xl border-2 transition-all duration-300 w-full
-                ${
+                          group flex-shrink-0 p-4 sm:p-5 lg:p-6 rounded-xl lg:rounded-2xl border-2 transition-all duration-300 w-full flex-1
+                          ${
                             activeSkill === skill.id
                                 ? "border-primary bg-primary/10 shadow-lg shadow-primary/20"
                                 : "border-border/50 bg-background/50 hover:border-primary/50 hover:bg-background/80"
-                        }
-              `}
+                          }
+                        `}
                     >
                       <div className="flex lg:flex-col items-center gap-3">
                         <div
