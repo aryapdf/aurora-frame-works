@@ -138,9 +138,9 @@ const ExpertiseSection = () => {
             {/* Left Section - Browser-style Tabs */}
             <div
                 ref={skillsNavRef}
-                className="lg:col-span-12 xl:col-span-12 flex flex-col"
+                className="lg:col-span-12 xl:col-span-12 flex flex-col -mb-6 lg:mb-0"
             >
-              <div className="flex justify-start gap-1 overflow-x-auto pb-4 border-b border-border/30">
+              <div className="flex justify-start gap-1 overflow-x-auto pb-0 lg:pb-4 border-b border-border/30">
                 {skills.map((skill) => (
                     <button
                         key={skill.id}
@@ -150,7 +150,7 @@ const ExpertiseSection = () => {
                           rounded-t-lg transition-all duration-300 flex-shrink-0
                           ${
                             activeSkill === skill.id
-                                ? "bg-background border-t-2 border-x-2 border-primary border-b-0 shadow-lg"
+                                ? "bg-background border-t-2 border-x-2 border-primary border-foreground/10 shadow-lg"
                                 : "bg-background/30 border border-transparent hover:bg-background/50"
                           }
                         `}
@@ -190,10 +190,10 @@ const ExpertiseSection = () => {
             {/* Skill Details Section */}
             <div
                 ref={detailRef}
-                className="flex flex-col h-full min-h-0 flex-1"
+                className="flex flex-col h-full min-h-0 flex-1 -mt-0 lg:mt-0"
             >
               <div
-                  className="backdrop-blur-xl bg-background/50 border border-foreground/10 rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8 xl:p-10 flex-1 flex flex-col overflow-hidden">
+                  className="backdrop-blur-xl bg-background/50 border border-foreground/10 rounded-t-none lg:rounded-2xl rounded-b-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8 xl:p-10 flex-1 flex flex-col overflow-hidden">
                 {activeData && (
                     <div className="flex flex-col flex-1 min-h-0">
                       {/* Title and Experience Time */}
