@@ -81,10 +81,10 @@ const HeroSection = () => {
   }, [currentTextIndex, displayedText, isDeleting, texts]);
 
   return (
-      <section ref={sectionRef} className="min-h-screen pt-20 relative overflow-hidden flex items-center">
+      <section ref={sectionRef} className="min-h-screen md:min-h-screen pt-20 pb-24 md:pb-0 relative overflow-hidden flex items-center">
         <div className="container mx-auto px-4 sm:px-6">
           {/* Blurred background container */}
-          <div ref={containerRef} className="backdrop-blur-xl bg-background/30 border border-foreground/10 rounded-3xl p-8 sm:p-12 lg:p-16">
+          <div ref={containerRef} className="backdrop-blur-xl bg-background/30 border border-foreground/10 rounded-3xl p-8 sm:p-12 lg:p-16 min-h-[600px] md:min-h-0 flex items-center">
             <div className="max-w-full space-y-6 sm:space-y-8">
               {/* Profile Bubble */}
               <div ref={profileRef} className="inline-flex items-center space-x-2 sm:space-x-3 glass-card px-3 sm:px-4 py-2 rounded-full">

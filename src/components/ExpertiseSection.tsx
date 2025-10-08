@@ -134,58 +134,63 @@ const ExpertiseSection = () => {
           </div>
 
           {/* Main Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 flex-1 items-stretch min-h-0">
-            {/* Left Section - Skill Icons */}
+          <div className="flex flex-col gap-6 lg:gap-8 flex-1 items-stretch min-h-0">
+            {/* Left Section - Browser-style Tabs */}
             <div
                 ref={skillsNavRef}
-                className="lg:col-span-4 xl:col-span-3 flex flex-col h-full"
+                className="lg:col-span-12 xl:col-span-12 flex flex-col"
             >
-              <div className="flex lg:flex-col justify-between gap-5 overflow-x-auto lg:overflow-y-auto pb-4 lg:pb-0 flex-1">
+              <div className="flex justify-start gap-1 overflow-x-auto pb-4 border-b border-border/30">
                 {skills.map((skill) => (
                     <button
                         key={skill.id}
                         onClick={() => handleSkillClick(skill.id)}
-                        // onClick={() => setActiveSkill(skill.id)}
                         className={`
-                          group flex-shrink-0 p-4 sm:p-5 lg:p-6 rounded-xl lg:rounded-2xl border-2 transition-all duration-300 w-full flex-1
+                          group relative flex items-center gap-2 px-3 sm:px-4 py-2.5 sm:py-3 
+                          rounded-t-lg transition-all duration-300 flex-shrink-0
                           ${
                             activeSkill === skill.id
-                                ? "border-primary bg-primary/10 shadow-lg shadow-primary/20"
-                                : "border-border/50 bg-background/50 hover:border-primary/50 hover:bg-background/80"
+                                ? "bg-background border-t-2 border-x-2 border-primary border-b-0 shadow-lg"
+                                : "bg-background/30 border border-transparent hover:bg-background/50"
                           }
                         `}
                     >
-                      <div className="flex lg:flex-col items-center gap-3">
-                        <div
-                            className={`
-                    w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 flex items-center justify-center rounded-xl transition-transform duration-300 flex-shrink-0
-                    ${activeSkill === skill.id ? "scale-110" : "group-hover:scale-105"}
-                  `}
-                        >
-                          <img
-                              src={skill.icon}
-                              alt={skill.name}
-                              className="w-full h-full object-contain"
-                          />
-                        </div>
-                        <span
-                            className={`
-                    text-xs sm:text-sm font-medium transition-colors duration-300 text-center lg:text-center whitespace-nowrap lg:whitespace-normal
-                    ${activeSkill === skill.id ? "text-primary" : "text-muted-foreground group-hover:text-foreground"}
-                  `}
-                        >
-                  {skill.name}
-                </span>
+                      <div
+                          className={`
+                            w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded transition-transform duration-300 flex-shrink-0
+                            ${activeSkill === skill.id ? "scale-110" : "group-hover:scale-105"}
+                          `}
+                      >
+                        <img
+                            src={skill.icon}
+                            alt={skill.name}
+                            className="w-full h-full object-contain"
+                        />
                       </div>
+                      <span
+                          className={`
+                            text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap
+                            ${
+                              activeSkill === skill.id 
+                                ? "text-primary max-w-40 opacity-100" 
+                                : "max-w-0 opacity-0 overflow-hidden"
+                            }
+                          `}
+                      >
+                        {skill.name}
+                      </span>
+                      {activeSkill === skill.id && (
+                        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
+                      )}
                     </button>
                 ))}
               </div>
             </div>
 
-            {/* Right Section - Skill Details */}
+            {/* Skill Details Section */}
             <div
                 ref={detailRef}
-                className="lg:col-span-8 xl:col-span-9 flex flex-col h-full min-h-0"
+                className="flex flex-col h-full min-h-0 flex-1"
             >
               <div
                   className="backdrop-blur-xl bg-background/50 border border-foreground/10 rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8 xl:p-10 flex-1 flex flex-col overflow-hidden">

@@ -42,72 +42,91 @@ const Header = () => {
   }, []);
 
   return (
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'glass-card' : 'bg-transparent'
-      }`}>
-        <div className="container mx-auto px-4 py-2">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <div className="flex items-center space-x-8">
-              <img 
-                alt="personal_logo" 
-                src="src/assets/personal-logo.png" 
-                className="w-14 h-14 object-contain rounded-full cursor-pointer hover:scale-105 transition-transform"
-                onClick={() => smoothScrollTo("top")}
-              />
+      <>
+        {/* Desktop Header - Top */}
+        <header className={`hidden md:block fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+            isScrolled ? 'glass-card' : 'bg-transparent'
+        }`}>
+          <div className="container mx-auto px-4 py-2">
+            <div className="flex items-center justify-between">
+              {/* Logo */}
+              <div className="flex items-center space-x-8">
+                <img 
+                  alt="personal_logo" 
+                  src="src/assets/personal-logo.png" 
+                  className="w-14 h-14 object-contain rounded-full cursor-pointer hover:scale-105 transition-transform"
+                  onClick={() => smoothScrollTo("top")}
+                />
 
-              {/* Desktop Nav */}
-              <nav className="hidden md:flex items-center space-x-8">
-                {navItems.map((item) => (
-                    <button
-                        key={item.key}
-                        onClick={() => smoothScrollTo(item.section)}
-                        className="text-foreground/80 hover:text-foreground transition-colors text-base font-medium"
-                    >
-                      {item.label}
-                    </button>
-                ))}
-              </nav>
-            </div>
+                {/* Desktop Nav */}
+                <nav className="flex items-center space-x-8">
+                  {navItems.map((item) => (
+                      <button
+                          key={item.key}
+                          onClick={() => smoothScrollTo(item.section)}
+                          className="text-foreground/80 hover:text-foreground transition-colors text-base font-medium"
+                      >
+                        {item.label}
+                      </button>
+                  ))}
+                </nav>
+              </div>
 
-            {/* Right side */}
-            <div className="flex items-center space-x-2 md:space-x-4">
-              <LanguageSwitcher />
-              <ThemeToggle />
-              {/*<Button variant="ghost" size="icon" className="text-foreground/80">*/}
-              {/*  <Search className="h-4 w-4" />*/}
-              {/*</Button>*/}
-
-              {/* Mobile Menu */}
-              <div className="md:hidden">
-                <Sheet open={open} onOpenChange={setOpen}>
-                  <SheetTrigger asChild>
-                    <Button variant="ghost" size="icon">
-                      <Menu className="h-5 w-5" />
-                    </Button>
-                  </SheetTrigger>
-                  <SheetContent side="right" className="w-64 p-6">
-                    <nav className="flex flex-col space-y-4 mt-6">
-                      {navItems.map((item) => (
-                          <button
-                              key={item.key}
-                              onClick={() => {
-                                smoothScrollTo(item.section);
-                                setOpen(false);
-                              }}
-                              className="text-foreground/80 hover:text-foreground transition-colors text-base font-medium text-left"
-                          >
-                            {item.label}
-                          </button>
-                      ))}
-                    </nav>
-                  </SheetContent>
-                </Sheet>
+              {/* Right side */}
+              <div className="flex items-center space-x-2 md:space-x-4">
+                <LanguageSwitcher />
+                <ThemeToggle />
               </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
+
+        {/* Mobile Header - Bottom */}
+        <header className="md:hidden fixed bottom-0 left-0 right-0 z-50 glass-card border-t border-foreground/10 pb-safe">
+          <div className="container mx-auto px-4 py-3">
+            <div className="flex items-center justify-between">
+              {/* Hamburger Menu - Left */}
+              <Sheet open={open} onOpenChange={setOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon" className="text-foreground/80">
+                    <Menu className="h-5 w-5" />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="bottom" className="h-auto max-h-[80vh] rounded-t-3xl">
+                  <nav className="flex flex-col space-y-1 py-4">
+                    {navItems.map((item) => (
+                        <button
+                            key={item.key}
+                            onClick={() => {
+                              smoothScrollTo(item.section);
+                              setOpen(false);
+                            }}
+                            className="text-foreground/80 hover:text-foreground hover:bg-muted/50 transition-colors text-lg font-medium text-left px-4 py-3 rounded-lg"
+                        >
+                          {item.label}
+                        </button>
+                    ))}
+                  </nav>
+                </SheetContent>
+              </Sheet>
+
+              {/* Theme and Language - Middle */}
+              <div className="flex items-center space-x-2">
+                <ThemeToggle />
+                <LanguageSwitcher />
+              </div>
+
+              {/* Logo - Right */}
+              <img 
+                alt="personal_logo" 
+                src="src/assets/personal-logo.png" 
+                className="w-10 h-10 object-contain rounded-full cursor-pointer hover:scale-105 transition-transform"
+                onClick={() => smoothScrollTo("top")}
+              />
+            </div>
+          </div>
+        </header>
+      </>
   );
 };
 

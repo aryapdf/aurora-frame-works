@@ -313,7 +313,7 @@ const PortfolioSection = () => {
                               <p className="text-foreground/60 text-base lg:text-lg mb-4">
                                 {project.subcategory}
                               </p>
-                              <p className="text-foreground/70 leading-relaxed">
+                              <p className="text-foreground/70 leading-relaxed hidden md:block">
                                 {project.description}
                               </p>
                             </div>
@@ -357,7 +357,7 @@ const PortfolioSection = () => {
 
           {/* Project Detail Modal */}
           <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
-            <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-background border border-foreground/10">
+            <DialogContent className="w-[90vw] sm:w-[95vw] max-w-4xl max-h-[90vh] overflow-y-auto bg-background border border-foreground/10">
               {selectedProject && (
                   <>
                     <DialogHeader className="space-y-3">
