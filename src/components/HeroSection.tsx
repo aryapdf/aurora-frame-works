@@ -35,17 +35,17 @@ const HeroSection = () => {
       x: -50,
       opacity: 0,
       duration: 0.4,
-    }, "-=0.6")
+    }, "-=0.9")
     .from(nameRef.current, {
       y: 50,
       opacity: 0,
       duration: 0.4,
-    }, "-=0.4")
+    }, "-=0.7")
     .from(textRef.current, {
       y: 30,
       opacity: 0,
       duration: 0.4,
-    }, "-=0.4")
+    }, "-=0.5")
     .from(ctaRef.current, {
       y: 20,
       opacity: 0,
