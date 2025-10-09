@@ -120,11 +120,11 @@ const ExpertiseSection = () => {
       <section
           ref={sectionRef}
           id="expertise"
-          className="relative min-h-screen max-h-screen overflow-hidden py-20 sm:py-32"
+          className="relative min-h-screen max-h-screen overflow-hidden py-24"
       >
         <div className="container mx-auto px-4 sm:px-6 h-full flex flex-col">
           {/* Section Header */}
-          <div ref={headerRef} className="mb-12 sm:mb-16 flex-shrink-0">
+          <div ref={headerRef} className="mb-6 sm:mb-8 flex-shrink-0">
             <p className="text-xs sm:text-sm font-mono text-muted-foreground mb-3 sm:mb-4 tracking-wider">
               {expertiseData.section}
             </p>
@@ -134,66 +134,65 @@ const ExpertiseSection = () => {
           </div>
 
           {/* Main Content */}
-          <div className="flex flex-col gap-6 lg:gap-8 flex-1 items-stretch min-h-0">
-            {/* Left Section - Browser-style Tabs */}
+          <div className="flex flex-col md:grid md:grid-cols-12 gap-6 lg:gap-8 flex-1 items-stretch min-h-0">
+            {/* Left Section - Skill Icons */}
             <div
                 ref={skillsNavRef}
-                className="lg:col-span-12 xl:col-span-12 flex flex-col -mb-6 lg:mb-0"
+                className="lg:col-span-4 xl:col-span-3 flex flex-col md:h-full"
             >
-              <div className="flex justify-start gap-1 overflow-x-auto pb-0 lg:pb-4 border-b border-border/30">
+              <div className="flex justify-start md:flex-col md:justify-between gap-1 md:gap-5 overflow-x-auto lg:overflow-y-auto pb-0 md:flex-1 border-b border-border/30">
                 {skills.map((skill) => (
                     <button
                         key={skill.id}
                         onClick={() => handleSkillClick(skill.id)}
+                        // onClick={() => setActiveSkill(skill.id)}
                         className={`
-                          group relative flex items-center gap-2 px-3 sm:px-4 py-2.5 sm:py-3 
-                          rounded-t-lg transition-all duration-300 flex-shrink-0
+                          group relative flex items-center gap-2 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl lg:rounded-2xl border-2 transition-all duration-300 md:w-full flex-shrink-0 md:flex-1 md:justify-center
                           ${
                             activeSkill === skill.id
-                                ? "bg-background border-t-2 border-x-2 border-primary border-foreground/10 shadow-lg"
-                                : "bg-background/30 border border-transparent hover:bg-background/50"
-                          }
+                                ? "border-primary bg-primary/10 shadow-lg shadow-primary/20"
+                                : "border-border/50 bg-background/50 hover:border-primary/50 hover:bg-background/80"
+                        }
                         `}
                     >
-                      <div
-                          className={`
-                            w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded transition-transform duration-300 flex-shrink-0
-                            ${activeSkill === skill.id ? "scale-110" : "group-hover:scale-105"}
-                          `}
-                      >
-                        <img
-                            src={skill.icon}
-                            alt={skill.name}
-                            className="w-full h-full object-contain"
-                        />
+                      <div className="flex lg:flex-col items-center md:gap-3">
+                        <div
+                            className={`
+                    w-5 h-5 sm:w-6 sm:h-6 lg:w-16 lg:h-16 flex items-center justify-center rounded-xl transition-transform duration-300 flex-shrink-0
+                    ${activeSkill === skill.id ? "scale-110" : "group-hover:scale-105"}
+                  `}
+                        >
+                          <img
+                              src={skill.icon}
+                              alt={skill.name}
+                              className="w-full h-full object-contain"
+                          />
+                        </div>
+                        {/*<span*/}
+                        {/*    className={`*/}
+                        {/*    text-xs sm:text-sm font-medium transition-all duration-300 md:text-center whitespace-nowrap md:whitespace-normal*/}
+                        {/*          ${*/}
+                        {/*              activeSkill === skill.id */}
+                        {/*                  ? "text-primary max-w-40 md:opacity-100 md:max-w-100 md:overflow-unset" */}
+                        {/*                  : "opacity-0 overflow-hidden md:max-w-100 md:opacity-100 md:overflow-unset"*/}
+                        {/*            }*/}
+                        {/*          `}*/}
+                        {/*        >*/}
+                        {/*  {skill.name}*/}
+                        {/*</span>*/}
                       </div>
-                      <span
-                          className={`
-                            text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap
-                            ${
-                              activeSkill === skill.id 
-                                ? "text-primary max-w-40 opacity-100" 
-                                : "max-w-0 opacity-0 overflow-hidden"
-                            }
-                          `}
-                      >
-                        {skill.name}
-                      </span>
-                      {activeSkill === skill.id && (
-                        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
-                      )}
                     </button>
                 ))}
               </div>
             </div>
 
-            {/* Skill Details Section */}
+            {/* Right Section - Skill Details */}
             <div
                 ref={detailRef}
-                className="flex flex-col h-full min-h-0 flex-1 -mt-0 lg:mt-0"
+                className="lg:col-span-8 xl:col-span-9 flex flex-col h-full min-h-0"
             >
               <div
-                  className="backdrop-blur-xl bg-background/50 border border-foreground/10 rounded-t-none lg:rounded-2xl rounded-b-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8 xl:p-10 flex-1 flex flex-col overflow-hidden">
+                  className="backdrop-blur-xl bg-background/50 border border-foreground/10 rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8 xl:p-10 flex-1 flex flex-col overflow-hidden">
                 {activeData && (
                     <div className="flex flex-col flex-1 min-h-0">
                       {/* Title and Experience Time */}
