@@ -99,7 +99,7 @@
       "links": ["https://id.infinixmobility.com/NOTE-40"]
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "Zero 40 Series",
       "description": "Maintained and optimized the Note 40 Series landing pages (Note 40, Note 40 Pro, Note 40 Pro 5G, Note 40 Pro+ 5G, Note 40S), improving performance by 15–20% through ScrollMagic render-frame enhancements and asynchronous rendering.",
       "category": "Front-End",
