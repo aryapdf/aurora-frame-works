@@ -94,7 +94,7 @@ const HeroSection = () => {
           }}>
             <div className="max-w-full" style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(1.5rem, 3vw, 2rem)' }}>
               {/* Profile Bubble */}
-              <div ref={profileRef} className="inline-flex items-center glass-card rounded-full" style={{ 
+              <div ref={profileRef} className="inline-flex items-center glass-card rounded-full w-fit" style={{
                 gap: 'clamp(0.5rem, 1.5vw, 0.75rem)',
                 padding: 'clamp(0.5rem, 1.5vw, 0.75rem) clamp(0.75rem, 2vw, 1rem)'
               }}>
