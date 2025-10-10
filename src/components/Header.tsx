@@ -47,25 +47,27 @@ const Header = () => {
         {/* Desktop Header - Top */}
         <header className={`hidden md:block fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
             isScrolled ? 'glass-card' : 'bg-transparent'
-        }`}>
-          <div className="container mx-auto px-4 py-2">
+        }`} style={{ padding: 'clamp(0.5rem, 1vw, 0.75rem) 0' }}>
+          <div className="container mx-auto" style={{ paddingLeft: 'clamp(1rem, 2vw, 1.5rem)', paddingRight: 'clamp(1rem, 2vw, 1.5rem)' }}>
             <div className="flex items-center justify-between">
               {/* Logo */}
-              <div className="flex items-center space-x-8">
+              <div className="flex items-center" style={{ gap: 'clamp(1.5rem, 3vw, 2rem)' }}>
                 <img 
                   alt="personal_logo" 
                   src="src/assets/personal-logo.png" 
-                  className="w-14 h-14 object-contain rounded-full cursor-pointer hover:scale-105 transition-transform"
+                  className="object-contain rounded-full cursor-pointer hover:scale-105 transition-transform"
+                  style={{ width: 'clamp(2.5rem, 4vw, 3.5rem)', height: 'clamp(2.5rem, 4vw, 3.5rem)' }}
                   onClick={() => smoothScrollTo("top")}
                 />
 
                 {/* Desktop Nav */}
-                <nav className="flex items-center space-x-8">
+                <nav className="flex items-center" style={{ gap: 'clamp(1.5rem, 2.5vw, 2rem)' }}>
                   {navItems.map((item) => (
                       <button
                           key={item.key}
                           onClick={() => smoothScrollTo(item.section)}
-                          className="text-foreground/80 hover:text-foreground transition-colors text-base font-medium"
+                          className="text-foreground/80 hover:text-foreground transition-colors font-medium"
+                          style={{ fontSize: 'clamp(0.875rem, 1vw, 1rem)' }}
                       >
                         {item.label}
                       </button>
@@ -74,7 +76,7 @@ const Header = () => {
               </div>
 
               {/* Right side */}
-              <div className="flex items-center space-x-2 md:space-x-4">
+              <div className="flex items-center" style={{ gap: 'clamp(0.5rem, 1vw, 1rem)' }}>
                 <LanguageSwitcher />
                 <ThemeToggle />
               </div>
@@ -84,17 +86,17 @@ const Header = () => {
 
         {/* Mobile Header - Bottom */}
         <header className="md:hidden fixed bottom-0 left-0 right-0 z-50 glass-card border-t border-foreground/10 pb-safe">
-          <div className="container mx-auto px-4 py-3">
+          <div className="container mx-auto" style={{ padding: 'clamp(0.75rem, 2vw, 1rem) clamp(1rem, 3vw, 1.5rem)' }}>
             <div className="flex items-center justify-between flex-row-reverse">
               {/* Hamburger Menu - Left */}
               <Sheet open={open} onOpenChange={setOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className="text-foreground/80">
-                    <Menu className="h-5 w-5" />
+                  <Button variant="ghost" size="icon" className="text-foreground/80" style={{ width: 'clamp(2.25rem, 5vw, 2.5rem)', height: 'clamp(2.25rem, 5vw, 2.5rem)' }}>
+                    <Menu style={{ width: 'clamp(1.125rem, 3vw, 1.25rem)', height: 'clamp(1.125rem, 3vw, 1.25rem)' }} />
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="bottom" className="h-auto max-h-[80vh] rounded-t-3xl">
-                  <nav className="flex flex-col space-y-1 py-4">
+                  <nav className="flex flex-col space-y-1" style={{ paddingTop: 'clamp(1rem, 2vw, 1.5rem)', paddingBottom: 'clamp(1rem, 2vw, 1.5rem)' }}>
                     {navItems.map((item) => (
                         <button
                             key={item.key}
@@ -102,7 +104,11 @@ const Header = () => {
                               smoothScrollTo(item.section);
                               setOpen(false);
                             }}
-                            className="text-foreground/80 hover:text-foreground hover:bg-muted/50 transition-colors text-lg font-medium text-left px-4 py-3 rounded-lg"
+                            className="text-foreground/80 hover:text-foreground hover:bg-muted/50 transition-colors font-medium text-left rounded-lg"
+                            style={{ 
+                              fontSize: 'clamp(1rem, 2.5vw, 1.125rem)',
+                              padding: 'clamp(0.75rem, 2vw, 1rem) clamp(1rem, 3vw, 1.25rem)'
+                            }}
                         >
                           {item.label}
                         </button>
@@ -112,7 +118,7 @@ const Header = () => {
               </Sheet>
 
               {/* Theme and Language - Middle */}
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center" style={{ gap: 'clamp(0.5rem, 2vw, 0.75rem)' }}>
                 <ThemeToggle />
                 <LanguageSwitcher />
               </div>
@@ -121,7 +127,8 @@ const Header = () => {
               <img 
                 alt="personal_logo" 
                 src="src/assets/personal-logo.png" 
-                className="w-10 h-10 object-contain rounded-full cursor-pointer hover:scale-105 transition-transform"
+                className="object-contain rounded-full cursor-pointer hover:scale-105 transition-transform"
+                style={{ width: 'clamp(2rem, 5vw, 2.5rem)', height: 'clamp(2rem, 5vw, 2.5rem)' }}
                 onClick={() => smoothScrollTo("top")}
               />
             </div>

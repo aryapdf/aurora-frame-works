@@ -63,56 +63,45 @@ const AboutSection = () => {
 
   return (
       <section ref={sectionRef} id="about" className="relative">
-        <div className="container mx-auto px-4 sm:px-6 flex items-center justify-center h-screen pt-24">
-          <div ref={containerRef} className="w-full h-fit flex flex-col justify-center items-center backdrop-blur-xl bg-background/30 border border-foreground/10 rounded-3xl p-8 sm:p-12 lg:p-16">
-            {/* Company Logos Carousel */}
-            {/*<div className="mb-8 sm:mb-12 lg:mb-16 w-full relative overflow-hidden">*/}
-            {/*  /!* Scrolling container *!/*/}
-            {/*  <div className="flex gap-8 sm:gap-10 lg:gap-16 animate-scroll">*/}
-            {/*    /!* Duplicate the companies array for seamless loop *!/*/}
-            {/*    {[...companies, ...companies, ...companies].map((company, index) => (*/}
-            {/*        <div*/}
-            {/*            key={`${company.name}-${index}`}*/}
-            {/*            className="flex-shrink-0 flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-muted/50 border border-foreground/5 backdrop-blur-sm"*/}
-            {/*        >*/}
-            {/*          <img*/}
-            {/*              src={company.logo}*/}
-            {/*              alt={`${company.name} logo`}*/}
-            {/*              className="h-8 sm:h-10 w-auto filter grayscale opacity-60 rounded-lg overflow-hidden"*/}
-            {/*          />*/}
-            {/*        </div>*/}
-            {/*    ))}*/}
-            {/*  </div>*/}
-            {/*</div>*/}
-
+        <div className="container mx-auto flex items-center justify-center h-screen" style={{ 
+          paddingLeft: 'clamp(1rem, 3vw, 1.5rem)', 
+          paddingRight: 'clamp(1rem, 3vw, 1.5rem)',
+          paddingTop: 'clamp(5rem, 10vh, 6rem)'
+        }}>
+          <div ref={containerRef} className="w-full h-fit flex flex-col justify-center items-center backdrop-blur-xl bg-background/30 border border-foreground/10 rounded-3xl" style={{ 
+            padding: 'clamp(2rem, 6vw, 4rem)'
+          }}>
             {/* Section Header */}
-            <div className="text-left mb-6 sm:mb-8 lg:mb-12 max-w-full">
-              <p ref={headerRef} className="text-xs sm:text-sm text-foreground/40 uppercase tracking-wider mb-4 sm:mb-6 lg:mb-8">
+            <div className="text-left max-w-full" style={{ marginBottom: 'clamp(1.5rem, 4vw, 3rem)' }}>
+              <p ref={headerRef} className="text-foreground/40 uppercase tracking-wider" style={{ 
+                fontSize: 'clamp(0.75rem, 1vw, 0.875rem)',
+                marginBottom: 'clamp(1rem, 3vw, 2rem)'
+              }}>
                 {t("about.section")}
               </p>
 
               {/* Main Content */}
-              <div className="space-y-4 sm:space-y-6 lg:space-y-8">
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(1rem, 3vw, 2rem)' }}>
                 <h2
                     ref={titleRef}
-                    className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-normal text-foreground leading-relaxed sm:leading-relaxed lg:leading-relaxed"
-                    style={{lineHeight: 1.25}}
+                    className="font-normal text-foreground leading-relaxed"
+                    style={{ fontSize: 'clamp(1.25rem, 3.5vw, 2.5rem)', lineHeight: 1.25 }}
                 >
                   {t("about.title")}
                 </h2>
 
                 <p
                     ref={descRef}
-                    className="text-xl md:text-2xl lg:text-3xl xl:text-4xl text-foreground/60 leading-relaxed sm:leading-relaxed lg:leading-loose max-w-4xl"
-                    style={{lineHeight: 1.25}}
+                    className="text-foreground/60 leading-relaxed max-w-4xl"
+                    style={{ fontSize: 'clamp(1.25rem, 3.5vw, 2.5rem)', lineHeight: 1.25 }}
                 >
                   {t("about.description")}
                 </p>
 
                 {/* Current Job */}
-                <div ref={jobRef} className="pt-3 sm:pt-4 lg:pt-6">
-                  <div className="flex items-start sm:items-center space-x-2 text-foreground/60">
-                    <p className="text-sm sm:text-base lg:text-lg leading-normal">
+                <div ref={jobRef} style={{ paddingTop: 'clamp(0.75rem, 2vw, 1.5rem)' }}>
+                  <div className="flex items-start sm:items-center text-foreground/60" style={{ gap: 'clamp(0.5rem, 1vw, 0.75rem)' }}>
+                    <p className="leading-normal" style={{ fontSize: 'clamp(0.875rem, 1.5vw, 1.125rem)' }}>
                       {t("about.current_job")}
                     </p>
                   </div>

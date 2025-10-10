@@ -81,23 +81,34 @@ const HeroSection = () => {
   }, [currentTextIndex, displayedText, isDeleting, texts]);
 
   return (
-      <section ref={sectionRef} className="min-h-screen md:min-h-screen pt-20 pb-24 md:pb-0 relative overflow-hidden flex items-center">
-        <div className="container mx-auto px-4 sm:px-6">
+      <section ref={sectionRef} className="relative overflow-hidden flex items-center" style={{ 
+        minHeight: 'clamp(650px, 100vh, 1200px)',
+        paddingTop: 'clamp(4rem, 10vh, 6rem)',
+        paddingBottom: 'clamp(5rem, 12vh, 6rem)'
+      }}>
+        <div className="container mx-auto" style={{ paddingLeft: 'clamp(1rem, 3vw, 1.5rem)', paddingRight: 'clamp(1rem, 3vw, 1.5rem)' }}>
           {/* Blurred background container */}
-          <div ref={containerRef} className="backdrop-blur-xl bg-background/30 border border-foreground/10 rounded-3xl p-8 sm:p-12 lg:p-16 min-h-[600px] md:min-h-0 flex items-center">
-            <div className="max-w-full space-y-6 sm:space-y-8">
+          <div ref={containerRef} className="backdrop-blur-xl bg-background/30 border border-foreground/10 rounded-3xl flex items-center" style={{ 
+            padding: 'clamp(2rem, 6vw, 4rem)',
+            minHeight: 'clamp(450px, 60vh, 600px)'
+          }}>
+            <div className="max-w-full" style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(1.5rem, 3vw, 2rem)' }}>
               {/* Profile Bubble */}
-              <div ref={profileRef} className="inline-flex items-center space-x-2 sm:space-x-3 glass-card px-3 sm:px-4 py-2 rounded-full">
+              <div ref={profileRef} className="inline-flex items-center glass-card rounded-full" style={{ 
+                gap: 'clamp(0.5rem, 1.5vw, 0.75rem)',
+                padding: 'clamp(0.5rem, 1.5vw, 0.75rem) clamp(0.75rem, 2vw, 1rem)'
+              }}>
                 <img
                     alt="personal_logo"
                     src="src/assets/personal-logo-full.png"
-                    className="w-6 h-6 sm:w-8 sm:h-8 object-contain rounded-full"
+                    className="object-contain rounded-full"
+                    style={{ width: 'clamp(1.5rem, 3vw, 2rem)', height: 'clamp(1.5rem, 3vw, 2rem)' }}
                 />
-                <span className="text-foreground/80 text-xs sm:text-sm">{t("hero.greeting")}</span>
+                <span className="text-foreground/80" style={{ fontSize: 'clamp(0.75rem, 1.2vw, 0.875rem)' }}>{t("hero.greeting")}</span>
               </div>
 
               {/* Main Heading */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight text-foreground max-w-full">
+              <h1 className="font-bold leading-tight text-foreground max-w-full" style={{ fontSize: 'clamp(1.875rem, 6vw, 4.5rem)' }}>
               <span
                   ref={nameRef}
                   className="block bg-gradient-to-r from-[#00C8FF] to-[#0072FF] bg-clip-text text-transparent font-bold leading-tight"
@@ -105,19 +116,21 @@ const HeroSection = () => {
                 {t("hero.name")}
               </span>
 
-                <span ref={textRef} className="inline-block min-h-[1.2em] mt-2 sm:mt-0">
+                <span ref={textRef} className="inline-block" style={{ minHeight: '1.2em', marginTop: 'clamp(0.5rem, 1vw, 0)' }}>
                 {displayedText}
                   <span className="opacity-0 pointer-events-none">A</span>
               </span>
               </h1>
 
               {/* CTA */}
-              <div className="pt-4 sm:pt-8">
+              <div style={{ paddingTop: 'clamp(1rem, 2vw, 2rem)' }}>
                 <button
                     ref={ctaRef}
-                    className="group flex items-center space-x-2 text-foreground/60 hover:text-primary transition-colors text-sm sm:text-base">
+                    className="group flex items-center text-foreground/60 hover:text-primary transition-colors"
+                    style={{ gap: 'clamp(0.5rem, 1vw, 0.75rem)', fontSize: 'clamp(0.875rem, 1.2vw, 1rem)' }}
+                >
                   <span className="leading-relaxed">{t("hero.scroll")}</span>
-                  <ArrowDown className="h-3 w-3 sm:h-4 sm:w-4 group-hover:translate-y-1 transition-transform flex-shrink-0" />
+                  <ArrowDown style={{ width: 'clamp(0.75rem, 1.2vw, 1rem)', height: 'clamp(0.75rem, 1.2vw, 1rem)' }} className="group-hover:translate-y-1 transition-transform flex-shrink-0" />
                 </button>
               </div>
             </div>

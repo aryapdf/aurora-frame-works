@@ -38,22 +38,13 @@ const ExpertiseSection = () => {
 
   const handleSkillClick = (skillId: string) => {
     setActiveSkill(skillId);
-
-    // Calculate scroll position based on skill index
     const skillIndex = skills.findIndex(s => s.id === skillId);
-    const scrollProgress = skillIndex / (skills.length - 1); // 0 to 1
-
-    // Get ScrollTrigger instance
+    const scrollProgress = skillIndex / (skills.length - 1);
     const trigger = ScrollTrigger.getById('expertise-scroll');
     if (trigger) {
       const scrollDistance = trigger.end - trigger.start;
       const targetScroll = trigger.start + (scrollDistance * scrollProgress);
-
-      gsap.to(window, {
-        scrollTo: targetScroll,
-        duration: 0,
-        ease: "none"
-      });
+      gsap.to(window, { scrollTo: targetScroll, duration: 0, ease: "none" });
     }
   };
 
@@ -61,20 +52,19 @@ const ExpertiseSection = () => {
     gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: "top 50%", // mulai saat 25% bawah viewport
+        start: "top 50%",
         end: "+=50%",
         scrub: 1,
         toggleActions: "play none none reverse",
-        // markers: true,
       },
     })
-        .from(headerRef.current, { y: 40, opacity: 0, duration: 0.4 })
-        .from(skillsNavRef.current, { x: -60, opacity: 0, duration: 0.8 }, "+=0.8")
-        .from(detailRef.current, { x: 60, opacity: 0, duration: 0.8 }, "<");
+    .from(headerRef.current, { y: 40, opacity: 0, duration: 0.4 })
+    .from(skillsNavRef.current, { x: -60, opacity: 0, duration: 0.8 }, "+=0.8")
+    .from(detailRef.current, { x: 60, opacity: 0, duration: 0.8 }, "<");
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        id: 'expertise-scroll', // Add this
+        id: 'expertise-scroll',
         trigger: sectionRef.current,
         start: "top top",
         end: "+=400%",
@@ -84,7 +74,6 @@ const ExpertiseSection = () => {
       },
     });
 
-    // Map the skills
     skills.forEach((skill, index) => {
       tl.to({}, {
         duration: 1,
@@ -96,64 +85,40 @@ const ExpertiseSection = () => {
         }
       })
     })
-
   }, { scope: sectionRef });
-
 
   const expertiseData = t("expertise");
   const activeData = expertiseData.skills.find((s: any) => s.id === activeSkill);
 
   return (
-      <section
-          ref={sectionRef}
-          id="expertise"
-          className="relative min-h-screen max-h-screen overflow-hidden py-24"
-      >
-        <div className="container mx-auto px-4 sm:px-6 h-full flex flex-col">
-          {/* Section Header */}
-          <div ref={headerRef} className="mb-6 sm:mb-8 flex-shrink-0">
-            <p className="text-xs sm:text-sm font-mono text-muted-foreground mb-3 sm:mb-4 tracking-wider">
+      <section ref={sectionRef} id="expertise" className="relative min-h-screen max-h-screen overflow-hidden" style={{ paddingTop: 'clamp(5rem, 10vh, 6rem)', paddingBottom: 'clamp(5rem, 10vh, 6rem)' }}>
+        <div className="container mx-auto h-full flex flex-col" style={{ paddingLeft: 'clamp(1rem, 3vw, 1.5rem)', paddingRight: 'clamp(1rem, 3vw, 1.5rem)' }}>
+          <div ref={headerRef} className="flex-shrink-0" style={{ marginBottom: 'clamp(1.5rem, 3vw, 2rem)' }}>
+            <p className="font-mono text-muted-foreground tracking-wider" style={{ fontSize: 'clamp(0.75rem, 1vw, 0.875rem)', marginBottom: 'clamp(0.75rem, 2vw, 1rem)' }}>
               {expertiseData.section}
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+            <h2 className="font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent" style={{ fontSize: 'clamp(1.875rem, 4vw, 3rem)' }}>
               {expertiseData.title}
             </h2>
           </div>
 
-          {/* Main Content */}
-          <div className="flex flex-col md:grid md:grid-cols-12 gap-6 lg:gap-8 flex-1 items-stretch min-h-0">
-            {/* Left Section - Skill Icons */}
-            <div
-                ref={skillsNavRef}
-                className="lg:col-span-2 flex flex-col md:h-full"
-            >
-              <div className="flex justify-start md:flex-col md:justify-between gap-1 md:gap-5 overflow-x-auto lg:overflow-y-auto pb-0 md:flex-1 border-b border-border/30">
+          <div className="flex flex-col md:grid md:grid-cols-12 flex-1 items-stretch min-h-0" style={{ gap: 'clamp(1.5rem, 3vw, 2rem)' }}>
+            <div ref={skillsNavRef} className="lg:col-span-2 flex flex-col md:h-full">
+              <div className="flex justify-start md:flex-col md:justify-between overflow-x-auto lg:overflow-y-auto md:flex-1 border-b border-border/30" style={{ gap: 'clamp(0.25rem, 1vw, 1.25rem)', paddingBottom: '0' }}>
                 {skills.map((skill) => (
                     <button
                         key={skill.id}
                         onClick={() => handleSkillClick(skill.id)}
-                        // onClick={() => setActiveSkill(skill.id)}
-                        className={`
-                          group relative flex items-center gap-2 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl lg:rounded-2xl border-2 transition-all duration-300 md:w-full flex-shrink-0 md:flex-1 md:justify-center
-                          ${
+                        className={`group relative flex items-center border-2 transition-all duration-300 md:w-full flex-shrink-0 md:flex-1 md:justify-center rounded-xl lg:rounded-2xl ${
                             activeSkill === skill.id
                                 ? "border-primary bg-primary/10 shadow-lg shadow-primary/20"
                                 : "border-border/50 bg-background/50 hover:border-primary/50 hover:bg-background/80"
-                        }
-                        `}
+                        }`}
+                        style={{ gap: 'clamp(0.5rem, 1vw, 0.75rem)', padding: 'clamp(0.625rem, 1.5vw, 0.75rem) clamp(0.75rem, 2vw, 1rem)' }}
                     >
-                      <div className="flex lg:flex-col items-center md:gap-3">
-                        <div
-                            className={`
-                    w-5 h-5 sm:w-6 sm:h-6 lg:w-16 lg:h-16 flex items-center justify-center rounded-xl transition-transform duration-300 flex-shrink-0
-                    ${activeSkill === skill.id ? "scale-110" : "group-hover:scale-105"}
-                  `}
-                        >
-                          <img
-                              src={skill.icon}
-                              alt={skill.name}
-                              className="w-full h-full object-contain rounded-xl "
-                          />
+                      <div className="flex lg:flex-col items-center" style={{ gap: 'clamp(0, 1.5vw, 0.75rem)' }}>
+                        <div className={`flex items-center justify-center rounded-xl transition-transform duration-300 flex-shrink-0 ${activeSkill === skill.id ? "scale-110" : "group-hover:scale-105"}`} style={{ width: 'clamp(1.25rem, 8vw, 4rem)', height: 'clamp(1.25rem, 8vw, 4rem)' }}>
+                          <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain rounded-xl" />
                         </div>
                       </div>
                     </button>
@@ -161,68 +126,44 @@ const ExpertiseSection = () => {
               </div>
             </div>
 
-            {/* Right Section - Skill Details */}
-            <div
-                ref={detailRef}
-                className="lg:col-span-10 flex flex-col h-full min-h-0"
-            >
-              <div
-                  className="backdrop-blur-xl bg-background/50 border border-foreground/10 rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8 xl:p-10 flex-1 flex flex-col overflow-hidden">
+            <div ref={detailRef} className="lg:col-span-10 flex flex-col h-full min-h-0">
+              <div className="backdrop-blur-xl bg-background/50 border border-foreground/10 rounded-2xl lg:rounded-3xl flex-1 flex flex-col overflow-hidden" style={{ padding: 'clamp(1.25rem, 4vw, 2.5rem)' }}>
                 {activeData && (
                     <div className="flex flex-col flex-1 min-h-0">
-                      {/* Title and Experience Time */}
-                      <div className="border-b border-border/50 pb-4 sm:pb-5 lg:pb-6 flex-shrink-0">
-                        <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold mb-2 sm:mb-3">
+                      <div className="border-b border-border/50 flex-shrink-0" style={{ paddingBottom: 'clamp(1rem, 2vw, 1.5rem)' }}>
+                        <h3 className="font-bold" style={{ fontSize: 'clamp(1.25rem, 3vw, 2.5rem)', marginBottom: 'clamp(0.5rem, 1.5vw, 0.75rem)' }}>
                           {activeData.title}
                         </h3>
-                        <div className="flex items-center gap-2 text-xs sm:text-sm lg:text-base text-muted-foreground">
-                          <svg
-                              className="w-4 h-4 sm:w-5 sm:h-5"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                          >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                            />
+                        <div className="flex items-center text-muted-foreground" style={{ gap: 'clamp(0.5rem, 1vw, 0.75rem)', fontSize: 'clamp(0.75rem, 1.2vw, 1rem)' }}>
+                          <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
                           <span className="font-medium">{activeData.experience}</span>
                         </div>
                       </div>
 
-                      {/* Detail of Experience */}
-                      <div className="py-4 sm:py-5 lg:py-6 flex-shrink-0">
-                        <h4 className="text-base sm:text-lg lg:text-xl font-semibold mb-2 sm:mb-3 lg:mb-4 text-foreground/90">
+                      <div className="flex-shrink-0" style={{ paddingTop: 'clamp(1rem, 2vw, 1.5rem)', paddingBottom: 'clamp(1rem, 2vw, 1.5rem)' }}>
+                        <h4 className="font-semibold text-foreground/90" style={{ fontSize: 'clamp(1rem, 1.8vw, 1.25rem)', marginBottom: 'clamp(0.5rem, 1.5vw, 1rem)' }}>
                           {expertiseData.experienceLabel}
                         </h4>
-                        <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                        <p className="text-muted-foreground leading-relaxed" style={{ fontSize: 'clamp(0.875rem, 1.5vw, 1rem)' }}>
                           {activeData.detail}
                         </p>
                       </div>
 
-                      {/* Projects Done */}
-                      <h4 className="text-base sm:text-lg lg:text-xl font-semibold mb-3 sm:mb-4 lg:mb-5 text-foreground/90">
+                      <h4 className="font-semibold text-foreground/90" style={{ fontSize: 'clamp(1rem, 1.8vw, 1.25rem)', marginBottom: 'clamp(0.75rem, 2vw, 1.25rem)' }}>
                         {expertiseData.projectsLabel}
                       </h4>
                       <div className="flex-1 overflow-y-auto">
-                        <div className="grid grid-cols-1 xl:grid-cols-2 gap-3">
+                        <div className="grid grid-cols-1 xl:grid-cols-2" style={{ gap: 'clamp(0.75rem, 1.5vw, 1rem)' }}>
                           {activeData.projects.map((project: any, index: number) => (
-                              <div
-                                  key={index}
-                                  className="group p-4 sm:p-5 rounded-xl border border-border/50 bg-background/30 hover:bg-background/60 hover:border-primary/50 transition-all duration-300"
-                              >
-                                <div className="flex items-start gap-3">
-                                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-primary mt-2"/>
+                              <div key={index} className="group rounded-xl border border-border/50 bg-background/30 hover:bg-background/60 hover:border-primary/50 transition-all duration-300" style={{ padding: 'clamp(1rem, 2vw, 1.25rem)' }}>
+                                <div className="flex items-start" style={{ gap: 'clamp(0.75rem, 1.5vw, 1rem)' }}>
+                                  <div className="flex-shrink-0 rounded-full bg-primary" style={{ width: 'clamp(0.5rem, 1vw, 0.625rem)', height: 'clamp(0.5rem, 1vw, 0.625rem)', marginTop: 'clamp(0.5rem, 1vw, 0.625rem)' }}/>
                                   <div className="flex-1 min-w-0">
-                                    <h5 className="font-semibold text-sm sm:text-base mb-1 group-hover:text-primary transition-colors duration-300">
+                                    <h5 className="font-semibold group-hover:text-primary transition-colors duration-300" style={{ fontSize: 'clamp(0.875rem, 1.5vw, 1rem)', marginBottom: 'clamp(0.25rem, 0.5vw, 0.375rem)' }}>
                                       {project.name}
                                     </h5>
-                                    {/*<p className="text-xs sm:text-sm text-muted-foreground">*/}
-                                    {/*  {project.description}*/}
-                                    {/*</p>*/}
                                   </div>
                                 </div>
                               </div>

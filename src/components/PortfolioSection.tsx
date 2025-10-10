@@ -49,7 +49,6 @@ const PortfolioSection = () => {
         end: "+=100%",
         scrub: 1,
         toggleActions: "play none none reverse",
-        // markers: true,
       },
     });
 
@@ -88,7 +87,7 @@ const PortfolioSection = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const currentProjects = filteredProjects.slice(startIndex, startIndex + itemsPerPage);
     setDisplayedProjects(currentProjects);
-  }, [currentPage, activeFilter, isSheetOpen]); // Add proper dependencies
+  }, [currentPage, activeFilter, isSheetOpen]);
 
   const handleFilterChange = async (filter) => {
     if (isFilterChanging) return;
@@ -139,18 +138,21 @@ const PortfolioSection = () => {
   };
 
   return (
-      <section ref={sectionRef} id="projects" className="pt-24 relative">
-        <div className="container mx-auto px-4 sm:px-6">
+      <section ref={sectionRef} id="projects" className="relative" style={{ paddingTop: 'clamp(5rem, 10vh, 6rem)' }}>
+        <div className="container mx-auto" style={{ paddingLeft: 'clamp(1rem, 3vw, 1.5rem)', paddingRight: 'clamp(1rem, 3vw, 1.5rem)' }}>
           {/* Blurred background container */}
-          <div ref={containerRef} className="backdrop-blur-xl bg-background/30 border border-foreground/10 rounded-3xl p-8 sm:p-12 lg:p-16">
+          <div ref={containerRef} className="backdrop-blur-xl bg-background/30 border border-foreground/10 rounded-3xl" style={{ padding: 'clamp(2rem, 6vw, 4rem)' }}>
             {/* Section Header */}
-            <div ref={headerRef} className="text-left mb-12">
-              <div className="flex items-start justify-between mb-6">
+            <div ref={headerRef} className="text-left" style={{ marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>
+              <div className="flex items-start justify-between" style={{ marginBottom: 'clamp(1.5rem, 3vw, 2rem)' }}>
                 <div>
-                  <p className="text-xs sm:text-sm text-foreground/40 uppercase tracking-wider mb-4">
+                  <p className="text-foreground/40 uppercase tracking-wider" style={{ 
+                    fontSize: 'clamp(0.75rem, 1vw, 0.875rem)',
+                    marginBottom: 'clamp(1rem, 2vw, 1rem)'
+                  }}>
                     {t('porto.section')}
                   </p>
-                  <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl text-foreground leading-relaxed font-bold">
+                  <h2 className="text-foreground leading-relaxed font-bold" style={{ fontSize: 'clamp(1.25rem, 3.5vw, 2.5rem)' }}>
                     {t('porto.title')}
                   </h2>
                 </div>
@@ -160,19 +162,23 @@ const PortfolioSection = () => {
                   <SheetTrigger asChild>
                     <Button
                         variant="outline"
-                        className="flex text-sm lg:text-lg border-none outline-none bg-transparent items-center gap-2 rounded-full px-6 hover:bg-transparent text-foreground/80 hover:text-foreground"
+                        className="flex border-none outline-none bg-transparent items-center rounded-full hover:bg-transparent text-foreground/80 hover:text-foreground"
+                        style={{ 
+                          fontSize: 'clamp(0.875rem, 1.5vw, 1.125rem)',
+                          gap: 'clamp(0.5rem, 1vw, 0.75rem)',
+                          padding: 'clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 2vw, 1.5rem)'
+                        }}
                     >
-                      {/*<Grid3x3 className="w-4 h-4" />*/}
                       {t('porto.view_all')}
                     </Button>
                   </SheetTrigger>
                   <SheetContent side="right" className="w-full sm:max-w-4xl overflow-y-auto flex flex-col">
-                    <SheetHeader className="mb-6">
-                      <SheetTitle className="text-2xl">{t('porto.all_projects')}</SheetTitle>
+                    <SheetHeader style={{ marginBottom: 'clamp(1.5rem, 3vw, 2rem)' }}>
+                      <SheetTitle style={{ fontSize: 'clamp(1.25rem, 2.5vw, 1.5rem)' }}>{t('porto.all_projects')}</SheetTitle>
                     </SheetHeader>
 
                     {/* Filter Tabs */}
-                    <div className="flex flex-wrap gap-2 mb-8">
+                    <div className="flex flex-wrap" style={{ gap: 'clamp(0.5rem, 1vw, 0.75rem)', marginBottom: 'clamp(1.5rem, 3vw, 2rem)' }}>
                       {filters.map((filter) => (
                           <Button
                               key={filter}
@@ -180,11 +186,15 @@ const PortfolioSection = () => {
                               disabled={isFilterChanging}
                               variant={activeFilter === filter ? "default" : "outline"}
                               size="sm"
-                              className={`rounded-full px-4 ${
+                              className={`rounded-full ${
                                   activeFilter === filter
                                       ? "bg-primary text-primary-foreground"
                                       : "border-foreground/20 hover:bg-primary/10"
                               }`}
+                              style={{ 
+                                padding: 'clamp(0.375rem, 1vw, 0.5rem) clamp(1rem, 2vw, 1.25rem)',
+                                fontSize: 'clamp(0.75rem, 1.2vw, 0.875rem)'
+                              }}
                           >
                             {filter}
                           </Button>
@@ -192,9 +202,10 @@ const PortfolioSection = () => {
                     </div>
 
                     {/* Project Grid */}
-                    <div className="relative mb-8 overflow-hidden flex-1">
+                    <div className="relative overflow-hidden flex-1" style={{ marginBottom: 'clamp(1.5rem, 3vw, 2rem)' }}>
                       <div
-                          className="sheet-project-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-300"
+                          className="sheet-project-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 transition-all duration-300"
+                          style={{ gap: 'clamp(1rem, 2vw, 1.5rem)' }}
                       >
                         {isFilterChanging ? (
                             Array.from({length: itemsPerPage}, (_, index) => (
@@ -202,11 +213,13 @@ const PortfolioSection = () => {
                                   <CardContent className="p-0">
                                     <div
                                         className="bg-gradient-to-r from-foreground/10 via-foreground/20 to-foreground/10 animate-pulse"/>
-                                    <div className="p-4 space-y-2">
+                                    <div style={{ padding: 'clamp(1rem, 2vw, 1.25rem)', display: 'flex', flexDirection: 'column', gap: 'clamp(0.5rem, 1vw, 0.75rem)' }}>
                                       <div
-                                          className="h-4 bg-gradient-to-r from-foreground/10 via-foreground/20 to-foreground/10 animate-pulse rounded w-3/4"/>
+                                          className="bg-gradient-to-r from-foreground/10 via-foreground/20 to-foreground/10 animate-pulse rounded"
+                                          style={{ height: 'clamp(1rem, 2vw, 1.25rem)', width: '75%' }}/>
                                       <div
-                                          className="h-3 bg-gradient-to-r from-foreground/10 via-foreground/20 to-foreground/10 animate-pulse rounded w-1/2"/>
+                                          className="bg-gradient-to-r from-foreground/10 via-foreground/20 to-foreground/10 animate-pulse rounded"
+                                          style={{ height: 'clamp(0.75rem, 1.5vw, 1rem)', width: '50%' }}/>
                                     </div>
                                   </CardContent>
                                 </Card>
@@ -229,17 +242,19 @@ const PortfolioSection = () => {
                                       />
                                     </div>
 
-                                    <div className="p-4">
-                                      <div className="flex items-start justify-between mb-2">
-                                        <h3 className="text-base font-bold text-foreground group-hover:text-primary transition-colors flex-1">
+                                    <div style={{ padding: 'clamp(1rem, 2vw, 1.25rem)' }}>
+                                      <div className="flex items-start justify-between" style={{ marginBottom: 'clamp(0.5rem, 1vw, 0.75rem)' }}>
+                                        <h3 className="font-bold text-foreground group-hover:text-primary transition-colors flex-1" style={{ fontSize: 'clamp(0.938rem, 1.5vw, 1rem)' }}>
                                           {project.title}
                                         </h3>
                                         <div
-                                            className="w-7 h-7 rounded-full bg-primary flex items-center justify-center ml-2 group-hover:scale-110 transition-transform">
-                                          <ArrowUpRight className="w-3.5 h-3.5 text-primary-foreground"/>
+                                            className="rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform"
+                                            style={{ width: 'clamp(1.5rem, 2.5vw, 1.75rem)', height: 'clamp(1.5rem, 2.5vw, 1.75rem)', marginLeft: 'clamp(0.5rem, 1vw, 0.75rem)' }}
+                                        >
+                                          <ArrowUpRight style={{ width: 'clamp(0.75rem, 1.2vw, 0.875rem)', height: 'clamp(0.75rem, 1.2vw, 0.875rem)' }} className="text-primary-foreground"/>
                                         </div>
                                       </div>
-                                      <p className="text-foreground/60 text-xs">{project.subcategory}</p>
+                                      <p className="text-foreground/60" style={{ fontSize: 'clamp(0.75rem, 1.2vw, 0.875rem)' }}>{project.subcategory}</p>
                                     </div>
                                   </CardContent>
                                 </Card>
@@ -294,7 +309,7 @@ const PortfolioSection = () => {
             </div>
 
             {/* Featured Projects - Large Cards */}
-            <div ref={cardsRef}  className="grid grid-cols-1 gap-6 lg:gap-8">
+            <div ref={cardsRef}  className="grid grid-cols-1" style={{ gap: 'clamp(1.5rem, 3vw, 2rem)' }}>
               {featuredProjects.map((project) => (
                   <Card
                       key={project.id}
@@ -304,38 +319,44 @@ const PortfolioSection = () => {
                     <CardContent className="p-0 h-full">
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 h-full">
                         {/* Left: Project Info */}
-                        <div className="p-8 lg:p-12 flex flex-col justify-between order-2 lg:order-1">
-                          <div className="space-y-6">
+                        <div className="flex flex-col justify-between order-2 lg:order-1" style={{ padding: 'clamp(2rem, 6vw, 3rem)' }}>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(1.5rem, 3vw, 2rem)' }}>
                             <div>
-                              <h3 className="text-2xl lg:text-3xl font-bold text-foreground group-hover:text-primary transition-colors mb-3">
+                              <h3 className="font-bold text-foreground group-hover:text-primary transition-colors" style={{ 
+                                fontSize: 'clamp(1.5rem, 3vw, 1.875rem)',
+                                marginBottom: 'clamp(0.75rem, 1.5vw, 1rem)'
+                              }}>
                                 {project.title}
                               </h3>
-                              <p className="text-foreground/60 text-base lg:text-lg mb-4">
+                              <p className="text-foreground/60" style={{ 
+                                fontSize: 'clamp(1rem, 1.8vw, 1.125rem)',
+                                marginBottom: 'clamp(1rem, 2vw, 1.25rem)'
+                              }}>
                                 {project.subcategory}
                               </p>
-                              <p className="text-foreground/70 leading-relaxed hidden md:block">
+                              <p className="text-foreground/70 leading-relaxed hidden md:block" style={{ fontSize: 'clamp(0.938rem, 1.5vw, 1rem)' }}>
                                 {project.description}
                               </p>
                             </div>
                           </div>
 
                           {/* Project Meta */}
-                          <div className="flex items-center gap-8 mt-8 text-sm">
+                          <div className="flex items-center flex-wrap" style={{ gap: 'clamp(2rem, 4vw, 3rem)', marginTop: 'clamp(2rem, 4vw, 2.5rem)' }}>
                             {project.country && (
                                 <div>
-                                  <p className="text-primary font-medium text-lg">{project.country}</p>
-                                  <p className="text-foreground/40">Country</p>
+                                  <p className="text-primary font-medium" style={{ fontSize: 'clamp(1rem, 1.8vw, 1.125rem)' }}>{project.country}</p>
+                                  <p className="text-foreground/40" style={{ fontSize: 'clamp(0.75rem, 1.2vw, 0.875rem)' }}>Country</p>
                                 </div>
                             )}
                             {project.duration && (
                                 <div>
-                                  <p className="text-primary font-medium text-lg">{project.duration}</p>
-                                  <p className="text-foreground/40">Time of working</p>
+                                  <p className="text-primary font-medium" style={{ fontSize: 'clamp(1rem, 1.8vw, 1.125rem)' }}>{project.duration}</p>
+                                  <p className="text-foreground/40" style={{ fontSize: 'clamp(0.75rem, 1.2vw, 0.875rem)' }}>Time of working</p>
                                 </div>
                             )}
                             <div>
-                              <p className="text-primary font-medium text-lg">{project.year}</p>
-                              <p className="text-foreground/40">Years</p>
+                              <p className="text-primary font-medium" style={{ fontSize: 'clamp(1rem, 1.8vw, 1.125rem)' }}>{project.year}</p>
+                              <p className="text-foreground/40" style={{ fontSize: 'clamp(0.75rem, 1.2vw, 0.875rem)' }}>Years</p>
                             </div>
                           </div>
                         </div>
@@ -360,12 +381,12 @@ const PortfolioSection = () => {
             <DialogContent className="w-[90vw] sm:w-[95vw] max-w-4xl max-h-[90vh] overflow-y-auto bg-background border border-foreground/10">
               {selectedProject && (
                   <>
-                    <DialogHeader className="space-y-3">
-                      <DialogTitle className="text-2xl font-bold text-foreground">
+                    <DialogHeader style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(0.75rem, 1.5vw, 1rem)' }}>
+                      <DialogTitle className="font-bold text-foreground" style={{ fontSize: 'clamp(1.25rem, 2.5vw, 1.5rem)' }}>
                         {selectedProject.title}
                       </DialogTitle>
-                      <div className="flex items-center gap-2 text-sm">
-                    <span className="px-3 py-1 rounded-full bg-primary/10 text-primary">
+                      <div className="flex items-center flex-wrap" style={{ gap: 'clamp(0.5rem, 1vw, 0.75rem)', fontSize: 'clamp(0.75rem, 1.2vw, 0.875rem)' }}>
+                    <span className="rounded-full bg-primary/10 text-primary" style={{ padding: 'clamp(0.25rem, 0.8vw, 0.375rem) clamp(0.75rem, 1.5vw, 1rem)' }}>
                       {selectedProject.category}
                     </span>
                         <span className="text-foreground/60">•</span>
@@ -373,7 +394,7 @@ const PortfolioSection = () => {
                       </div>
                     </DialogHeader>
 
-                    <div className="space-y-6 mt-6">
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(1.5rem, 3vw, 2rem)', marginTop: 'clamp(1.5rem, 3vw, 2rem)' }}>
 
                       {selectedProject.image && (
                           <div className="rounded-lg overflow-hidden bg-foreground/5 max-w-md mx-auto">
@@ -387,23 +408,24 @@ const PortfolioSection = () => {
                       )}
 
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="space-y-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: 'clamp(2rem, 4vw, 3rem)' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(1.5rem, 3vw, 2rem)' }}>
                           <div>
-                            <h4 className="text-lg font-semibold text-foreground mb-3">Project Overview</h4>
-                            <p className="text-foreground/70 leading-relaxed">
+                            <h4 className="font-semibold text-foreground" style={{ fontSize: 'clamp(1rem, 1.8vw, 1.125rem)', marginBottom: 'clamp(0.75rem, 1.5vw, 1rem)' }}>Project Overview</h4>
+                            <p className="text-foreground/70 leading-relaxed" style={{ fontSize: 'clamp(0.875rem, 1.5vw, 1rem)' }}>
                               {selectedProject.description}
                             </p>
                           </div>
 
                           {selectedProject.technologies && (
                               <div>
-                                <h4 className="text-lg font-semibold text-foreground mb-3">Technologies Used</h4>
-                                <div className="flex flex-wrap gap-2">
+                                <h4 className="font-semibold text-foreground" style={{ fontSize: 'clamp(1rem, 1.8vw, 1.125rem)', marginBottom: 'clamp(0.75rem, 1.5vw, 1rem)' }}>Technologies Used</h4>
+                                <div className="flex flex-wrap" style={{ gap: 'clamp(0.5rem, 1vw, 0.75rem)' }}>
                                   {selectedProject.technologies.map((tech) => (
                                       <span
                                           key={tech}
-                                          className="px-3 py-1 text-xs rounded-full bg-foreground/5 border border-foreground/10 text-foreground/70 hover:glow-effect hover:border-transparent hover:bg-transparent hover:text-foreground "
+                                          className="rounded-full bg-foreground/5 border border-foreground/10 text-foreground/70 hover:glow-effect hover:border-transparent hover:bg-transparent hover:text-foreground"
+                                          style={{ padding: 'clamp(0.25rem, 0.8vw, 0.375rem) clamp(0.75rem, 1.5vw, 1rem)', fontSize: 'clamp(0.75rem, 1.2vw, 0.875rem)' }}
                                       >
                                         {tech}
                                       </span>
@@ -414,12 +436,13 @@ const PortfolioSection = () => {
 
                           {selectedProject.links && (
                               <div>
-                                <h4 className="text-lg font-semibold text-foreground mb-3">Links</h4>
-                                <div className="flex flex-col gap-2">
+                                <h4 className="font-semibold text-foreground" style={{ fontSize: 'clamp(1rem, 1.8vw, 1.125rem)', marginBottom: 'clamp(0.75rem, 1.5vw, 1rem)' }}>Links</h4>
+                                <div className="flex flex-col" style={{ gap: 'clamp(0.5rem, 1vw, 0.75rem)' }}>
                                   {selectedProject.links.map((tech) => (
                                       <span
                                           key={tech}
-                                          className="px-3 py-1 text-xs rounded-full bg-foreground/5 border border-foreground/10 text-foreground/70 hover:glow-effect hover:border-transparent hover:bg-transparent hover:text-foreground cursor-pointer"
+                                          className="rounded-full bg-foreground/5 border border-foreground/10 text-foreground/70 hover:glow-effect hover:border-transparent hover:bg-transparent hover:text-foreground cursor-pointer"
+                                          style={{ padding: 'clamp(0.25rem, 0.8vw, 0.375rem) clamp(0.75rem, 1.5vw, 1rem)', fontSize: 'clamp(0.75rem, 1.2vw, 0.875rem)' }}
                                           onClick={() => window.open(tech, '_blank')}
                                       >
                                         {tech}
@@ -431,34 +454,34 @@ const PortfolioSection = () => {
 
                         </div>
 
-                        <div className="space-y-6">
-                          <div className="grid grid-cols-2 gap-4">
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(1.5rem, 3vw, 2rem)' }}>
+                          <div className="grid grid-cols-2" style={{ gap: 'clamp(1rem, 2vw, 1.25rem)' }}>
                             {selectedProject.country && (
                                 <div>
-                                  <p className="text-primary font-medium text-lg mb-1">{selectedProject.country}</p>
-                                  <p className="text-foreground/40 text-sm">Country</p>
+                                  <p className="text-primary font-medium" style={{ fontSize: 'clamp(1rem, 1.8vw, 1.125rem)', marginBottom: 'clamp(0.25rem, 0.5vw, 0.375rem)' }}>{selectedProject.country}</p>
+                                  <p className="text-foreground/40" style={{ fontSize: 'clamp(0.75rem, 1.2vw, 0.875rem)' }}>Country</p>
                                 </div>
                             )}
                             {selectedProject.duration && (
                                 <div>
-                                  <p className="text-primary font-medium text-lg mb-1">{selectedProject.duration}</p>
-                                  <p className="text-foreground/40 text-sm">Duration</p>
+                                  <p className="text-primary font-medium" style={{ fontSize: 'clamp(1rem, 1.8vw, 1.125rem)', marginBottom: 'clamp(0.25rem, 0.5vw, 0.375rem)' }}>{selectedProject.duration}</p>
+                                  <p className="text-foreground/40" style={{ fontSize: 'clamp(0.75rem, 1.2vw, 0.875rem)' }}>Duration</p>
                                 </div>
                             )}
                             <div>
-                              <p className="text-primary font-medium text-lg mb-1">{selectedProject.year}</p>
-                              <p className="text-foreground/40 text-sm">Year</p>
+                              <p className="text-primary font-medium" style={{ fontSize: 'clamp(1rem, 1.8vw, 1.125rem)', marginBottom: 'clamp(0.25rem, 0.5vw, 0.375rem)' }}>{selectedProject.year}</p>
+                              <p className="text-foreground/40" style={{ fontSize: 'clamp(0.75rem, 1.2vw, 0.875rem)' }}>Year</p>
                             </div>
                             <div>
-                              <p className="text-primary font-medium text-lg mb-1">{selectedProject.category}</p>
-                              <p className="text-foreground/40 text-sm">Category</p>
+                              <p className="text-primary font-medium" style={{ fontSize: 'clamp(1rem, 1.8vw, 1.125rem)', marginBottom: 'clamp(0.25rem, 0.5vw, 0.375rem)' }}>{selectedProject.category}</p>
+                              <p className="text-foreground/40" style={{ fontSize: 'clamp(0.75rem, 1.2vw, 0.875rem)' }}>Category</p>
                             </div>
                           </div>
 
                           {selectedProject.clientTestimonial && (
                               <div>
-                                <h4 className="text-lg font-semibold text-foreground mb-3"></h4>
-                                <blockquote className="italic text-foreground/70 border-l-4 border-primary pl-4 bg-foreground/5 p-4 rounded">
+                                <h4 className="font-semibold text-foreground" style={{ fontSize: 'clamp(1rem, 1.8vw, 1.125rem)', marginBottom: 'clamp(0.75rem, 1.5vw, 1rem)' }}></h4>
+                                <blockquote className="italic text-foreground/70 border-l-4 border-primary rounded bg-foreground/5" style={{ paddingLeft: 'clamp(1rem, 2vw, 1.25rem)', padding: 'clamp(1rem, 2vw, 1.25rem)', fontSize: 'clamp(0.875rem, 1.5vw, 1rem)' }}>
                                   "{selectedProject.clientTestimonial}"
                                 </blockquote>
                               </div>
