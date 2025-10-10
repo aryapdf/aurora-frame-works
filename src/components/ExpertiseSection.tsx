@@ -138,7 +138,7 @@ const ExpertiseSection = () => {
             {/* Left Section - Skill Icons */}
             <div
                 ref={skillsNavRef}
-                className="lg:col-span-4 xl:col-span-3 flex flex-col md:h-full"
+                className="lg:col-span-2 flex flex-col md:h-full"
             >
               <div className="flex justify-start md:flex-col md:justify-between gap-1 md:gap-5 overflow-x-auto lg:overflow-y-auto pb-0 md:flex-1 border-b border-border/30">
                 {skills.map((skill) => (
@@ -165,21 +165,9 @@ const ExpertiseSection = () => {
                           <img
                               src={skill.icon}
                               alt={skill.name}
-                              className="w-full h-full object-contain"
+                              className="w-full h-full object-contain rounded-xl "
                           />
                         </div>
-                        {/*<span*/}
-                        {/*    className={`*/}
-                        {/*    text-xs sm:text-sm font-medium transition-all duration-300 md:text-center whitespace-nowrap md:whitespace-normal*/}
-                        {/*          ${*/}
-                        {/*              activeSkill === skill.id */}
-                        {/*                  ? "text-primary max-w-40 md:opacity-100 md:max-w-100 md:overflow-unset" */}
-                        {/*                  : "opacity-0 overflow-hidden md:max-w-100 md:opacity-100 md:overflow-unset"*/}
-                        {/*            }*/}
-                        {/*          `}*/}
-                        {/*        >*/}
-                        {/*  {skill.name}*/}
-                        {/*</span>*/}
                       </div>
                     </button>
                 ))}
@@ -189,7 +177,7 @@ const ExpertiseSection = () => {
             {/* Right Section - Skill Details */}
             <div
                 ref={detailRef}
-                className="lg:col-span-8 xl:col-span-9 flex flex-col h-full min-h-0"
+                className="lg:col-span-10 flex flex-col h-full min-h-0"
             >
               <div
                   className="backdrop-blur-xl bg-background/50 border border-foreground/10 rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8 xl:p-10 flex-1 flex flex-col overflow-hidden">
