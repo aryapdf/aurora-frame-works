@@ -21,7 +21,7 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  // { id: "html", name: "HTML/CSS/JS", icon: htmlIcon },
+  { id: "html", name: "HTML/CSS/JS", icon: htmlIcon },
   { id: "react", name: "React/Next/TS", icon: reactIcon },
   { id: "vue", name: "Vue/Nuxt", icon: vueIcon },
   { id: "antd", name: "ANTD", icon: antdIcon },
@@ -84,32 +84,19 @@ const ExpertiseSection = () => {
       },
     });
 
-    // Step 1: React (default)
-    tl.to({}, {
-      duration: 1,
-      onStart: () => setActiveSkill("react"),
-    });
+    // Map the skills
+    skills.forEach((skill, index) => {
+      tl.to({}, {
+        duration: 1,
+        onStart: () => setActiveSkill(skill.id),
+        onReverseComplete: () => {
+          if (index > 0) {
+            setActiveSkill(skills[index - 1].id)
+          }
+        }
+      })
+    })
 
-    // Step 2: Vue
-    tl.to({}, {
-      duration: 1,
-      onStart: () => setActiveSkill("vue"),
-      onReverseComplete: () => setActiveSkill('react')
-    });
-
-    // Step 3: Ant Design
-    tl.to({}, {
-      duration: 1,
-      onStart: () => setActiveSkill("antd"),
-      onReverseComplete: () => setActiveSkill('vue')
-    });
-
-    // Step 4: Magento
-    tl.to({}, {
-      duration: 1,
-      onStart: () => setActiveSkill("magento"),
-      onReverseComplete: () => setActiveSkill('antd')
-    });
   }, { scope: sectionRef });
 
 

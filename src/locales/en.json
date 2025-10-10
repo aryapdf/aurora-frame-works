@@ -122,6 +122,38 @@
     "projectsLabel": "Projects Built",
     "skills": [
       {
+        "id": "html",
+        "title": "HTML, CSS & Javascript",
+        "experience": "4+ years of experience",
+        "detail": "Advanced proficiency in HTML, CSS, and JavaScript, consistently applied across personal and professional projects with a strong focus on building responsive, high-quality front-end experiences.",
+        "projects": [
+          {
+            "name": "MoonWave Crypto Trading Platform",
+            "description": "Real-time trading interface with React, TypeScript, and WebSocket integration"
+          },
+          {
+            "name": "Project Management SaaS",
+            "description": "Full React/Node.js platform with real-time collaboration features"
+          },
+          {
+            "name": "Analytics Dashboard Platform",
+            "description": "Complex data visualization with React, D3.js, and custom hooks"
+          },
+          {
+            "name": "Banking Platform",
+            "description": "Secure financial app with React, TypeScript, and advanced security patterns"
+          },
+          {
+            "name": "Healthcare Management System",
+            "description": "HIPAA-compliant React application with complex state management"
+          },
+          {
+            "name": "KraftQ Brand Management System",
+            "description": "Next.js platform with SSR for brand asset management and workflows"
+          }
+        ]
+      },
+      {
         "id": "react",
         "title": "ReactJS, NextJS & TypeScript",
         "experience": "2+ years of experience",
