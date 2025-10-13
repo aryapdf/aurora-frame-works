@@ -80,7 +80,7 @@
       "duration": "1 Month",
       "year": "2024",
       "image": "src/assets/projects/note-40-racing.webp",
-      "technologies": ["Vue", "Nuxt", "ScrollMagic", "SwiperJS"],
+      "technologies": ["Vue", "ScrollMagic", "SwiperJS"],
       "clientTestimonial": "My first professional project: a landing page for a limited-edition campaign. The page is no longer live; the image is from the ID website’s KV.",
       "links": ["https://infinixmobility.com/note-40-racing-edition"]
     },
@@ -94,23 +94,37 @@
       "duration": "1 Month",
       "year": "2024",
       "image": "src/assets/projects/note-40.png",
-      "technologies": ["Vue", "Nuxt", "ScrollMagic", "SwiperJS"],
+      "technologies": ["Vue", "ScrollMagic", "SwiperJS"],
       "clientTestimonial": "The site’s ScrollMagic frame-render system triggers frame changes on scroll, delivering a smooth, movie-like immersive experience.",
       "links": ["https://id.infinixmobility.com/NOTE-40"]
     },
     {
       "id": 6,
       "title": "Zero 40 Series",
-      "description": "Maintained and optimized the Note 40 Series landing pages (Note 40, Note 40 Pro, Note 40 Pro 5G, Note 40 Pro+ 5G, Note 40S), improving performance by 15–20% through ScrollMagic render-frame enhancements and asynchronous rendering.",
+      "description": "Developed, maintained, and optimized the Zero 40 Series (Zero 40 & Zero 40 5G) USP landing page, featuring ScrollMagic animations integrated with SwiperJS for a unique and engaging user experience.",
       "category": "Front-End",
       "subcategory": "Landing Page",
       "country": "Indonesia",
       "duration": "1 Month",
       "year": "2024",
       "image": "src/assets/projects/note-40.png",
-      "technologies": ["Vue", "Nuxt", "ScrollMagic", "SwiperJS"],
-      "clientTestimonial": "The site’s ScrollMagic frame-render system triggers frame changes on scroll, delivering a smooth, movie-like immersive experience.",
-      "links": ["https://id.infinixmobility.com/NOTE-40"]
+      "technologies": ["Nuxt", "ScrollMagic", "SwiperJS"],
+      "clientTestimonial": "Whole Zero series is not available in Indonesia, so yeah.. (tip: use VPN on sg region)",
+      "links": ["infinixmobility.com/zero-40"]
+    },
+    {
+      "id": 6,
+      "title": "Zero Flip",
+      "description": "Zero Flip USP landing page offers a different kind experience of marketing the phone, with new scroll animation using GSAP that have multi scrolled-pin connection, modal triggers and complex function.",
+      "category": "Front-End",
+      "subcategory": "Landing Page",
+      "country": "Indonesia",
+      "duration": "1 Month",
+      "year": "2024",
+      "image": "src/assets/projects/note-40.png",
+      "technologies": ["Nuxt", "GSAP", "SwiperJS"],
+      "clientTestimonial": "Zero Flip is not available in Indonesia. (tip: use VPN on sg region)",
+      "links": ["infinixmobility.com/zero-40"]
     }
   ],
 
@@ -128,28 +142,8 @@
         "detail": "Advanced proficiency in HTML, CSS, and JavaScript, consistently applied across personal and professional projects with a strong focus on building responsive, high-quality front-end experiences.",
         "projects": [
           {
-            "name": "MoonWave Crypto Trading Platform",
-            "description": "Real-time trading interface with React, TypeScript, and WebSocket integration"
-          },
-          {
-            "name": "Project Management SaaS",
-            "description": "Full React/Node.js platform with real-time collaboration features"
-          },
-          {
-            "name": "Analytics Dashboard Platform",
-            "description": "Complex data visualization with React, D3.js, and custom hooks"
-          },
-          {
-            "name": "Banking Platform",
-            "description": "Secure financial app with React, TypeScript, and advanced security patterns"
-          },
-          {
-            "name": "Healthcare Management System",
-            "description": "HIPAA-compliant React application with complex state management"
-          },
-          {
-            "name": "KraftQ Brand Management System",
-            "description": "Next.js platform with SSR for brand asset management and workflows"
+            "name": "Almost all of my Front-End projects.",
+            "description": "-"
           }
         ]
       },

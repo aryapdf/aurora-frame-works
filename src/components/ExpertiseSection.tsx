@@ -103,20 +103,20 @@ const ExpertiseSection = () => {
           </div>
 
           <div className="flex flex-col md:grid md:grid-cols-12 flex-1 items-stretch min-h-0" style={{ gap: 'clamp(1.5rem, 3vw, 2rem)' }}>
-            <div ref={skillsNavRef} className="lg:col-span-2 flex flex-col md:h-full">
-              <div className="flex justify-start md:flex-col md:justify-between overflow-x-auto lg:overflow-y-auto md:flex-1 border-b border-border/30" style={{ gap: 'clamp(0.25rem, 1vw, 1.25rem)', paddingBottom: '0' }}>
+            <div ref={skillsNavRef} className="md:col-span-2 flex flex-col md:h-full">
+              <div className="flex justify-start md:flex-col md:justify-between overflow-x-auto md:overflow-y-auto md:flex-1 border-b border-border/30" style={{ gap: 'clamp(0.25rem, 1vw, 1.25rem)', paddingBottom: '0' }}>
                 {skills.map((skill) => (
                     <button
                         key={skill.id}
                         onClick={() => handleSkillClick(skill.id)}
-                        className={`group relative flex items-center border-2 transition-all duration-300 md:w-full flex-shrink-0 md:flex-1 md:justify-center rounded-xl lg:rounded-2xl ${
+                        className={`group relative flex items-center border-2 transition-all duration-300 md:w-full flex-shrink-0 md:flex-1 md:justify-center rounded-xl md:rounded-2xl ${
                             activeSkill === skill.id
                                 ? "border-primary bg-primary/10 shadow-lg shadow-primary/20"
                                 : "border-border/50 bg-background/50 hover:border-primary/50 hover:bg-background/80"
                         }`}
                         style={{ gap: 'clamp(0.5rem, 1vw, 0.75rem)', padding: 'clamp(0.625rem, 1.5vw, 0.75rem) clamp(0.75rem, 2vw, 1rem)' }}
                     >
-                      <div className="flex lg:flex-col items-center" style={{ gap: 'clamp(0, 1.5vw, 0.75rem)' }}>
+                      <div className="flex md:flex-col items-center" style={{ gap: 'clamp(0, 1.5vw, 0.75rem)' }}>
                         <div className={`flex items-center justify-center rounded-xl transition-transform duration-300 flex-shrink-0 ${activeSkill === skill.id ? "scale-110" : "group-hover:scale-105"}`} style={{ width: 'clamp(1.25rem, 8vw, 4rem)', height: 'clamp(1.25rem, 8vw, 4rem)' }}>
                           <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain rounded-xl" />
                         </div>
@@ -126,8 +126,8 @@ const ExpertiseSection = () => {
               </div>
             </div>
 
-            <div ref={detailRef} className="lg:col-span-10 flex flex-col h-full min-h-0">
-              <div className="backdrop-blur-xl bg-background/50 border border-foreground/10 rounded-2xl lg:rounded-3xl flex-1 flex flex-col overflow-hidden" style={{ padding: 'clamp(1.25rem, 4vw, 2.5rem)' }}>
+            <div ref={detailRef} className="md:col-span-10 flex flex-col h-full min-h-0">
+              <div className="backdrop-blur-xl bg-background/50 border border-foreground/10 rounded-2xl md:rounded-3xl flex-1 flex flex-col overflow-hidden" style={{ padding: 'clamp(1.25rem, 4vw, 2.5rem)' }}>
                 {activeData && (
                     <div className="flex flex-col flex-1 min-h-0">
                       <div className="border-b border-border/50 flex-shrink-0" style={{ paddingBottom: 'clamp(1rem, 2vw, 1.5rem)' }}>
