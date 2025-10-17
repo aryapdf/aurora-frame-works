@@ -76,8 +76,8 @@
       "description": "Developed a responsive landing page for the Infinix Note 40 Racing Edition Series (including Note 40, Note 40 Pro, Note 40 Pro+, Note 40 5G, and Note 40 Pro+ 5G variant), featuring ScrollMagic scroll animations, Swiper.js carousels and custom interactive UI.",
       "category": "Front-End",
       "subcategory": "USP Landing Page",
-      "country": "Indonesia",
-      "duration": "1 Month",
+      "country": "Global Deployment",
+      "duration": "2 Month",
       "year": "2024",
       "image": "src/assets/projects/note-40-racing.webp",
       "technologies": ["Vue", "ScrollMagic", "SwiperJS"],
@@ -90,8 +90,8 @@
       "description": "Maintained and optimized the Note 40 Series landing pages (Note 40, Note 40 Pro, Note 40 Pro 5G, Note 40 Pro+ 5G, Note 40S), improving performance by 15–20% through ScrollMagic render-frame enhancements and asynchronous rendering.",
       "category": "Front-End",
       "subcategory": "Landing Page",
-      "country": "Indonesia",
-      "duration": "1 Month",
+      "country": "Global Deployment",
+      "duration": "2 Month",
       "year": "2024",
       "image": "src/assets/projects/note-40.png",
       "technologies": ["Vue", "ScrollMagic", "SwiperJS"],
@@ -104,10 +104,10 @@
       "description": "Developed, maintained, and optimized the Zero 40 Series (Zero 40 & Zero 40 5G) USP landing page, featuring ScrollMagic animations integrated with SwiperJS for a unique and engaging user experience.",
       "category": "Front-End",
       "subcategory": "USP Landing Page",
-      "country": "Indonesia",
-      "duration": "1 Month",
+      "country": "Global Deployment",
+      "duration": "2 Month",
       "year": "2024",
-      "image": "src/assets/projects/note-40.png",
+      "image": "",
       "technologies": ["Nuxt", "ScrollMagic", "SwiperJS"],
       "clientTestimonial": "Whole Zero series is not available in Indonesia, so yeah.. (tip: use VPN on sg region)",
       "links": ["infinixmobility.com/zero-40"]
@@ -118,10 +118,10 @@
       "description": "Zero Flip USP landing page offers a different kind experience of marketing the phone, with new scroll animation using GSAP that have multi scrolled-pin connection, modal triggers and complex function.",
       "category": "Front-End",
       "subcategory": "USP Landing Page",
-      "country": "Indonesia",
-      "duration": "1 Month",
+      "country": "Global Deployment",
+      "duration": "2 Month",
       "year": "2024",
-      "image": "src/assets/projects/note-40.png",
+      "image": "",
       "technologies": ["Nuxt", "GSAP", "SwiperJS"],
       "clientTestimonial": "Zero Flip is not available in Indonesia. (tip: use VPN on sg region)",
       "links": ["infinixmobility.com/zero-40"]
@@ -131,12 +131,12 @@
       "title": "Hot 50 Series",
       "description": "Developed Hot 50 Series (Hot 50, Hot 50i, Hot 50 5G, Hot 50 Pro+), ",
       "category": "Front-End",
-      "subcategory": "Seasonal Event Page",
-      "country": "Indonesia",
-      "duration": "2 Month",
+      "subcategory": "USP Landing Page",
+      "country": "Global Deployment",
+      "duration": "4 Month",
       "year": "2024",
-      "image": "src/assets/projects/note-40.png",
-      "technologies": ["Vue", "SwiperJS", "HTML2Canvas"],
+      "image": "",
+      "technologies": ["Vue", "GSAP", "SwiperJS"],
       "clientTestimonial": "Hotmoji Event was a campaign that let user to customize emojis on their own picture by choosing frames, background, accessory.",
       "links": null
     },
@@ -145,13 +145,83 @@
       "title": "Hotmoji Event",
       "description": "Led and developed the frontend for Infinix’s Hotmoji Event as the project lead, featuring live image editing, assets (pictures, icons, sticker) customization, and social sharing integration using modern web technologies.",
       "category": "Front-End",
-      "subcategory": "Seasonal Event Page",
-      "country": "Indonesia",
+      "subcategory": "USP Landing Page",
+      "country": "Global Deployment",
       "duration": "2 Month",
       "year": "2024",
-      "image": "src/assets/projects/note-40.png",
+      "image": "",
       "technologies": ["Vue", "SwiperJS", "HTML2Canvas"],
       "clientTestimonial": "Hotmoji Event was a campaign that let user to customize emojis on their own picture by choosing frames, background, accessory.",
+      "links": null
+    },
+    {
+      "id": 10,
+      "title": "XPAD",
+      "description": "Developed XPAD landing page using Vue with GSAP and SwiperJS animation.",
+      "category": "Front-End",
+      "subcategory": "USP Landing Page",
+      "country": "Global Deployment",
+      "duration": "3 Month",
+      "year": "2024",
+      "image": "",
+      "technologies": ["Vue", "GSAP", "SwiperJS"],
+      "clientTestimonial": "A casual landing page for XPAD product.",
+      "links": null
+    },
+    {
+      "id": 11,
+      "title": "TWS XE 23",
+      "description": "Developed USP landing page for TWS XE-23 or commonly called Infinix Buds Lite.",
+      "category": "Front-End",
+      "subcategory": "Seasonal Event Page",
+      "country": "Global Deployment",
+      "duration": "1 Month",
+      "year": "2024",
+      "image": "",
+      "technologies": ["Vue", "SwiperJS", "HTML2Canvas"],
+      "clientTestimonial": "A casual landing page for XPAD product.",
+      "links": null
+    },
+    {
+      "id": 12,
+      "title": "XClub",
+      "description": "Maintain XClub (infinix.club), a social media app designed for users to share videos, pictures, and ideas on topics like technology, sports, and entertainment. Develop several features for XClub Front-End and Back-End such as encryption feature and user profile interface.",
+      "category": "Fullstack",
+      "subcategory": "Website Application",
+      "country": "Global Deployment",
+      "duration": "Ongoing",
+      "year": "2024 - Present",
+      "image": "",
+      "technologies": ["Vue", "Vuex", "Jquery", "Axios"],
+      "clientTestimonial": "I love XClub.",
+      "links": null
+    },
+    {
+      "id": 13,
+      "title": "XClub - Backend",
+      "description": "Maintain several Back-End repository (up to 7 repository) for XClub environment, create and improve feature such as optimizing query sql, create encryption data and handling H5 micro-sites data.",
+      "category": "Back-End",
+      "subcategory": "Back End Interface (API)",
+      "country": "Global Deployment",
+      "duration": "Ongoing",
+      "year": "2025 - Present",
+      "image": "",
+      "technologies": ["PHP", "ThinkORM", "MySQL"],
+      "clientTestimonial": "My first back-end project on my programming journey, handling multi-repositories that affecting each other is kinda fun.",
+      "links": null
+    },
+    {
+      "id": 14,
+      "title": "XClub - Seasonal Event",
+      "description": "Develop and maintain H5 microsites for large-scale international events such as PMWC, PMGC and HOK Invitational S3. Micro-sites handle users from XClub apps for certain seasonal event.",
+      "category": "Front-End",
+      "subcategory": "H5 Microsites",
+      "country": "Global Deployment",
+      "duration": "Ongoing",
+      "year": "2024 - Present",
+      "image": "",
+      "technologies": ["Vue", "Vuex"],
+      "clientTestimonial": "H5 Microsites",
       "links": null
     }
   ],
@@ -165,117 +235,65 @@
     "skills": [
       {
         "id": "html",
-        "title": "HTML, CSS & Javascript",
-        "experience": "4+ years of experience",
-        "detail": "Advanced proficiency in HTML, CSS, and JavaScript, consistently applied across personal and professional projects with a strong focus on building responsive, high-quality front-end experiences.",
+        "title": "HTML, CSS & JavaScript",
+        "experience": "3+ years of experience",
+        "detail": "Advanced proficiency in HTML, CSS, and JavaScript, consistently applied across professional and personal projects to create fast, responsive, and pixel-perfect interfaces. Experienced with Sass/SCSS for modular styling, Axios for API handling, and jQuery for legacy support. Implements clean, reusable, and component-based JavaScript using OOP patterns to maintain code scalability and readability.",
         "projects": [
           {
-            "name": "Almost all of my Front-End projects.",
-            "description": "-"
-          }
-        ]
-      },
-      {
-        "id": "react",
-        "title": "ReactJS, NextJS & TypeScript",
-        "experience": "2+ years of experience",
-        "detail": "Advanced proficiency in React ecosystem including hooks, context API, and component lifecycle. Experienced with Next.js for SSR/SSG, TypeScript for type safety, and modern state management (Redux, Zustand). Skilled in performance optimization, code splitting, and building scalable enterprise applications.",
-        "projects": [
-          {
-            "name": "MoonWave Crypto Trading Platform",
-            "description": "Real-time trading interface with React, TypeScript, and WebSocket integration"
-          },
-          {
-            "name": "Project Management SaaS",
-            "description": "Full React/Node.js platform with real-time collaboration features"
-          },
-          {
-            "name": "Analytics Dashboard Platform",
-            "description": "Complex data visualization with React, D3.js, and custom hooks"
-          },
-          {
-            "name": "Banking Platform",
-            "description": "Secure financial app with React, TypeScript, and advanced security patterns"
-          },
-          {
-            "name": "Healthcare Management System",
-            "description": "HIPAA-compliant React application with complex state management"
-          },
-          {
-            "name": "KraftQ Brand Management System",
-            "description": "Next.js platform with SSR for brand asset management and workflows"
+            "name": "All Front-End Projects (USP Landing Pages, Hotmoji Event, XOS Page, etc.)",
+            "description": "Core foundation of every landing page built for Infinix — responsible for semantic markup, responsive layouts, and optimized performance across devices."
           }
         ]
       },
       {
         "id": "vue",
         "title": "VueJS & NuxtJS",
-        "experience": "2+ years of experience",
-        "detail": "Comprehensive experience with Vue.js 2/3, Composition API, and Nuxt.js framework. Proficient in building reactive applications with Vuex/Pinia state management, Vue Router, and server-side rendering with Nuxt. Skilled in creating reusable components and implementing complex user interfaces.",
+        "experience": "1+ year of experience",
+        "detail": "Hands-on experience building high-performance microsites and landing pages using Vue 2 and Nuxt.js frameworks. Specialized in dynamic rendering, multilingual JSON-based localization, and animation systems using GSAP. Migrated the team’s animation framework from ScrollMagic to GSAP, achieving ~20% cleaner codebase and ~15% faster loading time. Familiar with Vuex state management, reusable components, and SSR rendering for SEO optimization.",
         "projects": [
           {
-            "name": "Coffee Shop E-commerce",
-            "description": "Full e-commerce platform built with Vue.js and Express backend"
+            "name": "Infinix Landing Pages (Note 40, Zero Flip, Hotmoji Event, XPAD, etc.)",
+            "description": "Developed and led multiple USP landing pages end-to-end. Served as project leader for Zero Flip and Hotmoji Event — delivering production-grade, animated microsites with efficient data-driven rendering."
           },
           {
-            "name": "Customer Support API Frontend",
-            "description": "Vue.js dashboard with Socket.io for real-time ticket management"
-          },
+            "name": "InfinixMobility.com Integration",
+            "description": "Integrated Nuxt-based landing pages with Magento backend APIs for seamless deployment across multiple localized sites."
+          }
+        ]
+      },
+      {
+        "id": "react",
+        "title": "ReactJS, NextJS & TypeScript",
+        "experience": "1+ year of experience",
+        "detail": "Proficient in building scalable and maintainable web applications using React and Next.js. Skilled with Hooks, Context API, and modular state management using Zustand and Redux. Experienced in integrating REST and Firebase APIs, as well as handling client-side caching and tokenized messaging systems. Uses TypeScript for strong typing, improving refactoring safety and reducing runtime errors.",
+        "projects": [
           {
-            "name": "E-commerce Admin Panel",
-            "description": "Comprehensive Vue.js admin interface with Vuex and Chart.js"
-          },
-          {
-            "name": "Restaurant Multi-location Platform",
-            "description": "Vue-based menu management and reservation system"
+            "name": "2Sweet (AI-Driven Social Platform)",
+            "description": "Developed an AI-integrated social app with features like tokenized chat system, donation system, image composition, and memory storage — built entirely with Next.js, Ant Design, and Firebase integration."
           }
         ]
       },
       {
         "id": "antd",
         "title": "Ant Design (ANTD)",
-        "experience": "1.5+ years of experience",
-        "detail": "Expert in implementing enterprise-grade UIs using Ant Design component library. Experienced in customizing themes, creating complex forms, data tables, and admin dashboards. Proficient in integrating ANTD with React applications and optimizing bundle sizes.",
+        "experience": "1+ year of experience",
+        "detail": "Experienced in creating professional-grade UI systems using Ant Design. Adept at customizing components, building structured forms, modals, tables, and admin dashboards. Focused on code reusability, visual consistency, and accessible interaction design. Often combines ANTD with Zustand or Context API for global state control and better component decoupling.",
         "projects": [
           {
-            "name": "Inventory Management System",
-            "description": "Built with ANTD components for complex data tables and forms"
-          },
-          {
-            "name": "HR Management Backend Interface",
-            "description": "ANTD-powered admin panel for employee management and payroll"
-          },
-          {
-            "name": "Email Marketing Platform",
-            "description": "Campaign builder using ANTD's advanced form and table components"
-          },
-          {
-            "name": "Financial Trading Backend Dashboard",
-            "description": "Real-time trading dashboard with customized ANTD components"
+            "name": "2Sweet Admin Dashboard",
+            "description": "Built dynamic, modular admin interface for managing AI chat logs, user events, and content moderation — with responsive layouts and Ant Design components."
           }
         ]
       },
       {
         "id": "magento",
-        "title": "Magento",
+        "title": "Magento 2",
         "experience": "1+ year of experience",
-        "detail": "Solid understanding of Magento 2 architecture, theme development, and module customization. Experience with creating custom themes, extending functionality through plugins, and integrating third-party services. Knowledgeable in Magento's XML layout system, PHTML templates, and admin configuration.",
+        "detail": "Strong understanding of Magento 2’s frontend integration, module customization, and multi-store management. Experienced in developing features like OTP verification, address hierarchy (province → city → district), and CSV/Excel export functionality. Skilled at debugging Magento core modules and optimizing data flow between Vue-based frontends and Magento REST APIs.",
         "projects": [
           {
-            "name": "Multi-store E-commerce Platform",
-            "description": "Custom Magento 2 theme with advanced product configurations"
-          },
-          {
-            "name": "B2B Wholesale Portal",
-            "description": "Magento customization for bulk ordering and pricing tiers"
-          },
-          {
-            "name": "Fashion E-commerce Site",
-            "description": "Custom Magento modules for size charts and virtual try-on"
-          },
-          {
-            "name": "Electronics Marketplace",
-            "description": "Multi-vendor Magento platform with custom shipping integrations"
+            "name": "InfinixMobility & XPARK Platforms",
+            "description": "Collaborated in extending Magento-based e-commerce with Vue integrations — improving checkout flow, translation handling, and content management efficiency."
           }
         ]
       }
