@@ -1,17 +1,20 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-import { useLanguage, useHeader } from "@/context/GlobalContext";
+import {useLanguage, useHeader, useTheme} from "@/context/GlobalContext";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import logoFull from '@/assets/personal-logo-full.png';
+import logo from '@/assets/personal-logo-t.png';
+import logoDark from '@/assets/personal-logo-dark.png';
+import logoWhite from '@/assets/personal-logo-light.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const HeroSection = () => {
   const { t } = useLanguage();
   const { showHeader, hideHeader, toggleHeader } = useHeader();
+  const { theme } = useTheme();
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
@@ -209,7 +212,6 @@ const HeroSection = () => {
                   style={{
                     position: "fixed",
                     inset: 0,
-                    background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%)",
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
@@ -220,7 +222,7 @@ const HeroSection = () => {
               >
                 <img
                     id="welcome-logo"
-                    src={logoFull}
+                    src={theme === 'dark' ? logoDark : logoWhite}
                     alt="Logo"
                     style={{
                       width: "clamp(80px, 15vw, 150px)",
@@ -273,9 +275,9 @@ const HeroSection = () => {
                 }}>
                   <img
                       alt="personal_logo"
-                      src={logoFull}
+                      src={theme === 'dark' ? logoDark : logoWhite}
                       className="object-contain rounded-full"
-                      style={{ width: 'clamp(1.5rem, 3vw, 2rem)', height: 'clamp(1.5rem, 3vw, 2rem)' }}
+                      style={{ width: 'clamp(1.5rem, 3vw, 2rem)', height: 'clamp(1.5rem, 3vw, 2rem)'}}
                   />
                   <span className="text-foreground/80" style={{ fontSize: 'clamp(0.75rem, 1.2vw, 0.875rem)' }}>{t("hero.greeting")}</span>
                 </div>
