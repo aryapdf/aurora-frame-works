@@ -1,8 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import en from "@/locales/en.json";
 import id from "@/locales/id.json";
-import logoLight from "@/assets/personal-logo.png";
-import logoDark from "@/assets/personal-logo-full.png";
 
 // ============================================
 // TYPES
@@ -26,10 +24,6 @@ interface GlobalContextType {
     showHeader: () => void;
     hideHeader: () => void;
     toggleHeader: () => void;
-
-    // Theme
-    logo: any;
-    setLogo: (logo: string) => void;
 }
 
 // ============================================
@@ -114,18 +108,6 @@ export const GlobalProvider: React.FC<GlobalProviderProps> = ({ children }) => {
     const hideHeader = () => setIsHeaderVisible(false);
     const toggleHeader = () => setIsHeaderVisible((prev) => !prev);
 
-    // 📌 Header State ========== >
-    const [logo, setLogo] = useState<string>(logoDark);
-
-    useEffect(() => {
-        if (theme === "dark") {
-            setLogo(logoDark);
-        } else if (theme === "light") {
-            setLogo(logoLight);
-        }
-    }, [theme]);
-
-
     // ============================================
     // COMBINE VALUES
     // ============================================
@@ -145,10 +127,6 @@ export const GlobalProvider: React.FC<GlobalProviderProps> = ({ children }) => {
         showHeader,
         hideHeader,
         toggleHeader,
-
-        // Logo
-        logo,
-        setLogo
     };
 
     return (
@@ -183,9 +161,4 @@ export const useTheme = () => {
 export const useHeader = () => {
     const { isHeaderVisible, showHeader, hideHeader, toggleHeader } = useGlobal();
     return { isHeaderVisible, showHeader, hideHeader, toggleHeader };
-};
-
-export const useLogo = () => {
-    const { logo, setLogo } = useGlobal();
-    return { logo, setLogo };
 };
