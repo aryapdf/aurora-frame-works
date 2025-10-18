@@ -194,8 +194,8 @@
     },
     {
       "id": 13,
-      "title": "XClub – Backend",
-      "description": "Maintained multiple backend repositories (up to 7) for the XClub environment. Enhanced SQL query performance, implemented encryption systems, and managed H5 microsite data handling for seasonal events.",
+      "title": "XClub – Dashboard BI",
+      "description": "Maintained multiple backend repositories including the Dashboard for the XClub environment. Enhanced SQL query performance, implemented encryption systems, and managed H5 microsite data handling for seasonal events.",
       "category": "Back-End",
       "subcategory": "Backend Services",
       "country": "Global Deployment",
@@ -214,9 +214,64 @@
       "country": "Global Deployment",
       "duration": "Ongoing",
       "year": "2024 – Present",
-      "technologies": ["Vue", "Vuex"],
-      "clientTestimonial": "H5 microsites serve as interactive, event-specific web apps for Infinix’s global events.",
-      "links": null
+      "technologies": [
+        "Vue",
+        "Vuex"
+      ],
+      "clientTestimonial": "H5 microsites serve as interactive, event-specific web apps for Infinix’s global events. The example on the link is PMWC event.",
+      "links": "https://hybrid.pre.infinix.club/pmwc"
+    },
+    {
+      "id": 15,
+      "title": "Xpark - Backend App",
+      "description": "The XPARK backend serves as the core e-commerce API infrastructure that powers both the Infinix Mobility website and its mobile applications.",
+      "category": "Back-End",
+      "subcategory": "Apps Back-End",
+      "country": "Global Deployment",
+      "duration": "Ongoing",
+      "year": "2024 – Present",
+      "technologies": ["Magento 2", "PHP", "MySQL"],
+      "clientTestimonial": "-",
+      "links": "-"
+    },
+    {
+      "id": 16,
+      "title": "Xpark Website",
+      "description": "Handling and maintain Xpark, official e-commerce platform of Infinix Mobility in Southeast Asia Region. The project emphasized high scalability and localization, supporting multi-region deployment and language-based configurations, ensuring stable performance and compliance with Infinix’s enterprise-level standards.",
+      "category": "Fullstack",
+      "subcategory": "E-Commerce Website",
+      "country": "Global Deployment",
+      "duration": "Ongoing",
+      "year": "2024 – Present",
+      "technologies": ["Custom Vue.js", "Magento 2", "PHP", "MySQL"],
+      "clientTestimonial": "As a Fullstack Engineer, I contributed to both front-end and back-end development.",
+      "links": "xpark.com"
+    },
+    {
+      "id": 17,
+      "title": "Infinix Mobility Official Website",
+      "description": "Maintain the official global website of Infinix. The platform serves as the central hub for the brand’s digital presence — showcasing its product ecosystem, campaigns, and community initiatives across multiple regions.",
+      "category": "Fullstack",
+      "subcategory": "Website",
+      "country": "Global Deployment",
+      "duration": "Ongoing",
+      "year": "2024 – Present",
+      "technologies": ["Custom Vue.js", "Magento 2", "PHP", "MySQL"],
+      "clientTestimonial": "I really impressed by how Magento and injected Vue really works together on this project.",
+      "links": "infinixmobility.com"
+    },
+    {
+      "id": 18,
+      "title": "2Sweet.ai",
+      "description": "2Sweet is an AI-driven social media platform designed to let users create conversational experiences with digital personas of deceased loved ones, using personal data and memories to power contextual AI interactions.",
+      "category": "Front-End",
+      "subcategory": "Web Apps",
+      "country": "-",
+      "duration": "5 Months",
+      "year": "2025",
+      "technologies": ["Next.Js", "ANTD", "FamilyTree", "Firebase"],
+      "clientTestimonial": "As a front end, I developed and optimized the Next.js-based front-end, ensuring high performance, dynamic routing, and responsive UI using Ant Design.",
+      "links": ""
     }
   ],
 
