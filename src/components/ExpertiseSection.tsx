@@ -8,11 +8,11 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 // Import skill icons
-import htmlIcon from "@/assets/tools/html-icon.svg";
 import reactIcon from "@/assets/tools/react-icon.png";
 import vueIcon from "@/assets/tools/vue-icon.png";
 import antdIcon from "@/assets/tools/antd-icon.svg";
 import magentoIcon from "@/assets/tools/magento-icon.svg";
+import backendIcon from "@/assets/tools/back-end-icon.svg";
 
 interface Skill {
   id: string;
@@ -21,11 +21,11 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  { id: "html", name: "HTML/CSS/JS", icon: htmlIcon },
   { id: "react", name: "React/Next/TS", icon: reactIcon },
   { id: "vue", name: "Vue/Nuxt", icon: vueIcon },
   { id: "antd", name: "ANTD", icon: antdIcon },
   { id: "magento", name: "Magento", icon: magentoIcon },
+  { id: "backend", name: "Back-End", icon: backendIcon },
 ];
 
 const ExpertiseSection = () => {
