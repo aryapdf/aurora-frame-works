@@ -5,6 +5,7 @@ import { useLanguage, useHeader } from "@/context/GlobalContext";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import logoFull from '@/assets/personal-logo-full.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -219,7 +220,7 @@ const HeroSection = () => {
               >
                 <img
                     id="welcome-logo"
-                    src="src/assets/personal-logo-full.png"
+                    src={logoFull}
                     alt="Logo"
                     style={{
                       width: "clamp(80px, 15vw, 150px)",
@@ -272,7 +273,7 @@ const HeroSection = () => {
                 }}>
                   <img
                       alt="personal_logo"
-                      src="src/assets/personal-logo-full.png"
+                      src={logoFull}
                       className="object-contain rounded-full"
                       style={{ width: 'clamp(1.5rem, 3vw, 2rem)', height: 'clamp(1.5rem, 3vw, 2rem)' }}
                   />
