@@ -1,17 +1,17 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-import { useLanguage, useHeader } from "@/context/GlobalContext";
+import {useLanguage, useHeader, useLogo} from "@/context/GlobalContext";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import logoFull from '@/assets/personal-logo-full.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const HeroSection = () => {
   const { t } = useLanguage();
   const { showHeader, hideHeader, toggleHeader } = useHeader();
+  const { logo } = useLogo();
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
@@ -209,7 +209,7 @@ const HeroSection = () => {
                   style={{
                     position: "fixed",
                     inset: 0,
-                    background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%)",
+                    background: "var(--gradient-primary)",
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
@@ -220,7 +220,7 @@ const HeroSection = () => {
               >
                 <img
                     id="welcome-logo"
-                    src={logoFull}
+                    src="src/assets/personal-logo.png"
                     alt="Logo"
                     style={{
                       width: "clamp(80px, 15vw, 150px)",
@@ -273,7 +273,7 @@ const HeroSection = () => {
                 }}>
                   <img
                       alt="personal_logo"
-                      src={logoFull}
+                      src={logo}
                       className="object-contain rounded-full"
                       style={{ width: 'clamp(1.5rem, 3vw, 2rem)', height: 'clamp(1.5rem, 3vw, 2rem)' }}
                   />
