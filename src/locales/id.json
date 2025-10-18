@@ -1,27 +1,24 @@
 {
   "nav.work": "Karya",
   "nav.experience": "Pengalaman",
-  "nav.expertise": "Kemampuan",
+  "nav.expertise": "Keahlian",
   "nav.about": "Tentang",
   "nav.projects": "Proyek",
   "nav.contact": "Kontak",
 
-
   "lang.english": "English",
   "lang.indonesian": "Indonesia",
+
   "frontend": "Front End Engineer",
-
-
-  "hero.greeting": "Hai!",
+  "hero.greeting": "Hai, semua!",
   "hero.name": "Arya Pradana,",
-  "hero.roles": ["Front End Engineer", "Back End Engineer", "Linux Enthusiast", "Musician"],
+  "hero.roles": ["Front End Engineer", "Back End Engineer", "Penggemar Linux", "Musisi"],
   "hero.scroll": "Gulir ke bawah untuk melihat portofolio",
 
-
-  "about.section": "01 — MENGENAL SAYA",
-  "about.title": "Front End Engineer dengan pengalaman profesional 1+ tahun dan kontributor utama untuk produk Infinix, termasuk halaman USP, xclub, dan platform xpark. Saat ini bekerja sebagai full-stack dengan pengembangan aktif di 2sweet.ai—platform berbasis AI untuk melestarikan kenangan, membuat pohon keluarga, dan mengadakan acara memorial.",
-  "about.description": "Sedang aktif mengembangkan skill di bidang Back-End. Antusias dengan Linux dan teknologi open-source. Di luar coding, bermain gitar dan bass.",
-  "about.current_job": "Saat ini bekerja sebagai Front-End Developer di PT. Summit Global Technology.",
+  "about.section": "01 — KENALI SAYA",
+  "about.title": "Front End Engineer dengan pengalaman profesional 1+ tahun dan kontributor inti pada rangkaian produk Infinix, termasuk halaman USP, xclub, dan platform xpark. Saat ini bekerja full-stack dengan pengembangan aktif pada 2sweet.ai—platform berbasis AI untuk melestarikan kenangan, membuat pohon keluarga, dan menyelenggarakan acara memorial.",
+  "about.description": "Aktif mengembangkan kemampuan Back-End. Penggemar Linux dengan passion di teknologi open-source. Saat tidak bekerja, saya bermain gitar dan bass.",
+  "about.current_job": "Saat ini bekerja sebagai Front-End Engineer di Summit Global Technology.",
   "about.job_details": "",
 
   "porto.section": "02 — PROYEK TERBARU",
@@ -31,315 +28,255 @@
   "porto.projects": [
     {
       "id": 1,
-      "title": "Platform Arsitektur Urbanex+",
-      "description": "Platform layanan arsitektur full-stack dengan visualisasi bangunan 3D, CMS untuk galeri proyek, dan sistem kontak terintegrasi dengan notifikasi email dan integrasi CRM.",
-      "category": "Fullstack",
-      "subcategory": "Aplikasi Web",
-      "country": "Australia",
-      "duration": "3 bulan",
-      "year": "2025",
-      "image": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&h=600&fit=crop",
-      "technologies": ["React", "Node.js", "PostgreSQL", "Three.js", "AWS S3"],
-      "clientTestimonial": "Pekerjaan luar biasa yang sempurna menangkap visi dan identitas merek kami."
+      "title": "Buku Resepku",
+      "description": "Katalog buku resep berbasis web yang memungkinkan pengguna untuk menelusuri, melihat, dan mengelola resep. Dikembangkan sebagai Proyek Capstone untuk SIB Batch 3 – Dicoding Academy.",
+      "category": "Front-End",
+      "subcategory": "Website",
+      "country": "Indonesia",
+      "duration": "1 Bulan",
+      "year": "2022",
+      "image": "src/assets/logos/buku-resepku-logo.png",
+      "technologies": ["Native JavaScript", "Bootstrap", "Webpack"],
+      "clientTestimonial": "Proyek pemrograman pertama saya yang membentuk fondasi dalam pengembangan front-end.",
+      "links": ["https://github.com/aryapdf/expense-tracker"]
     },
     {
       "id": 2,
-      "title": "E-commerce Kedai Kopi",
-      "description": "Platform e-commerce fullstack dengan katalog produk, keranjang belanja, pemrosesan pembayaran via Stripe, sistem manajemen pesanan, dan integrasi API pelacakan pengiriman real-time.",
-      "category": "Fullstack",
-      "subcategory": "Platform E-commerce",
-      "country": "USA",
-      "duration": "2 bulan",
+      "title": "Shopper",
+      "description": "Frontend e-commerce simulasi yang menampilkan interaksi pembeli-penjual dan manajemen produk bergaya marketplace untuk mengeksplorasi fundamental React.js dan desain komponen.",
+      "category": "Front-End",
+      "subcategory": "Website E-Commerce",
+      "country": "Indonesia",
+      "duration": "1 Bulan",
       "year": "2024",
-      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&h=600&fit=crop",
-      "technologies": ["Vue.js", "Express.js", "MongoDB", "Stripe API", "Redis"],
-      "clientTestimonial": "Meningkatkan pesanan online kami sebesar 150% dalam bulan pertama."
+      "image": "",
+      "technologies": ["React.js", "Bootstrap", "CI/CD Testing"],
+      "clientTestimonial": "Proyek berbasis framework pertama saya — dibangun untuk memahami arsitektur React.js dan state management.",
+      "links": ["https://github.com/aryapdf/shopper-ecommerce-frontend"]
     },
     {
       "id": 3,
-      "title": "Sistem Booking Studio Fitness",
-      "description": "Platform pemesanan lengkap dengan penjadwalan kelas, manajemen keanggotaan, pemrosesan pembayaran, integrasi sinkronisasi kalender, dan sistem notifikasi email otomatis.",
-      "category": "Fullstack",
-      "subcategory": "Platform Booking",
-      "country": "Kanada",
-      "duration": "1,5 bulan",
+      "title": "Website Portfolio Arya (Lama)",
+      "description": "Portfolio pribadi modern bertema terang yang menampilkan profil, keahlian, dan proyek saya dalam desain single-page interaktif.",
+      "category": "Front-End",
+      "subcategory": "Website Portfolio",
+      "country": "Indonesia",
+      "duration": "1 Bulan",
       "year": "2024",
-      "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
-      "technologies": ["Next.js", "Prisma", "PostgreSQL", "Stripe", "Google Calendar API"],
-      "clientTestimonial": "Desain profesional yang meningkatkan pendaftaran keanggotaan kami secara signifikan."
+      "image": "src/assets/projects/arya-portfolio-old.png",
+      "technologies": ["React.js", "Tailwind CSS", "Sass/SCSS"],
+      "clientTestimonial": "Portfolio lengkap pertama saya, dirancang untuk menonjolkan karya awal dan gaya pengembangan saya.",
+      "links": ["https://aryapdf.netlify.app/"]
     },
     {
       "id": 4,
-      "title": "Landing Page Startup Teknologi",
-      "description": "Situs marketing interaktif dengan demo produk, pelacakan analitik, formulir tangkap prospek, implementasi A/B testing, dan integrasi dengan Salesforce CRM untuk manajemen prospek.",
+      "title": "Note 40 Racing Edition Series",
+      "description": "Mengembangkan landing page responsif penuh untuk kampanye Infinix Note 40 Racing Edition, menampilkan animasi ScrollMagic, carousel Swiper.js, dan interaksi dinamis.",
       "category": "Front-End",
-      "subcategory": "Situs Marketing",
-      "country": "Inggris",
-      "duration": "2 bulan",
+      "subcategory": "USP Landing Page",
+      "country": "Deployment Global",
+      "duration": "2 Bulan",
       "year": "2024",
-      "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop",
-      "technologies": ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Google Analytics"],
-      "clientTestimonial": "Mencapai tingkat konversi 40% lebih tinggi dibanding situs kami sebelumnya."
+      "image": "src/assets/projects/note-40-racing.webp",
+      "technologies": ["Vue", "ScrollMagic", "SwiperJS"],
+      "clientTestimonial": "Proyek profesional pertama saya untuk kampanye global Infinix — dibangun untuk performa dan interaktivitas tinggi.",
+      "links": ["https://infinixmobility.com/note-40-racing-edition"]
     },
     {
       "id": 5,
-      "title": "Platform Multi-lokasi Restoran",
-      "description": "Sistem manajemen restoran fullstack dengan CMS menu, API reservasi meja, backend program loyalitas, layanan geolokasi, dan infrastruktur pemrosesan pembayaran.",
-      "category": "Fullstack",
-      "subcategory": "Platform Restoran",
-      "country": "Spanyol",
-      "duration": "4 bulan",
+      "title": "Note 40 Series",
+      "description": "Mengoptimalkan dan memelihara landing page Note 40 Series. Migrasi dari ScrollMagic ke GSAP, meningkatkan efisiensi animasi ~20% dan meningkatkan performa Lighthouse ~15%.",
+      "category": "Front-End",
+      "subcategory": "Landing Page",
+      "country": "Deployment Global",
+      "duration": "2 Bulan",
       "year": "2024",
-      "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop",
-      "technologies": ["React", "Node.js", "MongoDB", "Google Maps API", "Socket.io"],
-      "clientTestimonial": "Merampingkan kehadiran online kami di semua lokasi dengan sempurna."
+      "image": "",
+      "technologies": ["Vue", "GSAP", "SwiperJS"],
+      "clientTestimonial": "Meningkatkan performa kode dan maintainability untuk halaman peluncuran global Note 40.",
+      "links": ["https://id.infinixmobility.com/NOTE-40"]
     },
     {
       "id": 6,
-      "title": "API Gateway Klinik Medis",
-      "description": "Infrastruktur backend yang sesuai HIPAA dengan API manajemen pasien, sistem penjadwalan janji temu, penyimpanan dokumen aman, integrasi konsultasi video, dan logging audit.",
-      "category": "Back-End",
-      "subcategory": "API Kesehatan",
-      "country": "Jerman",
-      "duration": "3 bulan",
+      "title": "Zero 40 Series",
+      "description": "Mengembangkan dan memelihara landing page USP Zero 40 Series menggunakan ScrollMagic dan SwiperJS untuk animasi imersif dan pengalaman pengguna yang smooth.",
+      "category": "Front-End",
+      "subcategory": "USP Landing Page",
+      "country": "Deployment Global",
+      "duration": "2 Bulan",
       "year": "2024",
-      "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop",
-      "technologies": ["Node.js", "PostgreSQL", "Redis", "AWS S3", "HIPAA Compliance"],
-      "clientTestimonial": "Secara signifikan meningkatkan keterlibatan pasien dan efisiensi pemesanan."
+      "image": "",
+      "technologies": ["Nuxt", "ScrollMagic", "SwiperJS"],
+      "clientTestimonial": "Fokus pada performa dan dynamic rendering untuk halaman produk internasional.",
+      "links": ["https://infinixmobility.com/zero-40"]
     },
     {
       "id": 7,
-      "title": "Platform Trading Kripto MoonWave",
-      "description": "Antarmuka trading cryptocurrency real-time dengan koneksi WebSocket ke bursa, pelacakan portofolio, peringatan harga, dan fitur trading sosial dengan backend REST API.",
+      "title": "Zero Flip",
+      "description": "Memimpin pengembangan landing page Zero Flip, menampilkan animasi GSAP tingkat lanjut, section yang dipicu scroll, dan visual storytelling yang smooth.",
       "category": "Front-End",
-      "subcategory": "Antarmuka Trading",
-      "country": "Jerman",
-      "duration": "2 bulan",
-      "year": "2025",
-      "image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop",
-      "technologies": ["React", "TypeScript", "Redux", "WebSocket", "Chart.js"],
-      "clientTestimonial": "UI/UX luar biasa yang membuat data kripto kompleks mudah diakses pengguna kami."
+      "subcategory": "USP Landing Page",
+      "country": "Deployment Global",
+      "duration": "2 Bulan",
+      "year": "2024",
+      "image": "",
+      "technologies": ["Nuxt", "GSAP", "SwiperJS"],
+      "clientTestimonial": "Proyek pertama saya memimpin frontend untuk kampanye peluncuran global.",
+      "links": ["https://infinixmobility.com/zero-flip"]
     },
     {
       "id": 8,
-      "title": "Backend Aplikasi Meditasi",
-      "description": "Layanan backend yang dapat diskalakan dengan autentikasi pengguna, API pengiriman konten, sistem pelacakan progres, infrastruktur streaming audio, dan layanan notifikasi push.",
-      "category": "Back-End",
-      "subcategory": "API Mobile",
-      "country": "USA",
-      "duration": "3 bulan",
+      "title": "Hot 50 Series",
+      "description": "Mengembangkan landing page Hot 50 Series menggunakan Vue, GSAP, dan SwiperJS. Transisi section statis ke rendering dinamis berbasis JSON, meningkatkan kecepatan lokalisasi 100% dan mengurangi waktu pengembangan secara signifikan.",
+      "category": "Front-End",
+      "subcategory": "USP Landing Page",
+      "country": "Deployment Global",
+      "duration": "4 Bulan",
       "year": "2024",
-      "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=600&fit=crop",
-      "technologies": ["Node.js", "MongoDB", "AWS S3", "Firebase Cloud Messaging", "JWT"],
-      "clientTestimonial": "Backend yang andal menangani basis pengguna kami yang terus berkembang dengan sempurna."
+      "image": "",
+      "technologies": ["Vue", "GSAP", "SwiperJS"],
+      "clientTestimonial": "Memperkenalkan dynamic translation rendering untuk pertama kalinya di seluruh proyek USP Infinix.",
+      "links": null
     },
     {
       "id": 9,
-      "title": "Platform Pengiriman Makanan",
-      "description": "Ekosistem pengiriman lengkap dengan manajemen restoran, pemrosesan pesanan, pelacakan real-time, integrasi payment gateway, sistem pengiriman driver, dan dashboard analitik.",
-      "category": "Fullstack",
-      "subcategory": "Platform Pengiriman",
-      "country": "Prancis",
-      "duration": "4 bulan",
+      "title": "Hotmoji Event",
+      "description": "Memimpin dan mengembangkan microsite Hotmoji Event, mengimplementasikan kustomisasi gambar real-time (frame, stiker, background) dan social sharing untuk kampanye global.",
+      "category": "Front-End",
+      "subcategory": "H5 Microsite",
+      "country": "Deployment Global",
+      "duration": "2 Bulan",
       "year": "2024",
-      "image": "https://images.unsplash.com/photo-1526367790999-0150786686a2?w=800&h=600&fit=crop",
-      "technologies": ["React", "Node.js", "PostgreSQL", "Socket.io", "Stripe", "Google Maps API"],
-      "clientTestimonial": "Platform luar biasa yang meningkatkan pesanan pengiriman kami sebesar 300%."
+      "image": "",
+      "technologies": ["Vue", "SwiperJS", "HTML2Canvas"],
+      "clientTestimonial": "Salah satu microsite event paling interaktif yang saya kembangkan, memungkinkan pengguna mendesain dan membagikan avatar personal.",
+      "links": null
     },
     {
       "id": 10,
-      "title": "Dashboard Pelacakan Fitness",
-      "description": "Antarmuka pelacakan latihan interaktif dengan visualisasi data, grafik progres, fitur sosial, dan integrasi dengan perangkat wearable melalui REST API.",
+      "title": "XPAD",
+      "description": "Membangun landing page XPAD dengan animasi GSAP dan integrasi SwiperJS untuk transisi smooth dan desain UI yang engaging.",
       "category": "Front-End",
-      "subcategory": "Antarmuka Dashboard",
-      "country": "Australia",
-      "duration": "5 bulan",
+      "subcategory": "USP Landing Page",
+      "country": "Deployment Global",
+      "duration": "3 Bulan",
       "year": "2024",
-      "image": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&h=600&fit=crop",
-      "technologies": ["React", "TypeScript", "D3.js", "Recharts", "Tailwind CSS"],
-      "clientTestimonial": "Perhatian luar biasa terhadap detail dan desain pengalaman pengguna."
+      "image": "",
+      "technologies": ["Vue", "GSAP", "SwiperJS"],
+      "clientTestimonial": "Landing page produk kreatif dan visual fluid untuk XPAD.",
+      "links": null
     },
     {
       "id": 11,
-      "title": "API Pembelajaran Bahasa",
-      "description": "Layanan backend dengan algoritma pembelajaran adaptif, mesin rekomendasi konten, integrasi pengenalan suara, pelacakan progres, dan sistem manajemen pengguna.",
-      "category": "Back-End",
-      "subcategory": "API Pembelajaran",
-      "country": "Jepang",
-      "duration": "6 bulan",
+      "title": "TWS XE-23 (Infinix Buds Lite)",
+      "description": "Mengembangkan landing page untuk Infinix Buds Lite menggunakan Vue dan SwiperJS, fokus pada animasi ringan dan responsivitas mobile-first.",
+      "category": "Front-End",
+      "subcategory": "Halaman Event Musiman",
+      "country": "Deployment Global",
+      "duration": "1 Bulan",
       "year": "2024",
-      "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=600&fit=crop",
-      "technologies": ["Python", "Django", "PostgreSQL", "Redis", "ML Models"],
-      "clientTestimonial": "Backend yang kuat yang mendukung pengalaman pembelajaran bahasa kami."
+      "image": "",
+      "technologies": ["Vue", "SwiperJS", "HTML2Canvas"],
+      "clientTestimonial": "Halaman kampanye sederhana namun elegan untuk lineup audio XE-23.",
+      "links": null
     },
     {
       "id": 12,
-      "title": "Platform Perbankan",
-      "description": "Aplikasi finansial aman dengan manajemen akun, pemrosesan transaksi, sistem deteksi penipuan, pelacakan investasi, autentikasi biometrik, dan pelaporan kepatuhan.",
+      "title": "XClub",
+      "description": "Memelihara dan meningkatkan XClub (infinix.club) — platform komunitas global untuk pengguna Infinix. Meningkatkan sistem enkripsi, fitur profil pengguna, dan logika penanganan data frontend-backend.",
       "category": "Fullstack",
-      "subcategory": "Platform Finansial",
-      "country": "Singapura",
-      "duration": "8 bulan",
-      "year": "2024",
-      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
-      "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "Encryption Libraries"],
-      "clientTestimonial": "Platform profesional yang menanamkan kepercayaan dan keyakinan pada pengguna kami."
+      "subcategory": "Aplikasi Web",
+      "country": "Deployment Global",
+      "duration": "Berlangsung",
+      "year": "2024 – Sekarang",
+      "image": "",
+      "technologies": ["Nuxt.js", "Vuex", "jQuery", "Axios"],
+      "clientTestimonial": "Bagian dari upaya pengembangan berkelanjutan meningkatkan keamanan dan skalabilitas di berbagai wilayah.",
+      "links": null
     },
     {
       "id": 13,
-      "title": "SaaS Manajemen Proyek",
-      "description": "Platform kolaborasi enterprise dengan manajemen tugas, alur kerja tim, penyimpanan file, integrasi konferensi video, webhook API, dan sinkronisasi real-time.",
-      "category": "Fullstack",
-      "subcategory": "Platform SaaS",
-      "country": "USA",
-      "duration": "6 bulan",
-      "year": "2024",
-      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-      "technologies": ["React", "Node.js", "PostgreSQL", "Socket.io", "AWS S3"],
-      "clientTestimonial": "Mengubah cara tim kami mengelola proyek dan berkolaborasi."
+      "title": "XClub – Dashboard BI",
+      "description": "Memelihara beberapa repository backend untuk dashboard Business Intelligence XClub. Meningkatkan performa query SQL, mengimplementasikan sistem enkripsi, dan mengelola pipeline data event untuk microsite musiman.",
+      "category": "Back-End",
+      "subcategory": "Backend Services",
+      "country": "Deployment Global",
+      "duration": "Berlangsung",
+      "year": "2024 – Sekarang",
+      "image": "",
+      "technologies": ["PHP", "ThinkORM", "MySQL"],
+      "clientTestimonial": "Proyek fokus backend pertama saya yang melibatkan data relasional skala besar dan layanan API.",
+      "links": null
     },
     {
       "id": 14,
-      "title": "API Dukungan Pelanggan",
-      "description": "Backend dukungan omnichannel dengan routing tiket, respons otomatis, analisis sentimen, pelacakan SLA, integrasi webhook, dan sistem pelaporan komprehensif.",
-      "category": "Back-End",
-      "subcategory": "API Dukungan",
-      "country": "Kanada",
-      "duration": "5 bulan",
-      "year": "2024",
-      "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop",
-      "technologies": ["Node.js", "MongoDB", "Redis", "Socket.io", "ML Services"],
-      "clientTestimonial": "Secara dramatis meningkatkan skor kepuasan pelanggan kami."
+      "title": "XClub – Event Musiman (H5 Microsites)",
+      "description": "Mengembangkan dan memelihara microsite event interaktif (PMWC, PMGC, HOK Invitational S3, dll.) yang terintegrasi dengan ekosistem XClub untuk kampanye global.",
+      "category": "Front-End",
+      "subcategory": "H5 Microsites",
+      "country": "Deployment Global",
+      "duration": "Berlangsung",
+      "year": "2024 – Sekarang",
+      "image": "",
+      "technologies": ["Vue", "Vuex"],
+      "clientTestimonial": "Setiap microsite memberikan pengalaman engagement imersif untuk pengguna selama turnamen internasional.",
+      "links": ["https://hybrid.pre.infinix.club/pmwc"]
     },
     {
       "id": 15,
-      "title": "Platform Email Marketing",
-      "description": "Sistem manajemen kampanye dengan pembuat email, manajemen pelanggan, alur kerja otomasi, pelacakan analitik, A/B testing, dan infrastruktur pemantauan deliverability.",
-      "category": "Fullstack",
-      "subcategory": "Platform Marketing",
-      "country": "Inggris",
-      "duration": "7 bulan",
-      "year": "2024",
-      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      "technologies": ["React", "Python", "PostgreSQL", "Redis", "Celery", "SendGrid API"],
-      "clientTestimonial": "Platform luar biasa yang meningkatkan performa kampanye email kami."
+      "title": "XPARK – Backend App",
+      "description": "Berfungsi sebagai backend e-commerce inti yang menggerakkan website Infinix Mobility dan aplikasi mobile. Menangani API, manajemen katalog, dan logika pemrosesan pesanan.",
+      "category": "Back-End",
+      "subcategory": "Apps Backend",
+      "country": "Deployment Global",
+      "duration": "Berlangsung",
+      "year": "2024 – Sekarang",
+      "image": "",
+      "technologies": ["Magento 2", "PHP", "MySQL"],
+      "clientTestimonial": "Bertanggung jawab atas optimasi API dan integrasi di seluruh sistem front-end.",
+      "links": null
     },
     {
       "id": 16,
-      "title": "Sistem Manajemen Inventori",
-      "description": "Platform rantai pasokan dengan pelacakan inventori, pemesanan ulang otomatis, API integrasi pemasok, manajemen gudang, dashboard pelaporan, dan algoritma peramalan.",
+      "title": "XPARK Website",
+      "description": "Memelihara XPARK, platform e-commerce resmi untuk Infinix Mobility di Asia Tenggara. Mendukung lokalisasi, arsitektur scalable, dan deployment high-availability.",
       "category": "Fullstack",
-      "subcategory": "Sistem ERP",
-      "country": "Jerman",
-      "duration": "8 bulan",
-      "year": "2024",
-      "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop",
-      "technologies": ["Angular", "Java Spring Boot", "MySQL", "Redis", "Kafka"],
-      "clientTestimonial": "Merampingkan seluruh proses manajemen rantai pasokan kami."
+      "subcategory": "Website E-Commerce",
+      "country": "Deployment Global",
+      "duration": "Berlangsung",
+      "year": "2024 – Sekarang",
+      "image": "",
+      "technologies": ["Custom Vue.js", "Magento 2", "PHP", "MySQL"],
+      "clientTestimonial": "Berkontribusi pada integrasi frontend Vue dan pengembangan modul backend Magento.",
+      "links": ["https://xpark.com"]
     },
     {
       "id": 17,
-      "title": "Backend Manajemen HR",
-      "description": "Infrastruktur HR dengan database karyawan, pemrosesan penggajian, API manajemen cuti, pelacakan kinerja, manajemen dokumen, dan sistem pemantauan kepatuhan.",
-      "category": "Back-End",
-      "subcategory": "API HR",
-      "country": "Belanda",
-      "duration": "9 bulan",
-      "year": "2024",
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
-      "technologies": ["Python", "Django", "PostgreSQL", "Celery", "AWS S3"],
-      "clientTestimonial": "Backend revolusioner yang mendukung operasi HR kami."
+      "title": "Infinix Mobility Official Website",
+      "description": "Memelihara website global resmi Infinix — pusat utama untuk brand, produk, dan kampanye. Mengintegrasikan frontend Vue.js dengan backend Magento 2 untuk manajemen konten yang seamless.",
+      "category": "Fullstack",
+      "subcategory": "Website",
+      "country": "Deployment Global",
+      "duration": "Berlangsung",
+      "year": "2024 – Sekarang",
+      "image": "",
+      "technologies": ["Custom Vue.js", "Magento 2", "PHP", "MySQL"],
+      "clientTestimonial": "Integrasi teknis yang kompleks antara frontend Vue custom dan backend Magento.",
+      "links": ["https://infinixmobility.com"]
     },
     {
       "id": 18,
-      "title": "Dashboard Manajemen Media Sosial",
-      "description": "Antarmuka penjadwalan konten multi-platform dengan komposer postingan, visualisasi analitik, social listening, fitur kolaborasi tim, dan tampilan kalender.",
+      "title": "2Sweet.ai",
+      "description": "Platform media sosial berbasis AI yang memungkinkan pengguna membuat pengalaman percakapan dengan persona digital orang yang dicintai menggunakan data dan kenangan pribadi.",
       "category": "Front-End",
-      "subcategory": "Dashboard Manajemen",
-      "country": "Australia",
-      "duration": "6 bulan",
-      "year": "2024",
-      "image": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&h=600&fit=crop",
-      "technologies": ["React", "TypeScript", "Redux", "Chart.js", "Tailwind CSS"],
-      "clientTestimonial": "Antarmuka luar biasa yang meningkatkan efisiensi media sosial kami."
-    },
-    {
-      "id": 19,
-      "title": "Platform Dashboard Analitik",
-      "description": "Sistem business intelligence real-time dengan pembuat visualisasi kustom, pemrosesan pipeline data, sistem peringatan, pembuatan laporan, dan integrasi multi-sumber data.",
-      "category": "Fullstack",
-      "subcategory": "Platform Analitik",
-      "country": "USA",
-      "duration": "4 bulan",
-      "year": "2024",
-      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-      "technologies": ["React", "Node.js", "PostgreSQL", "D3.js", "WebSocket", "Redis"],
-      "clientTestimonial": "Dashboard yang sangat insightful mengubah pengambilan keputusan kami."
-    },
-    {
-      "id": 20,
-      "title": "Panel Admin E-commerce",
-      "description": "Antarmuka admin komprehensif dengan manajemen produk, pemrosesan pesanan, analitik pelanggan, pelacakan inventori, alat promosi, dan dashboard pelaporan penjualan.",
-      "category": "Front-End",
-      "subcategory": "Antarmuka Admin",
-      "country": "Inggris",
-      "duration": "5 bulan",
-      "year": "2024",
-      "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
-      "technologies": ["Vue.js", "TypeScript", "Vuex", "Chart.js", "TailwindCSS"],
-      "clientTestimonial": "Panel admin sempurna yang menyederhanakan operasi e-commerce kami."
-    },
-    {
-      "id": 21,
-      "title": "Backend Trading Finansial",
-      "description": "Infrastruktur trading berkinerja tinggi dengan mesin eksekusi order, pemrosesan data pasar, sistem manajemen risiko, pemantauan kepatuhan, dan penyelesaian transaksi.",
-      "category": "Back-End",
-      "subcategory": "API Trading",
-      "country": "Swiss",
-      "duration": "6 bulan",
-      "year": "2024",
-      "image": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800&h=600&fit=crop",
-      "technologies": ["Python", "FastAPI", "PostgreSQL", "Redis", "WebSocket"],
-      "clientTestimonial": "Backend luar biasa dengan performa dan keandalan yang luar biasa."
-    },
-    {
-      "id": 22,
-      "title": "Sistem Manajemen Kesehatan",
-      "description": "Platform perawatan pasien terintegrasi dengan sistem EHR, penjadwalan janji temu, manajemen penagihan, dukungan keputusan klinis, integrasi FHIR API, dan alat pelaporan.",
-      "category": "Fullstack",
-      "subcategory": "Sistem Kesehatan",
-      "country": "Kanada",
-      "duration": "7 bulan",
-      "year": "2024",
-      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop",
-      "technologies": ["React", "Node.js", "PostgreSQL", "FHIR", "HL7"],
-      "clientTestimonial": "Sistem luar biasa yang meningkatkan kualitas perawatan pasien kami."
-    },
-    {
-      "id": 23,
-      "title": "Dashboard Analitik Marketing",
-      "description": "Antarmuka performa kampanye dengan pemodelan atribusi, visualisasi funnel, pelacakan ROI, hasil A/B test, metrik multi-channel, dan pembuat laporan kustom.",
-      "category": "Front-End",
-      "subcategory": "Dashboard Analitik",
-      "country": "Jerman",
-      "duration": "4 bulan",
-      "year": "2024",
-      "image": "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&h=600&fit=crop",
-      "technologies": ["Angular", "TypeScript", "RxJS", "Highcharts", "Material UI"],
-      "clientTestimonial": "Dashboard yang mengubah permainan untuk performa tim marketing kami."
-    },
-    {
-      "id": 24,
-      "title": "Sistem Manajemen Brand KraftQ",
-      "description": "Platform manajemen aset digital dengan portal panduan brand, pustaka aset, kontrol versi, alur kerja kolaborasi, sistem persetujuan, dan pelacakan distribusi.",
-      "category": "Fullstack",
-      "subcategory": "Platform DAM",
-      "country": "Denmark",
-      "duration": "3 bulan",
+      "subcategory": "Aplikasi Web",
+      "country": "Indonesia",
+      "duration": "5 Bulan",
       "year": "2025",
-      "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop",
-      "technologies": ["React", "Node.js", "PostgreSQL", "AWS S3", "CloudFront"],
-      "clientTestimonial": "Solusi sempurna untuk menjaga konsistensi brand di seluruh tim."
+      "image": "",
+      "technologies": ["Next.js", "Ant Design", "FamilyTree.js", "Firebase"],
+      "clientTestimonial": "Mengembangkan dan mengoptimalkan front-end Next.js, meningkatkan performa, routing, dan alur UX.",
+      "links": null
     }
   ],
 
@@ -350,106 +287,98 @@
     "projectsLabel": "Proyek yang Dibangun",
     "skills": [
       {
-        "id": "react",
-        "title": "ReactJS, NextJS & TypeScript",
-        "experience": "2+ tahun pengalaman",
-        "detail": "Kemahiran tingkat lanjut dalam ekosistem React termasuk hooks, context API, dan component lifecycle. Berpengalaman dengan Next.js untuk SSR/SSG, TypeScript untuk type safety, dan state management modern (Redux, Zustand). Terampil dalam optimasi performa, code splitting, dan membangun aplikasi enterprise yang scalable.",
+        "id": "vue",
+        "title": "Vue.js & Nuxt.js",
+        "experience": "Pengalaman 2+ tahun",
+        "detail": "Pengalaman hands-on mengembangkan aplikasi web dan microsite berkinerja tinggi menggunakan Vue 2, Vuex, dan Nuxt.js. Terampil dalam sistem animasi GSAP, rendering multibahasa, dan arsitektur berbasis komponen. Migrasi animasi berbasis ScrollMagic ke GSAP, mengurangi kompleksitas kode dan meningkatkan performa runtime ~20%.",
         "projects": [
           {
-            "name": "Platform Trading Kripto MoonWave",
-            "description": "Antarmuka trading real-time dengan React, TypeScript, dan integrasi WebSocket"
+            "name": "Note 40 Racing Edition Series",
+            "description": "Mengembangkan landing page kampanye responsif dengan animasi ScrollMagic dan carousel Swiper.js, menghadirkan visual storytelling yang dinamis dan interaktif untuk peluncuran global."
           },
           {
-            "name": "SaaS Manajemen Proyek",
-            "description": "Platform React/Node.js lengkap dengan fitur kolaborasi real-time"
+            "name": "Zero Flip & Note 40 Series",
+            "description": "Memimpin pengembangan landing page global untuk perangkat flagship, mengimplementasikan animasi bertenaga GSAP, scroll trigger, dan transisi visual untuk UX storytelling."
           },
           {
-            "name": "Platform Dashboard Analitik",
-            "description": "Visualisasi data kompleks dengan React, D3.js, dan custom hooks"
+            "name": "Hot 50 Series",
+            "description": "Mengembangkan dynamic rendering berbasis JSON untuk konten multibahasa — meningkatkan kecepatan terjemahan 100% dan mengurangi biaya maintenance front-end."
           },
           {
-            "name": "Platform Perbankan",
-            "description": "Aplikasi finansial aman dengan React, TypeScript, dan pola keamanan lanjutan"
+            "name": "Hotmoji Event Microsite",
+            "description": "Membangun microsite kampanye global dengan editing gambar real-time, stiker, dan fitur sharing — menggabungkan rendering canvas JS dengan reaktivitas Vue untuk pengalaman pengguna yang smooth."
           },
           {
-            "name": "Sistem Manajemen Kesehatan",
-            "description": "Aplikasi React yang sesuai HIPAA dengan state management kompleks"
-          },
-          {
-            "name": "Sistem Manajemen Brand KraftQ",
-            "description": "Platform Next.js dengan SSR untuk manajemen aset brand dan workflows"
+            "name": "XClub H5 Seasonal Events",
+            "description": "Mengembangkan dan memelihara microsite interaktif (PMWC, PMGC, HOK Invitational S3, dll.) yang terintegrasi dengan ekosistem backend XClub untuk engagement pengguna global."
           }
         ]
       },
       {
-        "id": "vue",
-        "title": "VueJS & NuxtJS",
-        "experience": "2+ tahun pengalaman",
-        "detail": "Pengalaman komprehensif dengan Vue.js 2/3, Composition API, dan framework Nuxt.js. Mahir membangun aplikasi reaktif dengan state management Vuex/Pinia, Vue Router, dan server-side rendering dengan Nuxt. Terampil dalam membuat komponen yang dapat digunakan kembali dan mengimplementasikan antarmuka pengguna yang kompleks.",
+        "id": "react",
+        "title": "React.js, Next.js & TypeScript",
+        "experience": "Pengalaman 1+ tahun",
+        "detail": "Berpengalaman membangun aplikasi modular dan maintainable menggunakan React dan Next.js. Mahir dengan Hooks, Context API, dan dynamic routing. Terampil dalam autentikasi Firebase, sistem chat, dan alur data event-driven. Menggunakan TypeScript untuk static typing, memastikan logika komponen yang predictable dan bersih.",
         "projects": [
           {
-            "name": "E-commerce Kedai Kopi",
-            "description": "Platform e-commerce lengkap dibangun dengan Vue.js dan backend Express"
+            "name": "2Sweet.ai (Aplikasi Media Sosial berbasis AI)",
+            "description": "Mengembangkan antarmuka front-end dengan Next.js dan Ant Design, mengimplementasikan UI modular, sistem event, profil pengguna, donasi, dan integrasi chat AI yang didukung oleh ChatGPT."
           },
           {
-            "name": "Frontend API Dukungan Pelanggan",
-            "description": "Dashboard Vue.js dengan Socket.io untuk manajemen tiket real-time"
+            "name": "Shopper E-Commerce Frontend",
+            "description": "Membuat marketplace simulasi dengan interaksi pembeli-penjual, manajemen produk, dan desain berbasis komponen untuk mengeksplorasi fundamental React."
           },
           {
-            "name": "Panel Admin E-commerce",
-            "description": "Antarmuka admin Vue.js komprehensif dengan Vuex dan Chart.js"
-          },
-          {
-            "name": "Platform Multi-lokasi Restoran",
-            "description": "Sistem manajemen menu dan reservasi berbasis Vue"
+            "name": "Website Portfolio (Lama)",
+            "description": "Membangun portfolio single-page modern menggunakan React, Tailwind, dan Sass untuk menampilkan kartu proyek interaktif dan section keahlian."
           }
         ]
       },
       {
         "id": "antd",
         "title": "Ant Design (ANTD)",
-        "experience": "1,5+ tahun pengalaman",
-        "detail": "Ahli dalam mengimplementasikan UI tingkat enterprise menggunakan library komponen Ant Design. Berpengalaman dalam kustomisasi tema, membuat form kompleks, tabel data, dan admin dashboard. Mahir mengintegrasikan ANTD dengan aplikasi React dan mengoptimalkan ukuran bundle.",
+        "experience": "Pengalaman 1+ tahun",
+        "detail": "Terampil membangun antarmuka scalable dan production-ready menggunakan Ant Design. Menyesuaikan dan memperluas komponen untuk memenuhi kebutuhan UI unik, menekankan bahasa desain yang konsisten dan usability. Mahir dengan forms, tables, modals, dan layout responsif yang terintegrasi dengan state management real-time.",
         "projects": [
           {
-            "name": "Sistem Manajemen Inventori",
-            "description": "Dibangun dengan komponen ANTD untuk tabel data dan form kompleks"
+            "name": "Platform 2Sweet.ai",
+            "description": "Membangun UI user-facing dan dashboard admin menggunakan Ant Design, mengimplementasikan form terstruktur, tampilan moderasi konten, dan komponen manajemen event responsif."
           },
           {
-            "name": "Antarmuka Backend Manajemen HR",
-            "description": "Panel admin bertenaga ANTD untuk manajemen karyawan dan penggajian"
-          },
-          {
-            "name": "Platform Email Marketing",
-            "description": "Campaign builder menggunakan komponen form dan tabel lanjutan ANTD"
-          },
-          {
-            "name": "Dashboard Backend Trading Finansial",
-            "description": "Dashboard trading real-time dengan komponen ANTD yang dikustomisasi"
+            "name": "XClub - Dashboard BI",
+            "description": "Membangun UI user-facing dan dashboard admin menggunakan Ant Design, mengimplementasikan form terstruktur, tampilan moderasi konten, dan komponen manajemen event responsif."
           }
         ]
       },
       {
         "id": "magento",
-        "title": "Magento",
-        "experience": "1+ tahun pengalaman",
-        "detail": "Pemahaman solid tentang arsitektur Magento 2, pengembangan tema, dan kustomisasi modul. Pengalaman dalam membuat tema kustom, memperluas fungsionalitas melalui plugin, dan mengintegrasikan layanan pihak ketiga. Berpengetahuan dalam sistem layout XML Magento, template PHTML, dan konfigurasi admin.",
+        "title": "Magento 2 (Platform E-Commerce)",
+        "experience": "Pengalaman 2+ tahun",
+        "detail": "Pemahaman mendalam tentang arsitektur Magento 2, pengembangan modul, dan integrasi API. Berpengalaman membangun fitur checkout dengan alamat hierarkis, verifikasi OTP, dan modul export. Terampil dalam menyuntikkan frontend Vue.js custom ke dalam repository Magento untuk rendering konten dinamis.",
         "projects": [
           {
-            "name": "Platform E-commerce Multi-store",
-            "description": "Tema Magento 2 kustom dengan konfigurasi produk lanjutan"
+            "name": "Platform E-Commerce XPARK",
+            "description": "Memelihara dan meningkatkan platform e-commerce Infinix di Asia Tenggara dengan integrasi Magento-Vue, mengimplementasikan verifikasi OTP, perbaikan checkout, dan modul konfigurasi banner/produk."
           },
           {
-            "name": "Portal Grosir B2B",
-            "description": "Kustomisasi Magento untuk pemesanan massal dan tingkat harga"
+            "name": "InfinixMobility.com",
+            "description": "Memelihara dan mengoptimalkan website global Infinix, mengintegrasikan front-end berbasis Vue dengan API Magento untuk manajemen konten dinamis berbasis wilayah."
+          }
+        ]
+      },
+      {
+        "id": "backend",
+        "title": "Pengembangan Back-End (PHP, MySQL, ThinkORM)",
+        "experience": "Pengalaman 1+ tahun",
+        "detail": "Berpengalaman dalam logika backend dan pengembangan API menggunakan PHP dan MySQL dalam framework Magento dan ThinkORM. Terampil dalam optimasi query, enkripsi data, dan desain layanan modular untuk sistem terdistribusi.",
+        "projects": [
+          {
+            "name": "XClub Dashboard BI",
+            "description": "Memelihara dan mengoptimalkan layanan backend untuk dashboard BI XClub — meningkatkan performa query SQL, enkripsi, dan manajemen data event untuk kampanye global."
           },
           {
-            "name": "Situs E-commerce Fashion",
-            "description": "Modul Magento kustom untuk size chart dan virtual try-on"
-          },
-          {
-            "name": "Marketplace Elektronik",
-            "description": "Platform Magento multi-vendor dengan integrasi pengiriman kustom"
+            "name": "Aplikasi Backend XPARK",
+            "description": "Mengembangkan dan memelihara backend inti yang menggerakkan aplikasi dan website Infinix Mobility. Fokus pada optimasi API, alur order, dan manajemen katalog."
           }
         ]
       }
@@ -458,55 +387,63 @@
 
   "experience.section": "04 — PENGALAMAN",
   "experience.title": "Pengalaman Profesional",
-  "experience.description": "Front End Engineer dengan pengalaman 1+ tahun di ekosistem Vue/React, spesialisasi di framework Nuxt.js dan Next.js. Mahir dalam pengembangan Magento, integrasi REST API, dan pemrograman berorientasi objek. Sambil fokus di front-end, juga aktif mempelajari dan mengembangkan backend menggunakan PHP dan JavaScript. Pengalaman sehari-hari dengan tools desain seperti Figma, Adobe XD, dan Photoshop untuk implementasi UI/UX.",
+  "experience.description": "Front End Engineer dengan pengalaman 1+ tahun di ekosistem Vue/React, spesialisasi dalam framework Nuxt.js dan Next.js. Mahir dalam pengembangan Magento, integrasi REST API, dan pemrograman berorientasi objek. Sambil fokus pada front-end, aktif belajar dan mengembangkan backend menggunakan PHP dan JavaScript. Pengalaman harian dengan tools desain termasuk Figma, Adobe XD, dan Photoshop untuk implementasi UI/UX.",
   "experience.positions": [
     {
-      "title": "Front-End Developer",
-      "company": "PT. Summit Global Technology",
+      "title": "Front-End Engineer (Infinix Mobility & 2Sweet)",
+      "company": "PT. Summit Global Teknologi",
       "location": "Tangerang, Banten",
       "period": "Desember 2024 — Sekarang",
-      "duration": "1 th: 5 bln",
-      "description": "Mengembangkan platform acara gaming musiman (PMGC, PMSL, HOK Invitational), situs komunitas XClub, dan dashboard business intelligence menggunakan Vue.js dan ANTDesign. Memelihara platform e-commerce XPARK dan InfiniixMobility pada framework Magento, menggunakan PHP dan MySQL untuk backend. Integrasi dengan Next.js yang memungkinkan pengguna membuat pengalaman percakapan dengan orang yang telah meninggal menggunakan data pribadi. Mengimplementasikan konkurensi transaksi melalui Midtrans dan mengelola persona digital menggunakan proyek 2Sweet.",
-      "skills": ["HTML/CSS/JavaScript", "Vue.js", "Nuxt.js", "ReactJS", "Next.js", "PHP", "Magento", "E-Commerce", "Business Intelligence (BI)", "Pembuatan Dashboard", "Pengembangan API", "REST API", "Figma", "Linux Desktop", "TypeScript", "MySQL"]
+      "duration": "Berlangsung",
+      "description": "Menghadirkan beberapa microsite event H5 internasional (PMWC, PMGC, HOK Invitational S3, Inspiring Youth – UNESCO x INFINIX, XCC 2025, PMAC 2025) yang melayani lebih dari 1M+ pengguna. Mengembangkan dan memelihara platform komunitas XClub menggunakan Nuxt.js dan Vuex, meningkatkan keamanan front-end melalui enkripsi dan validasi kondisional. Memelihara platform e-commerce XPARK dan InfinixMobility di Magento yang terintegrasi dengan front-end Vue.js custom, mengimplementasikan alamat checkout hierarkis, verifikasi OTP, dan modul export CSV/Excel. Berkontribusi pada 2Sweet — platform media sosial berbasis AI yang dibangun dengan Next.js — dengan mengembangkan profil pengguna, sistem event, modul donasi, dan fitur chat AI yang didukung oleh ChatGPT. Re-engineering FamilyTree.js untuk visualisasi relasi tingkat lanjut.",
+      "skills": ["Vue.js", "Nuxt.js", "Next.js", "React", "Ant Design", "PHP", "Magento 2", "MySQL", "REST API", "Enkripsi", "UI/UX", "Figma", "Optimasi Performa"]
     },
     {
-      "title": "Junior Front-End Developer",
-      "company": "PT. Summit Global Technology",
+      "title": "Junior Front-End Developer (Infinix Mobility)",
+      "company": "PT. Summit Global Teknologi",
       "location": "Tangerang, Banten",
       "period": "Juni 2024 — Desember 2024",
-      "duration": "7 bln",
-      "description": "Mengembangkan dan memelihara halaman landing (USP) untuk lini produk Infinix termasuk smartphone, tablet, dan perangkat TWS menggunakan framework Vue.js. Memimpin inisiatif optimisasi kode komprehensif, mengubah arsitektur pemrograman fungsional menjadi struktur berorientasi objek OOP yang sangat tinggi, meningkatkan maintainability dan skalabilitas kode. Dipromosikan menjadi Project Leader untuk supervisi teknis dan memimpin koordinasi tim untuk proyek landing page.",
-      "skills": ["HTML/CSS/JavaScript", "Vue.js", "Nuxt.js", "Application Programming Interface (API)", "Front-end Engineering", "Desain Front-End", "Adobe Photoshop", "Adobe XD", "Linux Desktop", "Node.js"]
+      "duration": "7 bulan",
+      "description": "Mengembangkan 8 landing page USP utama (Note 40 Series, Zero Series, Zero Flip, Hot 50, Hotmoji Event, XPAD, TWS XE 23, dan XOS). Berperan sebagai project leader untuk Zero Flip dan Hotmoji Event. Migrasi framework animasi dari ScrollMagic ke GSAP, meningkatkan performa animasi ~20% dan skor Lighthouse ~15%. Mengimplementasikan rendering multibahasa dinamis berbasis JSON, mengurangi waktu terjemahan dan lokalisasi hingga 100%.",
+      "skills": ["Vue.js", "Nuxt.js", "GSAP", "ScrollMagic", "SwiperJS", "jQuery", "Arsitektur Frontend", "Lokalisasi", "Kepemimpinan", "Manajemen Proyek"]
     },
     {
-      "title": "Magang Front-End Developer",
+      "title": "Intern Front-End Developer (Kampus Merdeka)",
       "company": "PT. Dicoding Akademi Indonesia",
       "location": "Bandung, Jawa Barat",
       "period": "Agustus 2022 — Januari 2023",
-      "duration": "6 bln",
-      "description": "Memimpin dan mengelola tim yang terdiri dari 4 developer dalam Proyek Capstone, membuat katalog resep, blog, dan forum diskusi 'Buku Resepku'. Mengembangkan arsitektur front-end dengan - Perhatian terhadap fitur-fitur unggulan.",
-      "skills": ["Pengembangan Perangkat Lunak", "Coding Front-end", "Pemecahan Masalah", "Produk Web", "Optimisasi Front-end", "Rekayasa Perangkat Lunak", "Coding", "Google Sheets", "Pengembangan Front-End", "UI/UX", "Kepemimpinan Tim", "Cascading Style Sheets (CSS)", "Performa Web", "Pemrograman", "Postman API", "Desain Front-End", "Desain Ikon", "GitHub"]
+      "duration": "6 bulan",
+      "description": "Memimpin tim beranggotakan 4 orang untuk membangun 'Buku Resepku,' platform buku resep dan diskusi berbasis web. Merancang dan mengimplementasikan arsitektur front-end menggunakan native JavaScript, Bootstrap, dan Webpack, fokus pada struktur komponen yang bersih dan desain responsif.",
+      "skills": ["JavaScript", "Bootstrap", "Webpack", "Desain UI/UX", "Kepemimpinan Tim", "Pengembangan Agile"]
     },
     {
-      "title": "WordPress Developer",
+      "title": "WordPress Developer (Part-Time)",
       "company": "Fakultas Pertanian, Universitas Jambi",
       "location": "Mendalo Darat, Jambi",
       "period": "April 2022 — Agustus 2022",
-      "duration": "5 bln",
-      "description": "Mengembangkan situs WordPress untuk digunakan sebagai platform promosi, penyebaran informasi, dan pendaftaran untuk keperluan Seminar dan Template.",
-      "skills": ["Microsoft Office", "Desain WordPress", "Manajemen Waktu", "Pemecahan Masalah", "Kerja Sama Tim", "Microsoft Excel", "Google Sheets", "Administrasi Kantor Dasar", "WordPress", "Adobe Photoshop", "Microsoft Word", "Pembuatan Situs"]
+      "duration": "5 bulan",
+      "description": "Mengembangkan website berbasis WordPress untuk promosi fakultas, diseminasi informasi, dan pendaftaran acara akademik. Menangani layout halaman, setup SEO, dan manajemen konten.",
+      "skills": ["WordPress", "PHP", "SEO", "Manajemen Konten", "Kustomisasi UI"]
+    },
+    {
+      "title": "Fasilitator (DBS Foundation Coding Camp 2024)",
+      "company": "Dicoding Academy",
+      "location": "Online",
+      "period": "Juli 2024 — September 2024",
+      "duration": "3 bulan",
+      "description": "Membimbing peserta melalui fundamental pengembangan web dan modul pembelajaran berbasis proyek yang fokus pada praktik terbaik HTML, CSS, dan JavaScript.",
+      "skills": ["Mentoring", "Pengembangan Web", "HTML", "CSS", "JavaScript", "Kolaborasi Tim"]
     }
   ],
 
-
-  "contact.section": "04 — KONTAK",
-  "contact.title": "Mari berkenalan",
+  "contact.section": "05 — KONTAK",
+  "contact.title": "Mari Terhubung",
   "contact.subtitle": "Hubungi Saya",
   "contact.talk_to_me": "Bicara dengan saya",
-  "contact.write_project": "Ceritakan proyek Anda",
+  "contact.write_project": "Tulis proyek Anda",
   "contact.email": "Email",
   "contact.whatsapp": "Whatsapp",
-  "contact.mail_me": "Kirim Email",
+  "contact.mail_me": "Email Saya",
   "contact.text_me": "Kirim Pesan",
   "contact.form.name": "Nama",
   "contact.form.name_placeholder": "Masukkan nama Anda",

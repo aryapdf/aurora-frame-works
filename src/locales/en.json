@@ -19,7 +19,7 @@
 
   "about.section": "01 — GET TO KNOW ME",
   "about.title": "Front End Engineer with 1+ years of professional experience and core contributor to Infinix's product suite, including USP pages, xclub, and xpark platforms. Currently working full-stack with active development on 2sweet.ai—an AI-powered platform for preserving memories, creating family trees, and hosting memorial events.",
-  "about.description": "Actively expanding into Back-End development. Linux enthusiast with a passion for open-source technologies. When not coding, I'm playing guitar and bass.",
+  "about.description": "Actively expanding into Back-End development. Linux enthusiast with a passion for open-source technologies. When not working, I'm playing guitar and bass.",
   "about.current_job": "Currently working as Front-End Engineer at Summit Global Technology.",
   "about.job_details": "",
 
@@ -396,40 +396,49 @@
   "experience.description": "Front End Engineer with 1+ years of experience in Vue/React ecosystems, specializing in Nuxt.js and Next.js frameworks. Proficient in Magento development, REST API integration, and object-oriented programming. While focusing on front-end, actively learning and developing backend using PHP and JavaScript. Daily experience with design tools including Figma, Adobe XD, and Photoshop for UI/UX implementation.",
   "experience.positions": [
     {
-      "title": "Front-End Developer", 
-      "company": "PT. Summit Global Technology",
+      "title": "Front-End Engineer (Infinix Mobility & 2Sweet)",
+      "company": "PT. Summit Global Teknologi",
       "location": "Tangerang, Banten",
       "period": "December 2024 — Present",
-      "duration": "1 y: 5 mos",
-      "description": "Developed seasonal gaming event platforms (PMGC, PMSL, HOK Invitational), XClub community websites, and business intelligence dashboards utilizing Vue.js and ANTDesign. Maintained XPARK and InfiniixMobility e-commerce platforms on Magento framework, utilized PHP and MySQL for backend. Integrated with Next.js that allows users to create conversational experiences with deceased individuals using personal data. Implemented transaction concurrency through Midtrans and managed digital persona using the 2Sweet project.",
-      "skills": ["HTML/CSS/JavaScript", "Vue.js", "Nuxt.js", "ReactJS", "Next.js", "PHP", "Magento", "E-Commerce", "Business Intelligence (BI)", "Dashboard Building", "API Development", "REST API", "Figma", "Linux Desktop", "TypeScript", "MySQL"]
+      "duration": "Ongoing",
+      "description": "Delivered multiple international H5 event microsites (PMWC, PMGC, HOK Invitational S3, Inspiring Youth – UNESCO x INFINIX, XCC 2025, PMAC 2025) serving over 1M+ users. Developed and maintained the XClub community platform using Nuxt.js and Vuex, enhancing front-end security through encryption and conditional validation. Maintained XPARK and InfinixMobility e-commerce platforms on Magento integrated with custom Vue.js front-end, implementing hierarchical checkout addresses, OTP verification, and CSV/Excel export modules. Contributed to 2Sweet — an AI-powered social media platform built with Next.js — by developing user profiles, event systems, donation modules, and AI chat features powered by ChatGPT. Re-engineered FamilyTree.js for advanced relationship visualization.",
+      "skills": ["Vue.js", "Nuxt.js", "Next.js", "React", "Ant Design", "PHP", "Magento 2", "MySQL", "REST API", "Encryption", "UI/UX", "Figma", "Performance Optimization"]
     },
     {
-      "title": "Junior Front-End Developer",
-      "company": "PT. Summit Global Technology",
+      "title": "Junior Front-End Developer (Infinix Mobility)",
+      "company": "PT. Summit Global Teknologi",
       "location": "Tangerang, Banten",
       "period": "June 2024 — December 2024",
-      "duration": "7 mos",
-      "description": "Developed and maintained landing pages (USP) for Infinix product lines including smartphones, tablets, and TWS devices using Vue.js framework. Led a comprehensive code optimization initiative, transforming functional programming architecture into a highly OOP-oriented object-oriented structure, improving code maintainability and scalability. Promoted to Project Leader for technical supervision and led team coordination for landing page projects.",
-      "skills": ["HTML/CSS/JavaScript", "Vue.js", "Nuxt.js", "Application Programming Interface (API)", "Front-end Engineering", "Front-End Design", "Adobe Photoshop", "Adobe XD", "Linux Desktop", "Node.js"]
+      "duration": "7 months",
+      "description": "Developed 8 major USP landing pages (Note 40 Series, Zero Series, Zero Flip, Hot 50, Hotmoji Event, XPAD, TWS XE 23, and XOS). Served as project leader for Zero Flip and Hotmoji Event. Migrated animation framework from ScrollMagic to GSAP, improving animation performance by ~20% and Lighthouse scores by ~15%. Implemented dynamic JSON-based multilingual rendering, reducing translation and localization time by up to 100%.",
+      "skills": ["Vue.js", "Nuxt.js", "GSAP", "ScrollMagic", "SwiperJS", "jQuery", "Frontend Architecture", "Localization", "Leadership", "Project Management"]
     },
     {
-      "title": "Front-End Developer Intern", 
+      "title": "Front-End Developer Intern (Kampus Merdeka)",
       "company": "PT. Dicoding Akademi Indonesia",
       "location": "Bandung, Jawa Barat",
       "period": "August 2022 — January 2023",
-      "duration": "6 mos",
-      "description": "Lead and managed a team of 4 developers in a Capstone Project, creating a recipe catalog, blog, and discussion forum 'Buku Resepku'. Developed front-end architecture by using - Attention to excellent features.",
-      "skills": ["Software Development", "Front-end Coding", "Problem Solving", "Web Products", "Front-end Optimization", "Software Engineering", "Coding", "Google Sheets", "Front-End Development", "UI/UX", "Team Leadership", "Cascading Style Sheets (CSS)", "Web Performance", "Programming", "Postman API", "Front-End Design", "Icon Design", "GitHub"]
+      "duration": "6 months",
+      "description": "Led a 4-member team to build ‘Buku Resepku,’ a web-based cookbook and discussion platform. Designed and implemented front-end architecture using native JavaScript, Bootstrap, and Webpack, focusing on clean component structuring and responsive design.",
+      "skills": ["JavaScript", "Bootstrap", "Webpack", "UI/UX Design", "Team Leadership", "Agile Development"]
     },
     {
-      "title": "WordPress Developer",
+      "title": "WordPress Developer (Part-Time)",
       "company": "Faculty of Agriculture, Universitas Jambi",
       "location": "Mendalo Darat, Jambi",
       "period": "April 2022 — August 2022",
-      "duration": "5 mos",
-      "description": "Developing a WordPress website to be used as a platform for promotion, information dissemination, and registration for Seminar purposes and Template.",
-      "skills": ["Microsoft Office", "WordPress Design", "Time Management", "Problem Solving", "Teamwork", "Microsoft Excel", "Google Sheets", "Basic Office Administration", "WordPress", "Adobe Photoshop", "Microsoft Word", "Site Build"]
+      "duration": "5 months",
+      "description": "Developed a WordPress-based website for faculty promotion, information dissemination, and academic event registration. Handled page layouts, SEO setup, and content management.",
+      "skills": ["WordPress", "PHP", "SEO", "Content Management", "UI Customization"]
+    },
+    {
+      "title": "Facilitator (DBS Foundation Coding Camp 2024)",
+      "company": "Dicoding Academy",
+      "location": "Online",
+      "period": "July 2024 — September 2024",
+      "duration": "3 months",
+      "description": "Guided participants through web development fundamentals and project-based learning modules focused on HTML, CSS, and JavaScript best practices.",
+      "skills": ["Mentorship", "Web Development", "HTML", "CSS", "JavaScript", "Team Collaboration"]
     }
   ],
 
