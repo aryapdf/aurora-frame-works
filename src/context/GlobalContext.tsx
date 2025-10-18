@@ -50,7 +50,7 @@ interface GlobalProviderProps {
 }
 
 export const GlobalProvider: React.FC<GlobalProviderProps> = ({ children }) => {
-    // 📌 Language State
+    // 📌 Language State ========== >
     const [language, setLanguageState] = useState<Language>(() => {
         const savedLanguage = localStorage.getItem("language") as Language;
         return savedLanguage || "en";
@@ -67,7 +67,7 @@ export const GlobalProvider: React.FC<GlobalProviderProps> = ({ children }) => {
         return translations[language][key] || key;
     };
 
-    // 📌 Theme State
+    // 📌 Theme State ========== >
     const [theme, setTheme] = useState<Theme>(() => {
         const savedTheme = localStorage.getItem("theme") as Theme;
         if (savedTheme) {
@@ -101,8 +101,8 @@ export const GlobalProvider: React.FC<GlobalProviderProps> = ({ children }) => {
         setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
     };
 
-    // 📌 Header State
-    const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+    // 📌 Header State ========== >
+    const [isHeaderVisible, setIsHeaderVisible] = useState(false);
 
     const showHeader = () => setIsHeaderVisible(true);
     const hideHeader = () => setIsHeaderVisible(false);

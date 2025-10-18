@@ -4,11 +4,13 @@ import { Search, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import ThemeToggle from "@/components/ThemeToggle";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { useLanguage } from "@/context/GlobalContext";
+import { useLanguage, useHeader } from "@/context/GlobalContext";
 
 const Header = () => {
   const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
+  const { isHeaderVisible } = useHeader()
+
   const navItems = [
     { key: "nav.about", label: t("nav.about"), section: "about" },
     { key: "nav.projects", label: t("nav.projects"), section: "projects" },
@@ -45,8 +47,8 @@ const Header = () => {
   return (
       <>
         {/* Desktop Header - Top */}
-        <>
-          <header className={`hidden md:block fixed top-4 left-0 right-0 z-50 transition-all duration-300 'bg-transparent'`}>
+        <header className={`${isHeaderVisible ? 'opacity-100' : 'opacity-0'} transition-all duration-300`}>
+          <div className={`hidden md:block fixed top-4 left-0 right-0 z-50 transition-all duration-300 bg-transparent `}>
             <div className="px-16 mx-auto"
             >
               <div className="flex items-center justify-between">
@@ -77,9 +79,9 @@ const Header = () => {
                 </div>
               </div>
             </div>
-          </header>
+          </div>
 
-          <header className={`
+          <div className={`
             hidden md:block fixed bottom-4 left-0 right-0 z-50 mx-auto w-fit transition-all duration-300 rounded-lg ${isScrolled ? 'glass-card' : 'n-glass-card'}`}
                   style={{padding: 'clamp(0.5rem, 1vw, 0.75rem) 0'}}>
             <div className="container w-fit"
@@ -98,8 +100,8 @@ const Header = () => {
                 ))}
               </nav>
             </div>
-          </header>
-        </>
+          </div>
+        </header>
 
 
         {/* Mobile Header - Bottom */}
