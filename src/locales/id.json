@@ -35,7 +35,7 @@
       "country": "Indonesia",
       "duration": "1 Bulan",
       "year": "2022",
-      "image": "src/assets/logos/buku-resepku-logo.png",
+      "image": "/assets/projects/buku-resepku-logo.png",
       "technologies": ["Native JavaScript", "Bootstrap", "Webpack"],
       "clientTestimonial": "Proyek pemrograman pertama saya yang membentuk fondasi dalam pengembangan front-end.",
       "links": ["https://github.com/aryapdf/expense-tracker"]
@@ -63,7 +63,7 @@
       "country": "Indonesia",
       "duration": "1 Bulan",
       "year": "2024",
-      "image": "src/assets/projects/arya-portfolio-old.png",
+      "image": "/assets/projects/arya-portfolio-old.png",
       "technologies": ["React.js", "Tailwind CSS", "Sass/SCSS"],
       "clientTestimonial": "Portfolio lengkap pertama saya, dirancang untuk menonjolkan karya awal dan gaya pengembangan saya.",
       "links": ["https://aryapdf.netlify.app/"]
@@ -77,7 +77,7 @@
       "country": "Deployment Global",
       "duration": "2 Bulan",
       "year": "2024",
-      "image": "src/assets/projects/note-40-racing.webp",
+      "image": "/assets/projects/note-40-racing.webp",
       "technologies": ["Vue", "ScrollMagic", "SwiperJS"],
       "clientTestimonial": "Proyek profesional pertama saya untuk kampanye global Infinix — dibangun untuk performa dan interaktivitas tinggi.",
       "links": ["https://infinixmobility.com/note-40-racing-edition"]

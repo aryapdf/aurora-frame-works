@@ -5,6 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import ThemeToggle from "@/components/ThemeToggle";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useLanguage, useHeader } from "@/context/GlobalContext";
+import logo from "@/assets/personal-logo-t.png"
 
 const Header = () => {
   const { t } = useLanguage();
@@ -61,7 +62,7 @@ const Header = () => {
                 `} style={{gap: 'clamp(1.5rem, 3vw, 2rem)'}}>
                   <img
                       alt="personal_logo"
-                      src="src/assets/personal-logo.png"
+                      src={logo}
                       className="object-contain rounded-lg cursor-pointer hover:scale-105 transition-transform"
                       style={{width: 'clamp(2.5rem, 4vw, 3.5rem)', height: 'clamp(2.5rem, 4vw, 3.5rem)'}}
                       onClick={() => smoothScrollTo("top")}
@@ -149,7 +150,7 @@ const Header = () => {
               {/* Logo - Right */}
               <img 
                 alt="personal_logo" 
-                src="src/assets/personal-logo.png" 
+                src={logo}
                 className="object-contain rounded-full cursor-pointer hover:scale-105 transition-transform"
                 style={{ width: 'clamp(2rem, 5vw, 2.5rem)', height: 'clamp(2rem, 5vw, 2.5rem)' }}
                 onClick={() => smoothScrollTo("top")}

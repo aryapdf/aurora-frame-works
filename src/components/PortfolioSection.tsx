@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import logoDark from '@/assets/personal-logo-dark.png';
+import logoWhite from '@/assets/personal-logo-light.png';
 
 gsap.registerPlugin(ScrollTrigger);
 import { Card, CardContent } from "@/components/ui/card";
@@ -25,9 +27,12 @@ import {
 import { ArrowUpRight, Grid3x3 } from "lucide-react";
 import projectsData from "@/data/projects.json";
 import useEmblaCarousel from "embla-carousel-react";
-import {useLanguage} from "@/context/GlobalContext.tsx";
+import {useLanguage, useTheme} from "@/context/GlobalContext.tsx";
+
 
 const PortfolioSection = () => {
+  const {theme} = useTheme();
+
   const [activeFilter, setActiveFilter] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedProject, setSelectedProject] = useState(null);
@@ -235,7 +240,7 @@ const PortfolioSection = () => {
                                     <div
                                         className="relative w-full aspect-video max-w-md mx-auto overflow-hidden bg-muted">
                                       <img
-                                          src={project.image || "src/assets/personal-logo-full.png"}
+                                          src={project.image || (theme === "dark" ? logoDark : logoWhite)}
                                           alt={project.title}
                                           className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                           loading="lazy"
@@ -364,7 +369,7 @@ const PortfolioSection = () => {
                         {/* Right: Project Image */}
                         <div className="relative aspect-[4/3] lg:h-full overflow-hidden order-1 lg:order-2 bg-muted">
                           <img
-                              src={project.image || 'src/assets/personal-logo-full.png'}
+                              src={project.image || (theme === "dark" ? logoDark : logoWhite)}
                               alt={project.title}
                               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           />

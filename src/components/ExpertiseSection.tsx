@@ -53,13 +53,14 @@ const ExpertiseSection = () => {
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top 50%",
-        end: "+=50%",
+        end: "+=35%",
+        // markers: true,
         scrub: 1,
         toggleActions: "play none none reverse",
       },
     })
     .from(headerRef.current, { y: 40, opacity: 0, duration: 0.4 })
-    .from(skillsNavRef.current, { x: -60, opacity: 0, duration: 0.8 }, "+=0.8")
+    .from(skillsNavRef.current, { x: -60, opacity: 0, duration: 0.8 }, "+=0.4")
     .from(detailRef.current, { x: 60, opacity: 0, duration: 0.8 }, "<");
 
     const tl = gsap.timeline({

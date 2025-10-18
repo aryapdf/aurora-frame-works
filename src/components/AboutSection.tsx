@@ -53,14 +53,6 @@ const AboutSection = () => {
     }, "-=0.4");
   }, { scope: sectionRef });
 
-  const companies = [
-    { name: "SGT", logo: "src/assets/logos/summitglobal-logo.png" },
-    { name: "Infinix", logo: "src/assets/logos/infinix-logo.png" },
-    { name: "Xclub", logo: "src/assets/logos/xclub-logo.png" },
-    { name: "Xpark", logo: "src/assets/logos/xpark-logo.png" },
-    { name: "2Sweet", logo: "src/assets/logos/2sweet-logo.svg" },
-  ];
-
   return (
       <section ref={sectionRef} id="about" className="relative">
         <div className="container mx-auto flex items-center justify-center h-screen" style={{ 
