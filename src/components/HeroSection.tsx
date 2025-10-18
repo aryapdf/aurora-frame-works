@@ -261,10 +261,10 @@ const HeroSection = () => {
               opacity: animationComplete ? 1 : 0
             }}
         >
-          <div className="container mx-auto" style={{ paddingLeft: 'clamp(1rem, 3vw, 1.5rem)', paddingRight: 'clamp(1rem, 3vw, 1.5rem)' }}>
+          <div className="container mx-auto" style={{ paddingLeft: 'clamp(1.5rem, 5vw, 3rem)', paddingRight: 'clamp(1.5rem, 5vw, 3rem)' }}>
             <div ref={containerRef} className="backdrop-blur-xl bg-background/30 border border-foreground/10 rounded-3xl flex items-center" style={{
               padding: 'clamp(2rem, 6vw, 4rem)',
-              minHeight: 'clamp(450px, 60vh, 600px)'
+              minHeight: 'clamp(450px, 100vh, 720px)'
             }}>
               <div className="max-w-full" style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(1.5rem, 3vw, 2rem)' }}>
                 <div ref={profileRef} className="inline-flex items-center glass-card rounded-full w-fit" style={{

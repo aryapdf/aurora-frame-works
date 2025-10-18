@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import logoFull from '@/assets/personal-logo-full.png';
 
 gsap.registerPlugin(ScrollTrigger);
 import { Card, CardContent } from "@/components/ui/card";
@@ -235,7 +236,7 @@ const PortfolioSection = () => {
                                     <div
                                         className="relative w-full aspect-video max-w-md mx-auto overflow-hidden bg-muted">
                                       <img
-                                          src={project.image || "src/assets/personal-logo-full.png"}
+                                          src={project.image || logoFull}
                                           alt={project.title}
                                           className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                           loading="lazy"
@@ -364,7 +365,7 @@ const PortfolioSection = () => {
                         {/* Right: Project Image */}
                         <div className="relative aspect-[4/3] lg:h-full overflow-hidden order-1 lg:order-2 bg-muted">
                           <img
-                              src={project.image || 'src/assets/personal-logo-full.png'}
+                              src={project.image || logoFull}
                               alt={project.title}
                               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           />
