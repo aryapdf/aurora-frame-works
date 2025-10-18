@@ -4,7 +4,7 @@ import { Search, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import ThemeToggle from "@/components/ThemeToggle";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage } from "@/context/GlobalContext";
 
 const Header = () => {
   const { t } = useLanguage();
@@ -47,7 +47,7 @@ const Header = () => {
         {/* Desktop Header - Top */}
         <>
           <header className={`hidden md:block fixed top-4 left-0 right-0 z-50 transition-all duration-300 'bg-transparent'`}>
-            <div className="container mx-auto"
+            <div className="px-16 mx-auto"
             >
               <div className="flex items-center justify-between">
 

@@ -1,4 +1,4 @@
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage } from "@/context/GlobalContext";
 import personalLogo from "@/assets/personal-logo.png";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";

@@ -1,4 +1,4 @@
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage } from "@/context/GlobalContext";
 import { ChevronDown } from "lucide-react";
 import { useState, useRef } from "react";
 import { useGSAP } from "@gsap/react";

@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage } from "@/context/GlobalContext.tsx";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const LanguageSwitcher = () => {

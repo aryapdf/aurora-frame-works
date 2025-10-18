@@ -25,7 +25,7 @@ import {
 import { ArrowUpRight, Grid3x3 } from "lucide-react";
 import projectsData from "@/data/projects.json";
 import useEmblaCarousel from "embla-carousel-react";
-import {useLanguage} from "@/contexts/LanguageContext.tsx";
+import {useLanguage} from "@/context/GlobalContext.tsx";
 
 const PortfolioSection = () => {
   const [activeFilter, setActiveFilter] = useState("All");
