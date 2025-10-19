@@ -87,9 +87,9 @@ const LanguageSwitcher = () => {
         aria-label="Switch language"
       >
         {/*<span className="mr-2 text-sm">{currentLanguage?.flag}</span>*/}
-        <span className="text-xs font-medium uppercase">{language}</span>
+        <span className="text-sm font-medium uppercase">{language}</span>
         <ChevronDown 
-          className={`ml-1 h-3 w-3 transition-transform duration-200 ${
+          className={`ml-1 h-6 w-6 transition-transform duration-200 ${
             isOpen ? 'rotate-180' : ''
           }`}
         />
