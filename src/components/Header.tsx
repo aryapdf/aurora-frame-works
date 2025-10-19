@@ -64,7 +64,7 @@ const Header = () => {
                       alt="personal_logo"
                       src={logo}
                       className="object-contain rounded-lg cursor-pointer hover:scale-105 transition-transform"
-                      style={{width: 'clamp(2.5rem, 4vw, 3.5rem)', height: 'clamp(2.5rem, 4vw, 3.5rem)'}}
+                      style={{width: 'clamp(3rem, 6vw, 4rem)', height: 'clamp(3rem, 6vw, 4rem)'}}
                       onClick={() => smoothScrollTo("top")}
                   />
                 </div>
@@ -88,13 +88,13 @@ const Header = () => {
             <div className="container w-fit"
                  style={{paddingLeft: 'clamp(1rem, 2vw, 1.5rem)', paddingRight: 'clamp(1rem, 2vw, 1.5rem)'}}>
               {/* Desktop Nav */}
-              <nav className="flex items-center" style={{gap: 'clamp(1.5rem, 2.5vw, 2rem)'}}>
+              <nav className="flex items-center" style={{gap: 'clamp(2rem, 3vw, 2.5rem)'}}>
                 {navItems.map((item) => (
                     <button
                         key={item.key}
                         onClick={() => smoothScrollTo(item.section)}
                         className="text-foreground/80 hover:text-foreground transition-colors font-medium"
-                        style={{fontSize: 'clamp(0.875rem, 1vw, 1rem)'}}
+                        style={{fontSize: 'clamp(1rem, 2vw, 1.25rem)'}}
                     >
                       {item.label}
                     </button>

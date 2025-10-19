@@ -86,10 +86,10 @@ const LanguageSwitcher = () => {
         className="h-9 px-3 text-foreground/80 hover:text-foreground transition-colors"
         aria-label="Switch language"
       >
-        <span className="mr-2 text-sm">{currentLanguage?.flag}</span>
-        <span className="text-xs font-medium uppercase">{language}</span>
+        {/*<span className="mr-2 text-sm">{currentLanguage?.flag}</span>*/}
+        <span className="text-sm font-medium uppercase">{language}</span>
         <ChevronDown 
-          className={`ml-1 h-3 w-3 transition-transform duration-200 ${
+          className={`ml-1 h-6 w-6 transition-transform duration-200 ${
             isOpen ? 'rotate-180' : ''
           }`}
         />
@@ -105,7 +105,7 @@ const LanguageSwitcher = () => {
                 language === lang.code ? 'bg-muted/30 text-primary' : 'text-foreground/80'
               }`}
             >
-              <span className="text-base">{lang.flag}</span>
+              {/*<span className="text-base">{lang.flag}</span>*/}
               <span className="font-medium">{lang.name}</span>
             </button>
           ))}
