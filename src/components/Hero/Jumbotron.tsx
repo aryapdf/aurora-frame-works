@@ -177,90 +177,90 @@ const Jumbotron = () => {
     }, { dependencies: [animationComplete] });
 
     // Glass Shatter Transition + About Animation
-    useGSAP(() => {
-        if (!animationComplete) return;
-
-        // Glass shatter effect saat scroll
-        const shardTimeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: heroSectionRef.current,
-                start: "bottom 80%",
-                end: "bottom 20%",
-                scrub: 1,
-            },
-        });
-
-        // Animasi pecahan kaca dengan efek 3D
-        glassShardRefs.current.forEach((shard, i) => {
-            shardTimeline.to(shard, {
-                x: gsap.utils.random(-300, 300),
-                y: gsap.utils.random(-300, 300),
-                rotation: gsap.utils.random(-180, 180),
-                opacity: 0,
-                scale: 0.3,
-                filter: "blur(8px)",
-                ease: "power2.in",
-            }, 0);
-        });
-
-        // About section animation dengan glass morphism effect
-        const aboutTimeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: aboutSectionRef.current,
-                start: "top 70%",
-                end: "top 20%",
-                scrub: 1,
-            },
-        });
-
-        aboutTimeline
-            .from(aboutContainerRef.current, {
-                scale: 0.8,
-                opacity: 0,
-                rotationX: 15,
-                transformPerspective: 1000,
-                filter: "blur(20px)",
-                duration: 1,
-                ease: "power3.out",
-            })
-            .from(headerRef.current, {
-                y: 50,
-                opacity: 0,
-                filter: "blur(10px)",
-                duration: 0.6,
-            }, "-=0.5")
-            .from(titleRef.current, {
-                y: 60,
-                opacity: 0,
-                filter: "blur(15px)",
-                duration: 0.8,
-            }, "-=0.4")
-            .from(descRef.current, {
-                y: 60,
-                opacity: 0,
-                filter: "blur(15px)",
-                duration: 0.8,
-            }, "-=0.6")
-            .from(jobRef.current, {
-                y: 40,
-                opacity: 0,
-                filter: "blur(10px)",
-                duration: 0.6,
-            }, "-=0.4");
-
-        // Parallax effect untuk glass container
-        gsap.to(aboutContainerRef.current, {
-            scrollTrigger: {
-                trigger: aboutSectionRef.current,
-                start: "top bottom",
-                end: "bottom top",
-                scrub: 1,
-            },
-            y: -50,
-            ease: "none",
-        });
-
-    }, { dependencies: [animationComplete] });
+    // useGSAP(() => {
+    //     if (!animationComplete) return;
+    //
+    //     // Glass shatter effect saat scroll
+    //     const shardTimeline = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: heroSectionRef.current,
+    //             start: "bottom 80%",
+    //             end: "bottom 20%",
+    //             scrub: 1,
+    //         },
+    //     });
+    //
+    //     // Animasi pecahan kaca dengan efek 3D
+    //     glassShardRefs.current.forEach((shard, i) => {
+    //         shardTimeline.to(shard, {
+    //             x: gsap.utils.random(-300, 300),
+    //             y: gsap.utils.random(-300, 300),
+    //             rotation: gsap.utils.random(-180, 180),
+    //             opacity: 0,
+    //             scale: 0.3,
+    //             filter: "blur(8px)",
+    //             ease: "power2.in",
+    //         }, 0);
+    //     });
+    //
+    //     // About section animation dengan glass morphism effect
+    //     const aboutTimeline = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: aboutSectionRef.current,
+    //             start: "top 70%",
+    //             end: "top 20%",
+    //             scrub: 1,
+    //         },
+    //     });
+    //
+    //     aboutTimeline
+    //         .from(aboutContainerRef.current, {
+    //             scale: 0.8,
+    //             opacity: 0,
+    //             rotationX: 15,
+    //             transformPerspective: 1000,
+    //             filter: "blur(20px)",
+    //             duration: 1,
+    //             ease: "power3.out",
+    //         })
+    //         .from(headerRef.current, {
+    //             y: 50,
+    //             opacity: 0,
+    //             filter: "blur(10px)",
+    //             duration: 0.6,
+    //         }, "-=0.5")
+    //         .from(titleRef.current, {
+    //             y: 60,
+    //             opacity: 0,
+    //             filter: "blur(15px)",
+    //             duration: 0.8,
+    //         }, "-=0.4")
+    //         .from(descRef.current, {
+    //             y: 60,
+    //             opacity: 0,
+    //             filter: "blur(15px)",
+    //             duration: 0.8,
+    //         }, "-=0.6")
+    //         .from(jobRef.current, {
+    //             y: 40,
+    //             opacity: 0,
+    //             filter: "blur(10px)",
+    //             duration: 0.6,
+    //         }, "-=0.4");
+    //
+    //     // Parallax effect untuk glass container
+    //     gsap.to(aboutContainerRef.current, {
+    //         scrollTrigger: {
+    //             trigger: aboutSectionRef.current,
+    //             start: "top bottom",
+    //             end: "bottom top",
+    //             scrub: 1,
+    //         },
+    //         y: -50,
+    //         ease: "none",
+    //     });
+    //
+    // }, { dependencies: [animationComplete] });
 
     // Typewriter effect
     useEffect(() => {
@@ -301,14 +301,19 @@ const Jumbotron = () => {
                         pointerEvents: "none"
                     }}
                 >
-                    <div id="welcome-bg" style={{
-                        position: "fixed",
-                        inset: 0,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        opacity: 0
-                    }}>
+                    <div
+                        id="welcome-bg"
+                        style={{
+                            position: "fixed",
+                            inset: 0,
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            gap: "2rem",
+                            opacity: 0
+                        }}
+                    >
                         <img
                             id="welcome-logo"
                             src={theme === 'dark' ? logoDark : logoWhite}
@@ -326,7 +331,7 @@ const Jumbotron = () => {
             )}
 
             {/* Glass Shards Overlay */}
-            <div style={{position: "fixed", inset: 0, pointerEvents: "none", zIndex: 50}}>
+            <div style={{position: "fixed", inset: 0, pointerEvents: "none", zIndex: 1000}}>
                 {[...Array(12)].map((_, i) => (
                     <div
                         key={i}
@@ -362,7 +367,8 @@ const Jumbotron = () => {
                 <div className="container mx-auto" style={{ paddingLeft: 'clamp(1.5rem, 5vw, 3rem)', paddingRight: 'clamp(1.5rem, 5vw, 3rem)' }}>
                     <div ref={heroContainerRef} className="backdrop-blur-xl bg-background/30 border border-foreground/10 rounded-3xl flex items-center" style={{
                         padding: 'clamp(2rem, 6vw, 4rem)',
-                        minHeight: 'clamp(450px, 100vh, 720px)'
+                        minHeight: 'clamp(450px, 100vh, 720px)',
+                        boxShadow: "0 0 30px rgba(0, 200, 255, 0.2), 0 0 60px rgba(0, 200, 255, 0.1)"
                     }}>
                         <div className="max-w-full" style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(1.5rem, 3vw, 2rem)' }}>
                             <div ref={profileRef} className="inline-flex items-center glass-card rounded-full w-fit" style={{
