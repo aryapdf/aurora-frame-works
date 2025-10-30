@@ -1,3 +1,5 @@
+// path : src/components/HeroSection.tsx
+
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
@@ -233,21 +235,6 @@ const HeroSection = () => {
                     }}
                 />
 
-                {/*<h1*/}
-                {/*    id="welcome-text"*/}
-                {/*    style={{*/}
-                {/*      fontSize: "clamp(2rem, 6vw, 4rem)",*/}
-                {/*      fontWeight: "bold",*/}
-                {/*      background: "linear-gradient(135deg, #00C8FF, #0072FF, #00C8FF)",*/}
-                {/*      backgroundSize: "200% 200%",*/}
-                {/*      WebkitBackgroundClip: "text",*/}
-                {/*      WebkitTextFillColor: "transparent",*/}
-                {/*      animation: "gradient-shift 3s ease infinite",*/}
-                {/*      textAlign: "center"*/}
-                {/*    }}*/}
-                {/*>*/}
-                {/*  {t("hero.greeting")}*/}
-                {/*</h1>*/}
               </div>
             </div>
         )}

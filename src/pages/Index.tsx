@@ -20,7 +20,6 @@ const Index = () => {
       force3D: true,
     });
 
-    // Refresh ScrollTrigger on load
     ScrollTrigger.refresh();
 
     return () => {
@@ -28,13 +27,20 @@ const Index = () => {
     };
   }, []);
 
+    function refreshPage() {
+        const body = document.querySelector('body')
+        body.style.opacity = '0'
+        window.scrollTo(0, 0);
+
+        setTimeout(() => body.style.opacity = '1' , 100)
+    }
     useEffect(() => {
         window.addEventListener('beforeunload', () => {
-            window.scrollTo(0, 0);
+            refreshPage();
         });
 
         window.addEventListener('load', () => {
-            window.scrollTo(0, 0);
+            refreshPage();
         });
     }, []);
 
