@@ -134,6 +134,7 @@
     @apply bg-background text-foreground;
     background: var(--gradient-primary);
     min-height: 100vh;
+    transition: all .3s ease;
   }
 }
 

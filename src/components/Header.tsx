@@ -107,7 +107,7 @@ const Header = () => {
 
         {/* Mobile Header - Bottom */}
         <header
-            className="md:hidden fixed bottom-0 left-0 right-0 z-50 glass-card border-t border-foreground/10 pb-safe">
+            className={`${isHeaderVisible ? 'opacity-100' : 'opacity-0'} md:hidden fixed bottom-0 left-0 right-0 z-50 glass-card border-t border-foreground/10 pb-safe`}>
           <div className="container mx-auto" style={{padding: 'clamp(0.75rem, 2vw, 1rem) clamp(1rem, 3vw, 1.5rem)'}}>
             <div className="flex items-center justify-between flex-row-reverse">
               {/* Hamburger Menu - Left */}

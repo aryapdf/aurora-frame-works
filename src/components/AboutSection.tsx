@@ -1,3 +1,5 @@
+// path: src/components/AboutSection.tsx
+
 import { useLanguage } from "@/context/GlobalContext";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";

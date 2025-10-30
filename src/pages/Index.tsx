@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Jumbotron from "@/components/Hero/Jumbotron.tsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,19 +20,34 @@ const Index = () => {
       force3D: true,
     });
 
-    // Refresh ScrollTrigger on load
     ScrollTrigger.refresh();
 
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, []);
+
+    function refreshPage() {
+        const body = document.querySelector('body')
+        body.style.opacity = '0'
+        window.scrollTo(0, 0);
+
+        setTimeout(() => body.style.opacity = '1' , 100)
+    }
+    useEffect(() => {
+        window.addEventListener('beforeunload', () => {
+            refreshPage();
+        });
+
+        window.addEventListener('load', () => {
+            refreshPage();
+        });
+    }, []);
 
   return (
     <div className="min-h-screen">
       <Header />
-      <HeroSection />
-      <AboutSection />
+      <Jumbotron />
       <PortfolioSection />
       <ExpertiseSection />
       <ExperienceSection />
