@@ -61,16 +61,17 @@ const Jumbotron = () => {
 
             const size = gsap.utils.random(4, 40);
             particle.style.cssText = `
-        position: fixed;
-        width: ${size}px;
-        height: ${size}px;
-        background: linear-gradient(135deg, #00C8FF, #0072FF);
-        border-radius: 50%;
-        z-index: 99;
-        left: 50%;
-        top: 50%;
-        opacity: 0;
-      `;
+                position: fixed;
+                width: ${size}px;
+                height: ${size}px;
+                background: linear-gradient(135deg, #00C8FF, #0072FF);
+                border-radius: 50%;
+                box-shadow: 0 0 ${size * 2}px rgba(0, 200, 255, 0.8);
+                z-index: 99;
+                left: 50%;
+                top: 50%;
+                opacity: 0;
+            `;
 
             document.getElementById("welcome-bg")?.appendChild(particle);
             particles.push(particle);
@@ -300,19 +301,14 @@ const Jumbotron = () => {
                         pointerEvents: "none"
                     }}
                 >
-                    <div
-                        id="welcome-bg"
-                        style={{
-                            position: "fixed",
-                            inset: 0,
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            gap: "2rem",
-                            opacity: 0
-                        }}
-                    >
+                    <div id="welcome-bg" style={{
+                        position: "fixed",
+                        inset: 0,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        opacity: 0
+                    }}>
                         <img
                             id="welcome-logo"
                             src={theme === 'dark' ? logoDark : logoWhite}
@@ -321,7 +317,7 @@ const Jumbotron = () => {
                                 width: "clamp(80px, 15vw, 150px)",
                                 height: "clamp(80px, 15vw, 150px)",
                                 borderRadius: "50%",
-                                boxShadow: "0 0 60px rgba(0, 200, 255, 0.5)",
+                                boxShadow: "0 0 80px rgba(0, 200, 255, 0.8), 0 0 120px rgba(0, 200, 255, 0.5)",
                                 zIndex: 100
                             }}
                         />
@@ -330,7 +326,7 @@ const Jumbotron = () => {
             )}
 
             {/* Glass Shards Overlay */}
-            <div style={{ position: "fixed", inset: 0, pointerEvents: "none", zIndex: 50 }}>
+            <div style={{position: "fixed", inset: 0, pointerEvents: "none", zIndex: 50}}>
                 {[...Array(12)].map((_, i) => (
                     <div
                         key={i}
