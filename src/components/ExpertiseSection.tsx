@@ -31,8 +31,8 @@ const skills: Skill[] = [
 const ExpertiseSection = () => {
   const { t } = useLanguage();
   const [activeSkill, setActiveSkill] = useState<string>("react");
-  const sectionRef = useRef<HTMLElement>(null);
-  const headerRef = useRef<HTMLDivElement>(null);
+  const expertiseSectionRef = useRef<HTMLElement>(null);
+  const expertiseHeaderRef = useRef<HTMLDivElement>(null);
   const skillsNavRef = useRef<HTMLDivElement>(null);
   const detailRef = useRef<HTMLDivElement>(null);
 
@@ -51,7 +51,7 @@ const ExpertiseSection = () => {
   useGSAP(() => {
     gsap.timeline({
       scrollTrigger: {
-        trigger: sectionRef.current,
+        trigger: expertiseSectionRef.current,
         start: "top 50%",
         end: "+=35%",
         // markers: true,
@@ -59,14 +59,14 @@ const ExpertiseSection = () => {
         toggleActions: "play none none reverse",
       },
     })
-    .from(headerRef.current, { y: 40, opacity: 0, duration: 0.4 })
+    .from(expertiseHeaderRef.current, { y: 40, opacity: 0, duration: 0.4 })
     .from(skillsNavRef.current, { x: -60, opacity: 0, duration: 0.8 }, "+=0.4")
     .from(detailRef.current, { x: 60, opacity: 0, duration: 0.8 }, "<");
 
     const tl = gsap.timeline({
       scrollTrigger: {
         id: 'expertise-scroll',
-        trigger: sectionRef.current,
+        trigger: expertiseSectionRef.current,
         start: "top top",
         end: "+=400%",
         scrub: true,
@@ -86,15 +86,15 @@ const ExpertiseSection = () => {
         }
       })
     })
-  }, { scope: sectionRef });
+  }, { scope: expertiseSectionRef });
 
   const expertiseData = t("expertise");
   const activeData = expertiseData.skills.find((s: any) => s.id === activeSkill);
 
   return (
-      <section ref={sectionRef} id="expertise" className="relative min-h-screen max-h-screen overflow-hidden" style={{ paddingTop: 'clamp(5rem, 10vh, 6rem)', paddingBottom: 'clamp(5rem, 10vh, 6rem)' }}>
+      <section ref={expertiseSectionRef} id="expertise" className="relative min-h-screen max-h-screen overflow-hidden" style={{ paddingTop: 'clamp(5rem, 10vh, 6rem)', paddingBottom: 'clamp(5rem, 10vh, 6rem)' }}>
         <div className="container mx-auto h-full flex flex-col" style={{ paddingLeft: 'clamp(1rem, 3vw, 1.5rem)', paddingRight: 'clamp(1rem, 3vw, 1.5rem)' }}>
-          <div ref={headerRef} className="flex-shrink-0" style={{ marginBottom: 'clamp(1.5rem, 3vw, 2rem)' }}>
+          <div ref={expertiseHeaderRef} className="flex-shrink-0" style={{ marginBottom: 'clamp(1.5rem, 3vw, 2rem)' }}>
             <p className="font-mono text-muted-foreground tracking-wider" style={{ fontSize: 'clamp(0.75rem, 1vw, 0.875rem)', marginBottom: 'clamp(0.75rem, 2vw, 1rem)' }}>
               {expertiseData.section}
             </p>
