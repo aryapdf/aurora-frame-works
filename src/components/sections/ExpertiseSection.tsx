@@ -14,11 +14,11 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  { id: "react", name: "React/Next/TS", icon: "/assets/icon/react-icon.png" },
+  { id: "react", name: "React/Next/TS", icon: "/assets/icon/next-js-icon.png" },
   { id: "vue", name: "Vue/Nuxt", icon: "/assets/icon/vue-icon.png" },
-  { id: "antd", name: "ANTD", icon: "/assets/icon/antd-icon.svg" },
-  { id: "magento", name: "Magento", icon: "/assets/icon/magento-icon.svg" },
-  { id: "backend", name: "Back-End", icon: "/assets/icon/back-end-icon.svg" },
+  { id: "component", name: "ShadcnUI/ANTD/Reactbits", icon: "/assets/icon/shadcn-ui-icon.png"},
+  { id: "magento", name: "Magento", icon: "/assets/icon/magento-icon.png" },
+  { id: "other", name: "Other", icon: "/assets/icon/bracket-icon.png" },
 ];
 
 const ExpertiseSection = () => {

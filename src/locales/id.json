@@ -335,7 +335,7 @@
         ]
       },
       {
-        "id": "antd",
+        "id": "component",
         "title": "Ant Design (ANTD)",
         "experience": "Pengalaman 1+ tahun",
         "detail": "Terampil membangun antarmuka scalable dan production-ready menggunakan Ant Design. Menyesuaikan dan memperluas komponen untuk memenuhi kebutuhan UI unik, menekankan bahasa desain yang konsisten dan usability. Mahir dengan forms, tables, modals, dan layout responsif yang terintegrasi dengan state management real-time.",
@@ -367,9 +367,9 @@
         ]
       },
       {
-        "id": "backend",
-        "title": "Pengembangan Back-End (PHP, MySQL, ThinkORM)",
-        "experience": "Pengalaman 1+ tahun",
+        "id": "other",
+        "title": "Lainnya (PHP, MySQL, ThinkORM)",
+        "experience": "Berpengalaman",
         "detail": "Berpengalaman dalam logika backend dan pengembangan API menggunakan PHP dan MySQL dalam framework Magento dan ThinkORM. Terampil dalam optimasi query, enkripsi data, dan desain layanan modular untuk sistem terdistribusi.",
         "projects": [
           {

@@ -339,8 +339,8 @@
         ]
       },
       {
-        "id": "antd",
-        "title": "Ant Design (ANTD)",
+        "id": "component",
+        "title": "ShadcnUI/ANTD/Reactbits",
         "experience": "1+ year of experience",
         "detail": "Skilled in building scalable, production-ready interfaces using Ant Design. Customizes and extends components to fit unique UI requirements, emphasizing consistent design language and usability. Proficient with forms, tables, modals, and responsive layouts integrated with real-time state management.",
         "projects": [
@@ -371,9 +371,9 @@
         ]
       },
       {
-        "id": "backend",
-        "title": "Back-End Development (PHP, MySQL, ThinkORM)",
-        "experience": "1+ year of experience",
+        "id": "other",
+        "title": "Other (PHP, MySQL, ThinkORM)",
+        "experience": "Experienced",
         "detail": "Experienced in backend logic and API development using PHP and MySQL within Magento and ThinkORM frameworks. Skilled in query optimization, data encryption, and modular service design for distributed systems.",
         "projects": [
           {
