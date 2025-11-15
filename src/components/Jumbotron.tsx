@@ -174,6 +174,18 @@ const Jumbotron = () => {
                 duration: 0.4,
             }, "-=0.3");
 
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: aboutSectionRef.current,
+                start: "top 50%",
+                end: "+=35%",
+                // markers: true,
+                scrub: 1,
+                toggleActions: "play none none reverse",
+            },
+        })
+            .from(aboutSectionRef.current, { y: 40, opacity: 0, duration: 0.4 })
+
     }, { dependencies: [animationComplete] });
 
     // Typewriter effect
