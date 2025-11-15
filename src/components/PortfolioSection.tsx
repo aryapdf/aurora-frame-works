@@ -25,8 +25,6 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import { ArrowUpRight, Grid3x3 } from "lucide-react";
-import projectsData from "@/data/projects.json";
-import useEmblaCarousel from "embla-carousel-react";
 import {useLanguage, useTheme} from "@/context/GlobalContext.tsx";
 
 

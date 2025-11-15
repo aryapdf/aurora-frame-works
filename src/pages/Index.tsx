@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Jumbotron from "@/components/Hero/Jumbotron.tsx";
+import Jumbotron from "@/components/Jumbotron.tsx";
 
 gsap.registerPlugin(ScrollTrigger);
 

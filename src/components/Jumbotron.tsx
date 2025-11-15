@@ -1,9 +1,9 @@
 // path : src/components/Jumbotron.tsx
 
 import { useState, useEffect, useRef } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button.tsx";
 import { ArrowDown } from "lucide-react";
-import {useLanguage, useHeader, useTheme} from "@/context/GlobalContext";
+import {useLanguage, useHeader, useTheme} from "@/context/GlobalContext.tsx";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
