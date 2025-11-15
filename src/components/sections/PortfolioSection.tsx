@@ -2,8 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import logoDark from '@/assets/personal-logo-dark.png';
-import logoWhite from '@/assets/personal-logo-light.png';
+import logoDark from '@/assets/logo/personal-logo-dark.png';
+import logoWhite from '@/assets/logo/personal-logo-light.png';
 
 gsap.registerPlugin(ScrollTrigger);
 import { Card, CardContent } from "@/components/ui/card.tsx";

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 interface PreloaderConfig {
     images?: string[];
@@ -18,39 +18,40 @@ export const useAssetPreloader = (config: PreloaderConfig) => {
 
         if (totalAssets === 0) {
             setLoading(false);
-            return
+            return;
         }
 
         let loadedCount = 0;
 
         const updateProgress = () => {
-            loadedCount++
-            setProgress(Math.round((loadedCount/totalAssets) * 100));
+            loadedCount++;
+            setProgress(Math.round((loadedCount / totalAssets) * 100));
 
             if (loadedCount === totalAssets) {
-                setTimeout(() => setLoading(false), 500)
+                setTimeout(() => setLoading(false), 500);
             }
-        }
+        };
 
-        config.images?.forEach(image => {
+        config.images?.forEach(src => {
             const img = new Image();
             img.onload = updateProgress;
             img.onerror = updateProgress;
-            img.src = image;
-        })
+            img.src = src;
+        });
 
         config.fonts?.forEach(font => {
             document.fonts.load(font).then(updateProgress).catch(updateProgress);
-        })
+        });
 
-        config.videos?.forEach(video => {
+        config.videos?.forEach(src => {
             const video = document.createElement('video');
             video.onloadeddata = updateProgress;
             video.onerror = updateProgress;
-            video.src = video;
+            video.src = src;
             video.preload = 'auto';
-        })
+        });
+
     }, [config]);
 
     return { loading, progress };
-}
+};

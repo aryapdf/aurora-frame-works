@@ -3,8 +3,8 @@ import { ArrowDown } from "lucide-react";
 import { useLanguage, useHeader, useTheme } from "@/context/GlobalContext.tsx";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import logoDark from '@/assets/personal-logo-dark.png';
-import logoWhite from '@/assets/personal-logo-light.png';
+import logoDark from '@/assets/logo/personal-logo-dark.png';
+import logoWhite from '@/assets/logo/personal-logo-light.png';
 
 const createParticles = (count: number) => {
   const container = document.getElementById('welcome-bg');

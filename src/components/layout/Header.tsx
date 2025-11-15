@@ -5,7 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet.tsx";
 import ThemeToggle from "@/components/ThemeToggle.tsx";
 import LanguageSwitcher from "@/components/LanguageSwitcher.tsx";
 import { useLanguage, useHeader } from "@/context/GlobalContext.tsx";
-import logo from "@/assets/personal-logo-t.png"
+import logo from "@/assets/logo/personal-logo-t.png"
 
 const Header = () => {
   const { t } = useLanguage();
