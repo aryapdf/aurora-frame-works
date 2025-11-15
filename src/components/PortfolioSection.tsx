@@ -145,8 +145,7 @@ const PortfolioSection = () => {
   return (
       <section ref={sectionRef} id="projects" className="relative" style={{ paddingTop: 'clamp(5rem, 10vh, 6rem)' }}>
         <div className="container mx-auto" style={{ paddingLeft: 'clamp(1rem, 3vw, 1.5rem)', paddingRight: 'clamp(1rem, 3vw, 1.5rem)' }}>
-          {/* Blurred background container */}
-          <div ref={containerRef} className="backdrop-blur-xl bg-background/30 border border-foreground/10 rounded-3xl" style={{ padding: 'clamp(2rem, 6vw, 4rem)' }}>
+          <div ref={containerRef} className="backdrop-blur-xl bg-background/30 border border-foreground/10 rounded-3xl" style={{ padding: 'clamp(2rem, 6vw, 4rem)',  boxShadow: "0 8px 32px 0 rgba(0, 200, 255, 0.1)", }}>
             {/* Section Header */}
             <div ref={headerRef} className="text-left" style={{ marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>
               <div className="flex items-start justify-between" style={{ marginBottom: 'clamp(1.5rem, 3vw, 2rem)' }}>
