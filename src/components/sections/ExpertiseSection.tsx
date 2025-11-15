@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { useLanguage } from "@/context/GlobalContext";
+import { useLanguage } from "@/context/GlobalContext.tsx";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

@@ -1,4 +1,4 @@
-import { useLanguage } from "@/context/GlobalContext";
+import { useLanguage } from "@/context/GlobalContext.tsx";
 import { ChevronDown } from "lucide-react";
 import { useState, useRef } from "react";
 import { useGSAP } from "@gsap/react";
@@ -10,7 +10,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+} from "@/components/ui/collapsible.tsx";
 
 const ExperienceSection = () => {
   const { t } = useLanguage();

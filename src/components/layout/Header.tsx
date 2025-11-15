@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button.tsx";
 import { Search, Menu } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import ThemeToggle from "@/components/ThemeToggle";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { useLanguage, useHeader } from "@/context/GlobalContext";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet.tsx";
+import ThemeToggle from "@/components/ThemeToggle.tsx";
+import LanguageSwitcher from "@/components/LanguageSwitcher.tsx";
+import { useLanguage, useHeader } from "@/context/GlobalContext.tsx";
 import logo from "@/assets/personal-logo-t.png"
 
 const Header = () => {

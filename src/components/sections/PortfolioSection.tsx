@@ -6,16 +6,16 @@ import logoDark from '@/assets/personal-logo-dark.png';
 import logoWhite from '@/assets/personal-logo-light.png';
 
 gsap.registerPlugin(ScrollTrigger);
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Card, CardContent } from "@/components/ui/card.tsx";
+import { Button } from "@/components/ui/button.tsx";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog.tsx";
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from "@/components/ui/sheet.tsx";
 import {
   Pagination,
   PaginationContent,
@@ -23,7 +23,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/pagination";
+} from "@/components/ui/pagination.tsx";
 import { ArrowUpRight, Grid3x3 } from "lucide-react";
 import {useLanguage, useTheme} from "@/context/GlobalContext.tsx";
 
