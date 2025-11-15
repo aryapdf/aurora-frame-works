@@ -176,92 +176,6 @@ const Jumbotron = () => {
 
     }, { dependencies: [animationComplete] });
 
-    // Glass Shatter Transition + About Animation
-    // useGSAP(() => {
-    //     if (!animationComplete) return;
-    //
-    //     // Glass shatter effect saat scroll
-    //     const shardTimeline = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: heroSectionRef.current,
-    //             start: "bottom 80%",
-    //             end: "bottom 20%",
-    //             scrub: 1,
-    //         },
-    //     });
-    //
-    //     // Animasi pecahan kaca dengan efek 3D
-    //     glassShardRefs.current.forEach((shard, i) => {
-    //         shardTimeline.to(shard, {
-    //             x: gsap.utils.random(-300, 300),
-    //             y: gsap.utils.random(-300, 300),
-    //             rotation: gsap.utils.random(-180, 180),
-    //             opacity: 0,
-    //             scale: 0.3,
-    //             filter: "blur(8px)",
-    //             ease: "power2.in",
-    //         }, 0);
-    //     });
-    //
-    //     // About section animation dengan glass morphism effect
-    //     const aboutTimeline = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: aboutSectionRef.current,
-    //             start: "top 70%",
-    //             end: "top 20%",
-    //             scrub: 1,
-    //         },
-    //     });
-    //
-    //     aboutTimeline
-    //         .from(aboutContainerRef.current, {
-    //             scale: 0.8,
-    //             opacity: 0,
-    //             rotationX: 15,
-    //             transformPerspective: 1000,
-    //             filter: "blur(20px)",
-    //             duration: 1,
-    //             ease: "power3.out",
-    //         })
-    //         .from(headerRef.current, {
-    //             y: 50,
-    //             opacity: 0,
-    //             filter: "blur(10px)",
-    //             duration: 0.6,
-    //         }, "-=0.5")
-    //         .from(titleRef.current, {
-    //             y: 60,
-    //             opacity: 0,
-    //             filter: "blur(15px)",
-    //             duration: 0.8,
-    //         }, "-=0.4")
-    //         .from(descRef.current, {
-    //             y: 60,
-    //             opacity: 0,
-    //             filter: "blur(15px)",
-    //             duration: 0.8,
-    //         }, "-=0.6")
-    //         .from(jobRef.current, {
-    //             y: 40,
-    //             opacity: 0,
-    //             filter: "blur(10px)",
-    //             duration: 0.6,
-    //         }, "-=0.4");
-    //
-    //     // Parallax effect untuk glass container
-    //     gsap.to(aboutContainerRef.current, {
-    //         scrollTrigger: {
-    //             trigger: aboutSectionRef.current,
-    //             start: "top bottom",
-    //             end: "bottom top",
-    //             scrub: 1,
-    //         },
-    //         y: -50,
-    //         ease: "none",
-    //     });
-    //
-    // }, { dependencies: [animationComplete] });
-
     // Typewriter effect
     useEffect(() => {
         if (!animationComplete) return;
@@ -385,17 +299,17 @@ const Jumbotron = () => {
                             </div>
 
                             <h1 className="font-bold leading-tight text-foreground max-w-full" style={{ fontSize: 'clamp(1.875rem, 6vw, 4.5rem)' }}>
-                <span
-                    ref={nameRef}
-                    className="block bg-gradient-to-r from-[#00C8FF] to-[#0072FF] bg-clip-text text-transparent font-bold leading-tight"
-                >
-                  {t("hero.name")}
-                </span>
+                            <span
+                                ref={nameRef}
+                                className="block bg-gradient-to-r from-[#00C8FF] to-[#0072FF] bg-clip-text text-transparent font-bold leading-tight"
+                            >
+                              {t("hero.name")}
+                            </span>
 
-                                <span ref={textRef} className="inline-block" style={{ minHeight: '1.2em', marginTop: 'clamp(0.5rem, 1vw, 0)' }}>
-                  {displayedText}
-                                    <span className="opacity-0 pointer-events-none">A</span>
-                </span>
+                            <span ref={textRef} className="inline-block" style={{ minHeight: '1.2em', marginTop: 'clamp(0.5rem, 1vw, 0)' }}>
+                                {displayedText}
+                                <span className="opacity-0 pointer-events-none">A</span>
+                            </span>
                             </h1>
 
                             <div style={{ paddingTop: 'clamp(1rem, 2vw, 2rem)' }}>
