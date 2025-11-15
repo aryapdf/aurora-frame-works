@@ -1,18 +1,11 @@
 import { useState, useRef } from "react";
-import { useLanguage } from "@/context/GlobalContext";
+import { useLanguage } from "@/context/GlobalContext.tsx";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
-// Import skill icons
-import reactIcon from "@/assets/tools/react-icon.png";
-import vueIcon from "@/assets/tools/vue-icon.png";
-import antdIcon from "@/assets/tools/antd-icon.svg";
-import magentoIcon from "@/assets/tools/magento-icon.svg";
-import backendIcon from "@/assets/tools/back-end-icon.svg";
 
 interface Skill {
   id: string;
@@ -21,11 +14,11 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  { id: "react", name: "React/Next/TS", icon: reactIcon },
-  { id: "vue", name: "Vue/Nuxt", icon: vueIcon },
-  { id: "antd", name: "ANTD", icon: antdIcon },
-  { id: "magento", name: "Magento", icon: magentoIcon },
-  { id: "backend", name: "Back-End", icon: backendIcon },
+  { id: "react", name: "React/Next/TS", icon: "/assets/icon/next-js-icon.png" },
+  { id: "vue", name: "Vue/Nuxt", icon: "/assets/icon/vue-icon.png" },
+  { id: "component", name: "ShadcnUI/ANTD/Reactbits", icon: "/assets/icon/shadcn-ui-icon.png"},
+  { id: "magento", name: "Magento", icon: "/assets/icon/magento-icon.png" },
+  { id: "other", name: "Other", icon: "/assets/icon/bracket-icon.png" },
 ];
 
 const ExpertiseSection = () => {

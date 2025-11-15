@@ -1,7 +1,7 @@
-import { useLanguage } from "@/context/GlobalContext";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { useLanguage } from "@/context/GlobalContext.tsx";
+import { Button } from "@/components/ui/button.tsx";
+import { Input } from "@/components/ui/input.tsx";
+import { Textarea } from "@/components/ui/textarea.tsx";
 import { Mail, MessageCircle, Send, Github, Linkedin } from "lucide-react";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";

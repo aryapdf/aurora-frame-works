@@ -2,20 +2,20 @@ import { useState, useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import logoDark from '@/assets/personal-logo-dark.png';
-import logoWhite from '@/assets/personal-logo-light.png';
+import logoDark from '@/assets/logo/personal-logo-dark.png';
+import logoWhite from '@/assets/logo/personal-logo-light.png';
 
 gsap.registerPlugin(ScrollTrigger);
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Card, CardContent } from "@/components/ui/card.tsx";
+import { Button } from "@/components/ui/button.tsx";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog.tsx";
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from "@/components/ui/sheet.tsx";
 import {
   Pagination,
   PaginationContent,
@@ -23,10 +23,8 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/pagination";
+} from "@/components/ui/pagination.tsx";
 import { ArrowUpRight, Grid3x3 } from "lucide-react";
-import projectsData from "@/data/projects.json";
-import useEmblaCarousel from "embla-carousel-react";
 import {useLanguage, useTheme} from "@/context/GlobalContext.tsx";
 
 
@@ -145,8 +143,7 @@ const PortfolioSection = () => {
   return (
       <section ref={sectionRef} id="projects" className="relative" style={{ paddingTop: 'clamp(5rem, 10vh, 6rem)' }}>
         <div className="container mx-auto" style={{ paddingLeft: 'clamp(1rem, 3vw, 1.5rem)', paddingRight: 'clamp(1rem, 3vw, 1.5rem)' }}>
-          {/* Blurred background container */}
-          <div ref={containerRef} className="backdrop-blur-xl bg-background/30 border border-foreground/10 rounded-3xl" style={{ padding: 'clamp(2rem, 6vw, 4rem)' }}>
+          <div ref={containerRef} className="backdrop-blur-xl bg-background/30 border border-foreground/10 rounded-3xl" style={{ padding: 'clamp(2rem, 6vw, 4rem)',  boxShadow: "0 8px 32px 0 rgba(0, 200, 255, 0.1)", }}>
             {/* Section Header */}
             <div ref={headerRef} className="text-left" style={{ marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>
               <div className="flex items-start justify-between" style={{ marginBottom: 'clamp(1.5rem, 3vw, 2rem)' }}>
