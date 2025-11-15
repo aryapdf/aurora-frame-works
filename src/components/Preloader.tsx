@@ -44,17 +44,17 @@ const Preloader: React.FC<PreloaderProps> = ({ progress, onComplete }) => {
                 zIndex: 99999,
                 display: 'flex',
                 flexDirection: 'column',
+                pointerEvents: 'none',
                 alignItems: 'center',
                 justifyContent: 'center',
-                backgroundColor: 'rgba(0, 0, 0, 0.95)',
-                backdropFilter: 'blur(10px)',
+                background: "transparent"
             }}
         >
             {/* Progress Text */}
             <div
                 ref={textRef}
                 style={{
-                    fontSize: 'clamp(3rem, 8vw, 6rem)',
+                    fontSize: 'clamp(1rem, 2.5vw, 2rem)',
                     fontWeight: 'bold',
                     background: 'linear-gradient(135deg, #00C8FF, #0072FF)',
                     WebkitBackgroundClip: 'text',

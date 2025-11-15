@@ -408,15 +408,6 @@
       "skills": ["Vue.js", "Nuxt.js", "GSAP", "ScrollMagic", "SwiperJS", "jQuery", "Arsitektur Frontend", "Lokalisasi", "Kepemimpinan", "Manajemen Proyek"]
     },
     {
-      "title": "Intern Front-End Developer (Kampus Merdeka)",
-      "company": "PT. Dicoding Akademi Indonesia",
-      "location": "Bandung, Jawa Barat",
-      "period": "Agustus 2022 — Januari 2023",
-      "duration": "6 bulan",
-      "description": "Memimpin tim beranggotakan 4 orang untuk membangun 'Buku Resepku,' platform buku resep dan diskusi berbasis web. Merancang dan mengimplementasikan arsitektur front-end menggunakan native JavaScript, Bootstrap, dan Webpack, fokus pada struktur komponen yang bersih dan desain responsif.",
-      "skills": ["JavaScript", "Bootstrap", "Webpack", "Desain UI/UX", "Kepemimpinan Tim", "Pengembangan Agile"]
-    },
-    {
       "title": "WordPress Developer (Part-Time)",
       "company": "Fakultas Pertanian, Universitas Jambi",
       "location": "Mendalo Darat, Jambi",
@@ -424,15 +415,6 @@
       "duration": "5 bulan",
       "description": "Mengembangkan website berbasis WordPress untuk promosi fakultas, diseminasi informasi, dan pendaftaran acara akademik. Menangani layout halaman, setup SEO, dan manajemen konten.",
       "skills": ["WordPress", "PHP", "SEO", "Manajemen Konten", "Kustomisasi UI"]
-    },
-    {
-      "title": "Fasilitator (DBS Foundation Coding Camp 2024)",
-      "company": "Dicoding Academy",
-      "location": "Online",
-      "period": "Juli 2024 — September 2024",
-      "duration": "3 bulan",
-      "description": "Membimbing peserta melalui fundamental pengembangan web dan modul pembelajaran berbasis proyek yang fokus pada praktik terbaik HTML, CSS, dan JavaScript.",
-      "skills": ["Mentoring", "Pengembangan Web", "HTML", "CSS", "JavaScript", "Kolaborasi Tim"]
     }
   ],
 
